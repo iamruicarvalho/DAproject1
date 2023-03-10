@@ -1,3 +1,0 @@
-C:/Users/Bernardo Pinto/OneDrive/Ensino superior/2ano_2semestre/DA/Projeto1/cmake-build-debug/CMakeFiles/Projeto1.dir
-C:/Users/Bernardo Pinto/OneDrive/Ensino superior/2ano_2semestre/DA/Projeto1/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Bernardo Pinto/OneDrive/Ensino superior/2ano_2semestre/DA/Projeto1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
