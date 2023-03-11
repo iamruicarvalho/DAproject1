@@ -21,7 +21,7 @@ std::vector<std::vector<std::string>> Station::get_stations() {
 void Station::station_reader(){
     int station_count=0;
     std::fstream fin;
-    fin.open("../Project1Data/stations.csv", std::ios::in);
+    fin.open("../resources/stations.csv", std::ios::in);
     std::vector<std::string> row;
     std::string line, word, temp;
     int i=0;
