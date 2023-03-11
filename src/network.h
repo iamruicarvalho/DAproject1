@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
-#include "codigo/data_structures/Graph.h"
+#include "Graph.h"
 
 class Network{
 public:

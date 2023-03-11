@@ -5,7 +5,7 @@
 #include <fstream>
 #include <sstream>
 #include <unordered_map>
-#include "codigo/include/network.h"
+#include "network.h"
 
 Network::Network(){
     read_stations();
@@ -27,7 +27,7 @@ std::unordered_map<int,std::string> Network::get_stations_code(){
 void Network::read_stations() {
     int station_count=0;
     std::fstream fin;
-    fin.open("../Project1Data/stations.csv", std::ios::in);
+    fin.open("../resources/stations.csv", std::ios::in);
     std::vector<std::string> row;
     std::string line, word, temp;
     int i=0;
@@ -55,7 +55,7 @@ void Network::read_stations() {
 void Network::read_connections() {
     int network_count=0;
     std::fstream fin;
-    fin.open("../Project1Data/network.csv", std::ios::in);
+    fin.open("../resources/network.csv", std::ios::in);
     std::vector<std::string> row;
     std::string line, word, temp;
     while(!fin.eof()){

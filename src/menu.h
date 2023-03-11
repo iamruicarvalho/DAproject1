@@ -5,7 +5,7 @@
 #ifndef PROJETO1_MENU_H
 #define PROJETO1_MENU_H
 
-#include "../data_structures/Graph.h"
+#include "Graph.h"
 #include "network.h"
 
 class Menu{

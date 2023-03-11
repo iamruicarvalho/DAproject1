@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(Projeto1
-        main.cpp codigo/menu.cpp codigo/include/menu.h codigo/network.cpp codigo/data_structures/Graph.cpp codigo/data_structures/Heap.cpp codigo/data_structures/UFDS.cpp codigo/data_structures/VertexEdge.cpp)
+        main.cpp src/menu.cpp src/menu.h src/network.cpp src/Graph.cpp src/Heap.cpp src/UFDS.cpp src/VertexEdge.cpp)
