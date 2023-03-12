@@ -15,6 +15,7 @@
 class Graph {
 public:
     ~Graph();
+    // Graph(int nrVertex);
     /*
     * Auxiliary function to find a vertex with a given ID.
     */

@@ -1,27 +1,23 @@
 //
-// Created by Bernardo Pinto on 06/03/2023.
+// Created by Utilizador on 12/03/2023.
 //
+#ifndef NETWORKMANAGER_H
+#define NETWORKMANAGER_H
 
-#ifndef NETWORK_H
-#define NETWORK_H
+#include "Station.h"
+#include "Network.h"
+#include <set>
 
-#include <string>
-#include <vector>
-#include <unordered_map>
-#include "Graph.h"
+using namepsace std;
 
-class Network {
+class NetworkManager {
 public:
-    Network();
-    void read_connections();
-    void read_stations();
-    Graph get_network();
-    std::unordered_map<int,std::string> get_stations_code();
-    std::unordered_map<std::string,int> get_stations_code_reversed();
+    NetworkManager();
+    void readFiles();
 private:
-    Graph network;
-    std::unordered_map<int,std::string> stations_code;
-    std::unordered_map<std::string,int> stations_code_reverse;
+    Graph railway;
+    set<Station> stations;
+    set<Network> network;
 };
 
-#endif //NETWORK_H
+#endif //NETWORKMANAGER_H

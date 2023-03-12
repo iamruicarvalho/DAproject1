@@ -13,11 +13,11 @@ public:
     Station(string name);
     Station(string name, string district, string municipality, string township, string line);
 
-    const string getName();
-    const string getDistrict();
-    const string getMunicipality();
-    const string getTownship();
-    const string getLine();
+    const string getName() const;
+    const string getDistrict() const;
+    const string getMunicipality() const;
+    const string getTownship() const;
+    const string getLine() const;
 
     void setName(const string name);
     void setDistrict(const string district);

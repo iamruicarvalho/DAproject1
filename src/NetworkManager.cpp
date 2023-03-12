@@ -1,12 +1,9 @@
 //
-// Created by Bernardo Pinto on 06/03/2023.
+// Created by Utilizador on 12/03/2023.
 //
-
-#include <fstream>
-#include <sstream>
-#include <unordered_map>
 #include "NetworkManager.h"
 
+/*
 Network::Network(){
     read_stations();
     read_connections();
@@ -74,4 +71,4 @@ void Network::read_connections() {
         int code_StationB = stations_code_reverse[row[1]];
         network.addEdge(code_StationA,code_StationB,std::stod(row[2]));
     }
-}
+}*/

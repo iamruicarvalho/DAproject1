@@ -14,21 +14,22 @@ Station::Station(int name, int district, int municipality, int township, int lin
     township_(township),
     line_(line) {}
 
-const string Station::getName() {
+const string Station::getName() const {
     return name_;
 }
-const string Station::getDistrict() {
+const string Station::getDistrict() const {
     return district_;
 }
-const string Station::getMunicipality() {
+const string Station::getMunicipality() const {
     return municipality_;
 }
-const string Station::getTownship() {
+const string Station::getTownship() const {
     return township_;
 }
-const string Station::getLine() {
+const string Station::getLine() const {
     return line_;
 }
+
 const void Station::setName(const int name) {
     name_ = name;
 }
