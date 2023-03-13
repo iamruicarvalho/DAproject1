@@ -14,14 +14,14 @@ int Menu::readBetweenInt(int low, int high) {
 Menu::Menu(){
     /*
     this->network = networkManager.getNetwork();
-    this->graph = networkManager.getGraph();            Quando o manager estiver terminado ja esta.
+    this->graph = networkManager.getGraph();            Quando o manager estiver terminado ja esta
     this->station = networkManager.getStations();
      */
 }
 void Menu::mainMenu() {
     int input;
     do{
-        cout << "---------------------------- AED TP 2 -----------------------------" << endl;
+        cout << "---------------------------- DA TP 1 -----------------------------" << endl;
         cout << "1 - " << endl;
         cout << "2 - " << endl;
         cout << "3 - " << endl;
