@@ -38,12 +38,11 @@ void NetworkManager::readFiles() {
             i++;
             stations_code_reverse[row[0]] = i;
             stations_code[i] = row[0];
-            network.addVertex(i);
-        }
-        */
-        stationsFile.close();
-        cout << "There are" << temp.size() " stations!" << endl;
+            railway.addVertex(i);
+        }*/
     }
+    stationsFile.close();
+    cout << "There are" << stationsSet.size() " stations!" << endl;
 
 
     // read network.csv
@@ -62,18 +61,28 @@ void NetworkManager::readFiles() {
         string stationA, stationB, capacity, service;
         istringstream iss(line);
         getline(iss, stationA, ',');
-        getline(iss, statioB, ',');
+        getline(iss, stationB, ',');
         getline(iss, capacity, ',');
         getline(iss, service, ',');
 
         Network network(stationA, stationB, capacity, service);
         networkSet.push_back(network);
-        }
-        
-        int code_StationA = stations_code_reverse[row[0]];
-        int code_StationB = stations_code_reverse[row[1]];
-        network.addEdge(code_StationA,code_StationB,std::stod(row[2]));
     }
+    networkFile.close();
+    cout << "In all, there are" << networkSet.size() " possible connections in the provided railway network!" << endl;
+    /*
+    int code_StationA = stations_code_reverse[row[0]];
+    int code_StationB = stations_code_reverse[row[1]];
+    railway.addEdge(code_StationA,code_StationB,std::stod(row[2]));*/
 }
 
+
+int NetworkManager:: indexA(string a){
+    auto it = stations_code_reverse.find(a);
+    return it->second;
+}
+int NetworkManager:: indexB(string a){
+    auto it = stations_code_reverse.find(a);
+    return it->second;
+}
 
