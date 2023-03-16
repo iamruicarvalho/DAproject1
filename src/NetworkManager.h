@@ -19,6 +19,8 @@ public:
     unordered_map<std::string,int> get_stations_code_reversed();
     std::unordered_map<int,std::string>get_stations_code();
     void read_stations();
+    int indexA(string a);
+    int indexB(string a);
     void read_connections();
     Graph get_railway();
 private:

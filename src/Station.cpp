@@ -7,7 +7,7 @@
 Station::Station(int name)
     : name_(name) {}
 
-Station::Station(int name, int district, int municipality, int township, int line)
+Station::Station(string name, string district, string municipality, string township, string line)
     : name_(name),
     district_(district),
     municipality_(municipality),
