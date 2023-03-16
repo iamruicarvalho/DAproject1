@@ -72,3 +72,13 @@ void NetworkManager::read_connections() {
         railway.addEdge(code_StationA,code_StationB,std::stod(row[2]));
     }
 }
+
+
+int NetworkManager:: indexA(string a){
+    auto it = stations_code_reverse.find(a);
+    return it->second;
+}
+int NetworkManager:: indexB(string a){
+    auto it = stations_code_reverse.find(a);
+    return it->second;
+}
