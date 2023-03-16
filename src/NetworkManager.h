@@ -8,19 +8,21 @@
 #include "Network.h"
 #include <set>
 
-using namepsace std;
+using namespace std;
 
-class NetworkManager {
+class NetworkManager : public Graph {
 public:
     NetworkManager();
     void readFiles();
-    
+
 
 
 private:
     Graph railway;
-    set<Station> stations;
-    set<Network> network;
+    set<Station> stationsSet;
+    set<Network> networkSet;
+    unordered_map<int, string> stations_code;
+    unordered_map<string, int> stations_code_reverse;
 };
 
 #endif //NETWORKMANAGER_H

@@ -12,10 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1831a68b-be4b-4980-98cd-548f45b0c098" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.h" afterDir="false" />
     </list>
@@ -40,6 +36,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "C:/AED/AEDproject2",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "CMakeSettings"
   }
 }]]></component>
@@ -61,7 +58,7 @@
       <workItem from="1678497871112" duration="3496000" />
       <workItem from="1678567452444" duration="9073000" />
       <workItem from="1678714686787" duration="618000" />
-      <workItem from="1678987765146" duration="2086000" />
+      <workItem from="1678987765146" duration="6019000" />
     </task>
     <servers />
   </component>
