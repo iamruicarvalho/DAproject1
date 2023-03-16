@@ -14,6 +14,9 @@ class NetworkManager {
 public:
     NetworkManager();
     void readFiles();
+    
+
+
 private:
     Graph railway;
     set<Station> stations;
