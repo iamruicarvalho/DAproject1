@@ -11,7 +11,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="ProjectDA1" targetName="ProjectDA1" />
+      <config projectName="Projeto1" targetName="Projeto1" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -21,17 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1831a68b-be4b-4980-98cd-548f45b0c098" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Network.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Network.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Station.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Station.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Station.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Station.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +52,23 @@
     "WebServerToolWindowFactoryState": "false",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "last_opened_file_path": "C:/AED/AEDproject2",
+    "last_opened_file_path": "/Users/davidcastro/Desktop/ProjectDA1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.updates"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.updates",
+    "structure.view.defaults.are.configured": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Projeto1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projeto1" TARGET_NAME="Projeto1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projeto1" RUN_TARGET_NAME="Projeto1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -89,7 +86,24 @@
       <workItem from="1678497142653" duration="100000" />
       <workItem from="1678497871112" duration="3496000" />
       <workItem from="1678567452444" duration="8367000" />
+      <workItem from="1678733651105" duration="662000" />
+      <workItem from="1678903602205" duration="3641000" />
     </task>
+    <task id="LOCAL-00001" summary="First Menu">
+      <created>1678733515562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678733515562</updated>
+    </task>
+    <task id="LOCAL-00002" summary="First Menu">
+      <created>1678733582179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678733582179</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +119,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Menu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,25 +3,25 @@
 //
 #include "NetworkManager.h"
 
-/*
-Network::Network(){
+
+NetworkManager::NetworkManager(){
     read_stations();
     read_connections();
 }
 
-Graph Network::get_network() {
-    return network;
+Graph NetworkManager::get_railway() {
+    return railway;
 }
 
-std::unordered_map<std::string,int> Network::get_stations_code_reversed() {
+std::unordered_map<std::string,int> NetworkManager::get_stations_code_reversed() {
     return stations_code_reverse;
 }
 
-std::unordered_map<int,std::string> Network::get_stations_code(){
+std::unordered_map<int,std::string> NetworkManager::get_stations_code(){
     return stations_code;
 }
 
-void Network::read_stations() {
+void NetworkManager::read_stations() {
     int station_count=0;
     std::fstream fin;
     fin.open("../resources/stations.csv", std::ios::in);
@@ -31,7 +31,7 @@ void Network::read_stations() {
     while(!fin.eof()){
         row.clear();
         getline(fin,line);
-        if(line== "") break;
+        if(line.empty()) break;
         std::stringstream s(line);
         while (getline(s, word, ',')) {
             row.push_back(word);
@@ -44,12 +44,12 @@ void Network::read_stations() {
             i++;
             stations_code_reverse[row[0]] = i;
             stations_code[i] = row[0];
-            network.addVertex(i);
+            railway.addVertex(i);
         }
     }
 }
 
-void Network::read_connections() {
+void NetworkManager::read_connections() {
     int network_count=0;
     std::fstream fin;
     fin.open("../resources/network.csv", std::ios::in);
@@ -58,7 +58,7 @@ void Network::read_connections() {
     while(!fin.eof()){
         row.clear();
         getline(fin,line);
-        if(line== "") break;
+        if(line.empty()) break;
         std::stringstream s(line);
         while (getline(s, word, ',')) {
             row.push_back(word);
@@ -69,6 +69,6 @@ void Network::read_connections() {
         }
         int code_StationA = stations_code_reverse[row[0]];
         int code_StationB = stations_code_reverse[row[1]];
-        network.addEdge(code_StationA,code_StationB,std::stod(row[2]));
+        railway.addEdge(code_StationA,code_StationB,std::stod(row[2]));
     }
-}*/
+}
