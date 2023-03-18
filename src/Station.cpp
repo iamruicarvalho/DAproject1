@@ -4,7 +4,7 @@
 
 #include "Station.h"
 
-Station::Station(int name)
+Station::Station(string name)
     : name_(name) {}
 
 Station::Station(string name, string district, string municipality, string township, string line)
@@ -30,18 +30,18 @@ const string Station::getLine() const {
     return line_;
 }
 
-const void Station::setName(const int name) {
+void Station::setName(const string name) {
     name_ = name;
 }
-const void Station::setDistrict(const int district) {
+void Station::setDistrict(const string district) {
     district_ = district;
 }
-const void Station::setMunicipality(const int municipality) {
+void Station::setMunicipality(const string municipality) {
     municipality_ = municipality;
 }
-const void Station::setTownship(const int township) {
+void Station::setTownship(const string township) {
     township_ = township;
 }
-const void Station::setLine(const int line) {
+void Station::setLine(const string line) {
     line_ = line;
 }

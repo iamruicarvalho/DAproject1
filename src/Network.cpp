@@ -19,7 +19,7 @@ const string Network::getStationA() const {
 const string Network::getStationB() const {
     return stationB_;
 }
-const string Network::getCapacity() const {
+const int Network::getCapacity() const {
     return capacity_;
 }
 const string Network::getService() const {

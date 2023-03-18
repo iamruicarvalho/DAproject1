@@ -18,7 +18,7 @@ public:
 
     const string getStationA() const;
     const string getStationB() const;
-    const string getCapacity() const;
+    const int getCapacity() const;
     const string getService() const;
 
     void setStationA(const string stationA);
