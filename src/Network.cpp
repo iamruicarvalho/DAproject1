@@ -39,7 +39,10 @@ void Network::setService(const std::string service) {
     service_ = service;
 }
 bool Network::operator<(const Network& network2) const{
-    return this->capacity_< network2.capacity_;
+    if(stationA_==network2.stationA_){
+        return stationB_<network2.stationB_;
+    }
+    return stationA_<network2.stationA_;
 }
 
 
