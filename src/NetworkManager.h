@@ -10,6 +10,7 @@
 #include <fstream>
 #include <sstream>
 #include <set>
+#include <list>
 
 using namespace std;
 
@@ -20,9 +21,12 @@ public:
 
     int indexA(string a);
     int indexB(string a);
-    Graph get_railway();
     unordered_map<std::string,int> get_stations_code_reversed();
     std::unordered_map<int,std::string> get_stations_code();
+    int max_trains(string source, string target, bool changed);
+    bool augmentingPath(int source, int target);
+    int minResidual(int source, int target);
+    void update(int flow, int source, int target, int& result);
 
 private:
     Graph railway;
@@ -30,7 +34,6 @@ private:
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
-
 };
 
 #endif //NETWORKMANAGER_H
