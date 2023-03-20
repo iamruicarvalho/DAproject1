@@ -16,32 +16,21 @@ using namespace std;
 class NetworkManager : public Graph {
 public:
     NetworkManager();
-<<<<<<< HEAD
     void readFiles();
 
-
+    int indexA(string a);
+    int indexB(string a);
+    Graph get_railway();
+    unordered_map<std::string,int> get_stations_code_reversed();
+    std::unordered_map<int,std::string> get_stations_code();
 
 private:
     Graph railway;
     set<Station> stationsSet;
     set<Network> networkSet;
-    unordered_map<int, string> stations_code;
-    unordered_map<string, int> stations_code_reverse;
-=======
-    unordered_map<std::string,int> get_stations_code_reversed();
-    std::unordered_map<int,std::string>get_stations_code();
-    void read_stations();
-    int indexA(string a);
-    int indexB(string a);
-    void read_connections();
-    Graph get_railway();
-private:
-    Graph railway;
-    set<Station> stations;
-    set<Network> network;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
->>>>>>> 401acb91568fcfb6a7147f61ddb30eb248914b6f
+
 };
 
 #endif //NETWORKMANAGER_H

@@ -5,10 +5,11 @@
 #ifndef STATION_H
 #define STATION_H
 
+#include "Graph.h"
 #include <string>
 using namespace std;
 
-class Station {
+class Station : public Graph {
 public:
     Station(string name);
     Station(string name, string district, string municipality, string township, string line);

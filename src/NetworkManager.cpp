@@ -2,6 +2,8 @@
 // Created by Utilizador on 12/03/2023.
 //
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "NetworkManager.h"
 
 using namespace std;
@@ -10,8 +12,8 @@ void NetworkManager::readFiles() {
     cout << "Loading files..." << endl;
 
     // read stations.csv
-    int station_count=0;
-    std::fstream stationsFile;
+    int station_count = 0;
+    std::ifstream stationsFile;
     stationsFile.open("../resources/stations.csv");
     if (!stationsFile.is_open()){
         cout << "File not found\n";
@@ -29,7 +31,7 @@ void NetworkManager::readFiles() {
         getline(iss, district, ',');
         getline(iss, municipality, ',');
         getline(iss, township, ',');
-        getline(iss, line, ',');
+        iss >> line;
 
         Station station(name, district, municipality, township, line);
         stationsSet.push_back(station);
@@ -46,8 +48,8 @@ void NetworkManager::readFiles() {
 
 
     // read network.csv
-    int network_count=0;
-    std::fstream networkFile;
+    int network_count = 0;
+    std::ifstream networkFile;
     networkFile.open("../resources/network.csv");
     if (!networkFile.is_open()){
         cout << "File not found\n";
@@ -63,17 +65,18 @@ void NetworkManager::readFiles() {
         getline(iss, stationA, ',');
         getline(iss, stationB, ',');
         getline(iss, capacity, ',');
-        getline(iss, service, ',');
+        iss >> service;
 
         Network network(stationA, stationB, capacity, service);
         networkSet.push_back(network);
+        railway.addEdge(stationA, stationB, capacity);
     }
     networkFile.close();
     cout << "In all, there are" << networkSet.size() " possible connections in the provided railway network!" << endl;
-    /*
+
     int code_StationA = stations_code_reverse[row[0]];
     int code_StationB = stations_code_reverse[row[1]];
-    railway.addEdge(code_StationA,code_StationB,std::stod(row[2]));*/
+    railway.addEdge(code_StationA,code_StationB,std::stod(row[2]));
 }
 
 
