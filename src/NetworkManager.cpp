@@ -69,7 +69,7 @@ void NetworkManager::readFiles() {
         getline(iss, capacity, ',');
         iss >> service;
 
-        Network network(stationA, stationB, stoi(capacity), service);
+        Network network(stationA, stationB, capacity, service);
         networkSet.insert(network);
         // railway.addEdge(stationA, stationB, capacity);
 
@@ -78,8 +78,7 @@ void NetworkManager::readFiles() {
         railway.addEdge(code_StationA, code_StationB, std::stod(capacity));
     }
     networkFile.close();
-    cout << "In all, there are" << networkSet.size() << " possible connections in the provided railway network!"
-         << endl;
+    cout << "In all, there are" << networkSet.size() << " possible connections in the provided railway network!" << endl;
 }
 
 
@@ -97,10 +96,10 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
 
 void NetworkManager::setBlockLine(const string &blockline) {
     set<int> blockeds = returnBlockedStations(blockline);
-    for (auto &c: blockeds) {
-        for (auto d: vertexSet) {
-            if (c == d->getId()) {
-                d->setBlock();
+    for (auto &i: blockeds) {
+        for (auto v: vertexSet) {
+            if (i == v->getId()) {
+                v->setBlock();
             }
         }
     }
@@ -145,17 +144,17 @@ bool NetworkManager::augmentingPath(int source, int target) {
 int NetworkManager::minResidual(int source, int target) {
     int disponivel;
     Vertex *end = findVertex(target);
-    Vertex *incoming = end->getPath()->getOrig();
-    int minFlow = end->getPath()->getWeight() - incoming->getPath()->getFlow();
-    while (incoming->getId() != source) {
-        if (incoming->getPath()->getReverse() == nullptr) {
-            disponivel = incoming->getPath()->getWeight() - incoming->getPath()->getFlow();
+    Vertex *start = end->getPath()->getOrig();
+    int minFlow = end->getPath()->getWeight() - start->getPath()->getFlow();
+    while (start->getId() != source) {
+        if (start->getPath()->getReverse() == nullptr) {
+            disponivel = start->getPath()->getWeight() - start->getPath()->getFlow();
             minFlow = std::min(minFlow, disponivel);
-            incoming = incoming->getPath()->getOrig();
+            start = start->getPath()->getOrig();
         } else {
-            disponivel = incoming->getPath()->getFlow();
+            disponivel = start->getPath()->getFlow();
             minFlow = std::min(minFlow, disponivel);
-            incoming = incoming->getPath()->getDest();
+            start = start->getPath()->getDest();
         }
     }
     return minFlow;
@@ -192,8 +191,7 @@ int NetworkManager::max_trains(string A, string B, bool changed) {
         update(flow, source, target, result);
     }
     if (result == 0 && changed)
-        return max_trains(B, A,
-                          false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
+        return max_trains(B, A,false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
     else return result;
 }
 
