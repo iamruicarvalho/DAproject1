@@ -54,6 +54,7 @@ bool Vertex::operator<(Vertex & vertex) const {
     return this->dist < vertex.dist;
 }
 
+
 int Vertex::getId() const {
     return this->id;
 }
@@ -86,6 +87,10 @@ std::vector<Edge *> Vertex::getIncoming() const {
     return this->incoming;
 }
 
+bool Vertex::isBlocked() {
+    return blocked;
+}
+
 void Vertex::setId(int id) {
     this->id = id;
 }
@@ -108,6 +113,10 @@ void Vertex::setDist(double dist) {
 
 void Vertex::setPath(Edge *path) {
     this->path = path;
+}
+
+void Vertex::setBlock() {
+    this->blocked = true;
 }
 
 /********************** Edge  ****************************/

@@ -45,3 +45,6 @@ void Station::setTownship(const string township) {
 void Station::setLine(const string line) {
     line_ = line;
 }
+bool Station::operator<(const Station& station2) const{
+    return this->name_< station2.name_;
+}

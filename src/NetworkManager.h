@@ -27,6 +27,8 @@ public:
     bool augmentingPath(int source, int target);
     int minResidual(int source, int target);
     void update(int flow, int source, int target, int& result);
+    set<int> returnBlockedStations(const string& line);
+    void setBlockLine(const string& blockline);
 
 private:
     Graph railway;
@@ -34,6 +36,7 @@ private:
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
+    unordered_map<std:: string, int> network_code_reverse;
 };
 
 #endif //NETWORKMANAGER_H

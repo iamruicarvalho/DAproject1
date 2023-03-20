@@ -57,10 +57,8 @@ int main() {
                 break;
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
+
 
 int readBetweenInt(int low, int high) {
     int input;
@@ -71,4 +69,3 @@ int readBetweenInt(int low, int high) {
     return input;
 }
 
->>>>>>> 3beed901fefbb26b56a26d5106c01a9be966165f

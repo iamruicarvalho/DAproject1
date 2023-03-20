@@ -13,6 +13,7 @@ class Station : public Graph {
 public:
     Station(string name);
     Station(string name, string district, string municipality, string township, string line);
+    bool operator<(const Station& station2) const;
 
     const string getName() const;
     const string getDistrict() const;

@@ -15,6 +15,7 @@ class Network : public Graph {
 public:
     Network(string stationA, string stationB);
     Network(string stationA, string stationB, int capacity, string service);
+    bool operator<(const Network& network2) const;
 
     const string getStationA() const;
     const string getStationB() const;

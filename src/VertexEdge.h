@@ -29,6 +29,7 @@ public:
     double getDist() const;
     Edge *getPath() const;
     std::vector<Edge *> getIncoming() const;
+    bool isBlocked();
 
     void setId(int info);
     void setVisited(bool visited);
@@ -36,6 +37,7 @@ public:
     void setIndegree(unsigned int indegree);
     void setDist(double dist);
     void setPath(Edge *path);
+    void setBlock();
     Edge * addEdge(Vertex *dest, double w);
     bool removeEdge(int destID);
 
@@ -54,6 +56,8 @@ protected:
     std::vector<Edge *> incoming; // incoming edges
 
     int queueIndex = 0; 		// required by MutablePriorityQueue and UFDS
+
+    bool blocked = false;
 };
 
 /********************** Edge  ****************************/
