@@ -43,7 +43,7 @@ void NetworkManager::readFiles() {
         }
     }
     stationsFile.close();
-    cout << "There are " << stationsSet.size() << " stations!" << endl;
+    cout << "There are" << stationsSet.size() << " stations!" << endl;
 
 
     // read network.csv
@@ -55,7 +55,7 @@ void NetworkManager::readFiles() {
         return;
     }
 
-    //int i=0;
+    int i=0;
     getline(networkFile, line);
     while (getline(networkFile, line)) {
         //row.clear();
@@ -178,7 +178,7 @@ int NetworkManager::max_trains(string A, string B, bool changed) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
     int result = 0;
-    for (auto vertex: vertexSet) {
+    for (auto vertex: railway.getVertexSet()) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
         }
@@ -188,8 +188,7 @@ int NetworkManager::max_trains(string A, string B, bool changed) {
         update(flow, source, target, result);
     }
     if (result == 0 && changed)
-        return max_trains(B, A,
-                          false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
+        return max_trains(B, A, false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
     else return result;
 }
 
