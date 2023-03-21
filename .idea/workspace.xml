@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -17,16 +20,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9ce0fbf-6214-4d8e-bdf8-99afaaa55df4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="f9ce0fbf-6214-4d8e-bdf8-99afaaa55df4" name="Changes" comment="Network e Station corrigidos tal como o VertexEdge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Network.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Network.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Station.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Station.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VertexEdge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/VertexEdge.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VertexEdge.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/VertexEdge.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,10 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2NIZVgywrn580zqmkQ3kGcaVvy5" />
   <component name="ProjectViewState">
@@ -54,16 +56,15 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Projeto1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projeto1" TARGET_NAME="Projeto1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projeto1" RUN_TARGET_NAME="Projeto1">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -78,8 +79,17 @@
       <option name="presentableId" value="Default" />
       <updated>1679353583844</updated>
       <workItem from="1679353585048" duration="39000" />
-      <workItem from="1679356066109" duration="2000" />
+      <workItem from="1679356066109" duration="111000" />
+      <workItem from="1679356510815" duration="723000" />
     </task>
+    <task id="LOCAL-00001" summary="Network e Station corrigidos tal como o VertexEdge">
+      <created>1679356160851</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679356160851</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +108,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="NetworkSet e leitura de ficheiros corrigidos" />
-    <option name="LAST_COMMIT_MESSAGE" value="NetworkSet e leitura de ficheiros corrigidos" />
+    <MESSAGE value="Network e Station corrigidos tal como o VertexEdge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Network e Station corrigidos tal como o VertexEdge" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/NetworkManager.cpp</url>
+          <line>184</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
