@@ -23,7 +23,8 @@ void NetworkManager::readFiles() {
         return;
     }
     string name, district, municipality, township, line;
-    int i = 0;
+    // int i = 0;
+    getline(stationsFile, line);
     while (getline(stationsFile, line)) {
         istringstream iss(line);
         getline(iss, name, ',');
@@ -35,8 +36,8 @@ void NetworkManager::readFiles() {
         Station station(name, district, municipality, township, line);
         stationsSet.insert(station);
 
-        /*
-        if (!(stations_code_reverse.count(name)) && name != "NAME") {
+
+        /*if (!(stations_code_reverse.count(name)) && name != "NAME") {
             i++;
             stations_code_reverse[name] = i;
             stations_code[i] = name;
@@ -47,7 +48,7 @@ void NetworkManager::readFiles() {
     }
 
     stationsFile.close();
-    cout << "There are" << stationsSet.size() << " stations!" << endl;
+    cout << "There are " << stationsSet.size() << " stations!" << endl;
 
 
     // read network.csv
@@ -80,7 +81,7 @@ void NetworkManager::readFiles() {
     }
 
     networkFile.close();
-    cout << "In all, there are" << networkSet.size() << " possible connections in the provided railway network!" << endl;
+    cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!" << endl;
 }
 
 
