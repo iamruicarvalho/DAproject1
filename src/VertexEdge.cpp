@@ -5,6 +5,9 @@
 /************************* Vertex  **************************/
 
 Vertex::Vertex(int id): id(id) {}
+Vertex::Vertex() {
+
+}
 
 /*
  * Auxiliary function to add an outgoing edge to a vertex (this),
@@ -122,6 +125,9 @@ void Vertex::setBlock() {
 /********************** Edge  ****************************/
 
 Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight(w) {}
+Edge::Edge(){
+
+}
 
 Vertex * Edge::getDest() const {
     return this->dest;

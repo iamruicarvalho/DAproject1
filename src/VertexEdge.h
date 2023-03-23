@@ -18,6 +18,7 @@ class Edge;
 
 class Vertex {
 public:
+    Vertex();
     Vertex(int id);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
@@ -64,6 +65,7 @@ protected:
 
 class Edge {
 public:
+    Edge();
     Edge(Vertex *orig, Vertex *dest, double w);
 
     Vertex * getDest() const;

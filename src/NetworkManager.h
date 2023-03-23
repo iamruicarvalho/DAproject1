@@ -31,7 +31,6 @@ public:
     void setBlockLine(const string& blockline);
 
 private:
-    Graph railway;
     set<Station> stationsSet;
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
