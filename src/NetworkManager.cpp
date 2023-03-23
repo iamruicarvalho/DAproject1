@@ -35,12 +35,13 @@ void NetworkManager::readFiles() {
         Station station(name, district, municipality, township, line);
         stationsSet.insert(station);
 
+        /*
         if (!(stations_code_reverse.count(name)) && name != "NAME") {
             i++;
             stations_code_reverse[name] = i;
             stations_code[i] = name;
             addVertex(i);
-        }
+        }*/
     }
     stationsFile.close();
     cout << "There are" << stationsSet.size() << " stations!" << endl;
@@ -58,23 +59,27 @@ void NetworkManager::readFiles() {
     getline(networkFile, line);
     while (getline(networkFile, line)) {
         //row.clear();
-        string stationA, stationB, capacity, service;
+        string stationA, stationB, service;
+        int capacity;
         istringstream iss(line);
         getline(iss, stationA, ',');
         getline(iss, stationB, ',');
-        getline(iss, capacity, ',');
+        iss >> capacity;    // cannot do getine() because capacity is an int
+        iss.ignore(1);
         iss >> service;
 
         Network network(stationA, stationB, capacity, service);
         networkSet.insert(network);
 
+        /*
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, std::stod(capacity));
+        addEdge(code_StationA, code_StationB, std::stod(capacity));*/
     }
     networkFile.close();
-
     cout << "In all, there are" << networkSet.size() << " possible connections in the provided railway network!" << endl;
+
+
 
 }
 
