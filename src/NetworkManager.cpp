@@ -22,12 +22,9 @@ void NetworkManager::readFiles() {
         cout << "File not found\n";
         return;
     }
-    std::string line;
+    string name, district, municipality, township, line;
     int i = 0;
-    getline(stationsFile, line);
     while (getline(stationsFile, line)) {
-        //line.clear();
-        string name, district, municipality, township, line;
         istringstream iss(line);
         getline(iss, name, ',');
         getline(iss, district, ',');
@@ -46,7 +43,7 @@ void NetworkManager::readFiles() {
         }
     }
     stationsFile.close();
-    cout << "There are" << stationsSet.size() << " stations!" << endl;
+    cout << "There are " << stationsSet.size() << " stations!" << endl;
 
 
     // read network.csv
@@ -71,14 +68,15 @@ void NetworkManager::readFiles() {
 
         Network network(stationA, stationB, capacity, service);
         networkSet.insert(network);
-        // railway.addEdge(stationA, stationB, capacity);
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
         railway.addEdge(code_StationA, code_StationB, std::stod(capacity));
     }
     networkFile.close();
+
     cout << "In all, there are" << networkSet.size() << " possible connections in the provided railway network!" << endl;
+
 }
 
 
