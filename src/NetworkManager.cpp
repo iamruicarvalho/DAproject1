@@ -30,7 +30,7 @@ void NetworkManager::readFiles() {
         getline(iss, district, ',');
         getline(iss, municipality, ',');
         getline(iss, township, ',');
-        iss >> line;
+        getline(iss, line, '\0');
 
         Station station(name, district, municipality, township, line);
         stationsSet.insert(station);
@@ -63,7 +63,7 @@ void NetworkManager::readFiles() {
         getline(iss, stationA, ',');
         getline(iss, stationB, ',');
         getline(iss, capacity, ',');
-        iss >> service;
+        getline(iss, service, '\0');
 
         Network network(stationA, stationB, stoi(capacity), service);
         networkSet.insert(network);
@@ -141,6 +141,7 @@ int NetworkManager::minResidual(int source, int target) {
     int disponivel;
     Vertex *end = findVertex(target);
     Vertex *incoming = end->getPath()->getOrig();
+    if(incoming->getPath()== nullptr) return end->getPath()->getWeight();
     int minFlow = end->getPath()->getWeight() - incoming->getPath()->getFlow();
     while (incoming->getId() != source) {
         if (incoming->getPath()->getReverse() == nullptr) {
@@ -156,17 +157,15 @@ int NetworkManager::minResidual(int source, int target) {
     return minFlow;
 }
 
-void NetworkManager::update(int flow, int source, int target, int &result) {
+void NetworkManager::update(int flow, int source, int target) {
     Vertex *u = findVertex(target);
     while (u != findVertex(source)) {
         auto edge = u->getPath();
         if (edge->getReverse() == nullptr) {
             edge->setFlow(edge->getFlow() + flow);
-            result += flow;
             u = edge->getOrig();
         } else {
             edge->setFlow(edge->getFlow() - flow);
-            result -= flow;
             u = edge->getDest();
             edge->setReverse(nullptr);
         }
@@ -176,7 +175,8 @@ void NetworkManager::update(int flow, int source, int target, int &result) {
 int NetworkManager::max_trains(string A, string B, bool changed) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
-    int result = 0;
+    if(source == 0 | target==0) return -1;
+    int result_final = 0;
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
@@ -184,10 +184,11 @@ int NetworkManager::max_trains(string A, string B, bool changed) {
     }
     while (augmentingPath(source, target)) {
         int flow = minResidual(source, target);
-        update(flow, source, target, result);
+        update(flow, source, target);
+        result_final+=flow;
     }
-    if (result == 0 && changed)
+    if (result_final == 0 && changed)
         return max_trains(B, A, false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
-    else return result;
+    else return result_final;
 }
 
