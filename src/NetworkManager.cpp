@@ -42,7 +42,10 @@ void NetworkManager::readFiles() {
             stations_code[i] = name;
             addVertex(i);
         }*/
+        int vertexId = stations_code_reverse[name];
+        railway.addVertex(vertexId);
     }
+
     stationsFile.close();
     cout << "There are" << stationsSet.size() << " stations!" << endl;
 
@@ -71,16 +74,13 @@ void NetworkManager::readFiles() {
         Network network(stationA, stationB, capacity, service);
         networkSet.insert(network);
 
-        /*
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, std::stod(capacity));*/
+        railway.addEdge(code_StationA, code_StationB, capacity);
     }
+
     networkFile.close();
     cout << "In all, there are" << networkSet.size() << " possible connections in the provided railway network!" << endl;
-
-
-
 }
 
 

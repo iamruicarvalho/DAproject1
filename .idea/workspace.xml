@@ -22,7 +22,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f9ce0fbf-6214-4d8e-bdf8-99afaaa55df4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/compiler_depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
