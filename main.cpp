@@ -2,6 +2,9 @@
 
 #include <iostream>
 #include "src/NetworkManager.h"
+#include <locale.h>
+#include <codecvt>
+
 
 void showMenu() {
     cout << "1 - Pretendo saber o fluxo maximo de comboios entre 2 estações" << endl;
@@ -13,6 +16,9 @@ void showMenu() {
 }
 
 int main() {
+    std::locale::global(std::locale(std::locale(), new std::codecvt_utf8<wchar_t>));
+    setlocale(LC_ALL, "Portuguese");
+
     NetworkManager networkManager;
     networkManager.readFiles();
 
@@ -35,10 +41,13 @@ int main() {
                 cout << "Qual e a segunda estacao?" << endl;
                 getline(cin,second);
                 int result = networkManager.max_trains(first, second, true);
-                if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
+                if (result == -1){
+                    cout << "Erro ao ler as estações submetidas" << endl;
+                }
+                else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
                     cout << "Nao existe um caminho entre essas 2 estacoes" << endl;
                 } else {
-                    cout << "No maximo, entre essas duas estacoes, podem passar " << result << "comboios ao mesmo tempo"
+                    cout << "No maximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo"
                          << endl;
                 }
                 break;
@@ -57,6 +66,7 @@ int main() {
                 break;
         }
     }
+    return 0;
 }
 
 

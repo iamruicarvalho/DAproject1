@@ -31,11 +31,10 @@ void NetworkManager::readFiles() {
         getline(iss, district, ',');
         getline(iss, municipality, ',');
         getline(iss, township, ',');
-        iss >> line;
+        getline(iss, line, '\0');
 
         Station station(name, district, municipality, township, line);
         stationsSet.insert(station);
-
 
         /*if (!(stations_code_reverse.count(name)) && name != "NAME") {
             i++;
@@ -43,10 +42,7 @@ void NetworkManager::readFiles() {
             stations_code[i] = name;
             addVertex(i);
         }*/
-        int vertexId = stations_code_reverse[name];
-        railway.addVertex(vertexId);
     }
-
     stationsFile.close();
     cout << "There are " << stationsSet.size() << " stations!" << endl;
 
@@ -63,23 +59,20 @@ void NetworkManager::readFiles() {
     getline(networkFile, line);
     while (getline(networkFile, line)) {
         //row.clear();
-        string stationA, stationB, service;
-        int capacity;
+        string stationA, stationB, capacity, service;
         istringstream iss(line);
         getline(iss, stationA, ',');
         getline(iss, stationB, ',');
-        iss >> capacity;    // cannot do getine() because capacity is an int
-        iss.ignore(1);
-        iss >> service;
+        getline(iss, capacity, ',');
+        getline(iss, service, '\0');
 
-        Network network(stationA, stationB, capacity, service);
+        Network network(stationA, stationB, stoi(capacity), service);
         networkSet.insert(network);
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        railway.addEdge(code_StationA, code_StationB, capacity);
+        addEdge(code_StationA, code_StationB, std::stod(capacity));
     }
-
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!" << endl;
 }
@@ -99,10 +92,10 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
 
 void NetworkManager::setBlockLine(const string &blockline) {
     set<int> blockeds = returnBlockedStations(blockline);
-    for (auto &i: blockeds) {
-        for (auto v: vertexSet) {
-            if (i == v->getId()) {
-                v->setBlock();
+    for (auto &c: blockeds) {
+        for (auto d: vertexSet) {
+            if (c == d->getId()) {
+                d->setBlock();
             }
         }
     }
@@ -147,33 +140,32 @@ bool NetworkManager::augmentingPath(int source, int target) {
 int NetworkManager::minResidual(int source, int target) {
     int disponivel;
     Vertex *end = findVertex(target);
-    Vertex *start = end->getPath()->getOrig();
-    int minFlow = end->getPath()->getWeight() - start->getPath()->getFlow();
-    while (start->getId() != source) {
-        if (start->getPath()->getReverse() == nullptr) {
-            disponivel = start->getPath()->getWeight() - start->getPath()->getFlow();
+    Vertex *incoming = end->getPath()->getOrig();
+    if(incoming->getPath()== nullptr) return end->getPath()->getWeight();
+    int minFlow = end->getPath()->getWeight() - incoming->getPath()->getFlow();
+    while (incoming->getId() != source) {
+        if (incoming->getPath()->getReverse() == nullptr) {
+            disponivel = incoming->getPath()->getWeight() - incoming->getPath()->getFlow();
             minFlow = std::min(minFlow, disponivel);
-            start = start->getPath()->getOrig();
+            incoming = incoming->getPath()->getOrig();
         } else {
-            disponivel = start->getPath()->getFlow();
+            disponivel = incoming->getPath()->getFlow();
             minFlow = std::min(minFlow, disponivel);
-            start = start->getPath()->getDest();
+            incoming = incoming->getPath()->getDest();
         }
     }
     return minFlow;
 }
 
-void NetworkManager::update(int flow, int source, int target, int &result) {
+void NetworkManager::update(int flow, int source, int target) {
     Vertex *u = findVertex(target);
     while (u != findVertex(source)) {
         auto edge = u->getPath();
         if (edge->getReverse() == nullptr) {
             edge->setFlow(edge->getFlow() + flow);
-            result += flow;
             u = edge->getOrig();
         } else {
             edge->setFlow(edge->getFlow() - flow);
-            result -= flow;
             u = edge->getDest();
             edge->setReverse(nullptr);
         }
@@ -183,7 +175,8 @@ void NetworkManager::update(int flow, int source, int target, int &result) {
 int NetworkManager::max_trains(string A, string B, bool changed) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
-    int result = 0;
+    if(source == 0 | target==0) return -1;
+    int result_final = 0;
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
@@ -191,11 +184,11 @@ int NetworkManager::max_trains(string A, string B, bool changed) {
     }
     while (augmentingPath(source, target)) {
         int flow = minResidual(source, target);
-        update(flow, source, target, result);
+        update(flow, source, target);
+        result_final+=flow;
     }
-    if (result == 0 && changed)
-        return max_trains(B, A,false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
-    else
-        return result;
+    if (result_final == 0 && changed)
+        return max_trains(B, A, false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
+    else return result_final;
 }
 

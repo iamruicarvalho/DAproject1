@@ -26,7 +26,7 @@ public:
     int max_trains(string source, string target, bool changed);
     bool augmentingPath(int source, int target);
     int minResidual(int source, int target);
-    void update(int flow, int source, int target, int& result);
+    void update(int flow, int source, int target);
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
 
