@@ -141,7 +141,6 @@ int NetworkManager::minResidual(int source, int target) {
     int disponivel;
     Vertex *end = findVertex(target);
     Vertex *incoming = end->getPath()->getOrig();
-    if(incoming->getPath() == nullptr) return end->getPath()->getWeight();
     int minFlow = end->getPath()->getWeight() - incoming->getPath()->getFlow();
     while (incoming->getId() != source) {
         if (incoming->getPath()->getReverse() == nullptr) {
@@ -177,12 +176,10 @@ void NetworkManager::update(int flow, int source, int target, int &result) {
 int NetworkManager::max_trains(string A, string B, bool changed) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
-    if(source==0 || target==0) return -1; //Erro ao ler as estações
     int result = 0;
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
-            edge->setReverse(nullptr);
         }
     }
     while (augmentingPath(source, target)) {

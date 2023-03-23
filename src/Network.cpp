@@ -7,7 +7,7 @@
 Network::Network(std::string stationA, std::string stationB)
     : stationA_(stationA), stationB_(stationB) {}
 
-Network::Network(std::string stationA, std::string stationB, int capacity, std::string service)
+Network::Network(std::string stationA, std::string stationB, double capacity, std::string service)
     : stationA_(stationA),
     stationB_(stationB),
     capacity_(capacity),
@@ -19,7 +19,7 @@ const string Network::getStationA() const {
 const string Network::getStationB() const {
     return stationB_;
 }
-const int Network::getCapacity() const {
+const double Network::getCapacity() const {
     return capacity_;
 }
 const string Network::getService() const {
@@ -32,7 +32,7 @@ void Network::setStationA(const std::string stationA) {
 void Network::setStationB(const std::string stationB) {
     stationB_ = stationB;
 }
-void Network::setCapacity(const int capacity) {
+void Network::setCapacity(const double capacity) {
     capacity_ = capacity;
 }
 void Network::setService(const std::string service) {
