@@ -1,41 +1,41 @@
 CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj: \
- C:\Users\Bernardo\ Pinto\OneDrive\Ensino\ superior\2ano_2semestre\DA\ProjectDA1\src\UFDS.cpp \
- C:\Users\Bernardo\ Pinto\OneDrive\Ensino\ superior\2ano_2semestre\DA\ProjectDA1\src\UFDS.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functexcept.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cpp_type_traits.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/numeric_traits.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_pair.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/move.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator_base_types.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator_base_funcs.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/concept_check.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/assertions.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ptr_traits.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/debug.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/predefined_ops.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/new_allocator.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/memoryfwd.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_construct.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/alloc_traits.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/alloc_traits.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/initializer_list \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functional_hash.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/range_access.h \
- C:/Users/BERNAR~1/AppData/Local/JETBRA~1/Toolbox/apps/CLion/ch-0/223883~1.42/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc
+ C:\Users\Bernardo\OneDrive\Ensino\ superior\2ano_2semestre\DA\ProjectDA1\src\UFDS.cpp \
+ C:\Users\Bernardo\OneDrive\Ensino\ superior\2ano_2semestre\DA\ProjectDA1\src\UFDS.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functexcept.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception_defines.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/cpp_type_traits.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/numeric_traits.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_pair.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/move.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/type_traits \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator_base_types.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator_base_funcs.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/concept_check.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/assertions.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_iterator.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ptr_traits.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/debug/debug.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/predefined_ops.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/new_allocator.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/exception.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/memoryfwd.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_construct.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_uninitialized.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/alloc_traits.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/alloc_traits.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_vector.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/initializer_list \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/functional_hash.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/range_access.h \
+ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc

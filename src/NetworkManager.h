@@ -23,15 +23,16 @@ public:
     int indexB(string a);
     unordered_map<std::string,int> get_stations_code_reversed();
     std::unordered_map<int,std::string> get_stations_code();
-    int max_trains(string source, string target, bool changed);
-    bool augmentingPath(int source, int target);
-    int minResidual(int source, int target);
-    void update(int flow, int source, int target);
+    int max_trains(string source, string target,int result_final, bool changed);
+    void testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
+    bool augmentingPath(Vertex *s, Vertex *t);
+    double minResidual(Vertex *s, Vertex *t);
+    void update(Vertex *s, Vertex *t, double f);
+    int max_of_max_trains();
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
 
 private:
-    Graph railway;
     set<Station> stationsSet;
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;

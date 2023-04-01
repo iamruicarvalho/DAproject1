@@ -1,3 +1,3 @@
-"C:\Users\Bernardo Pinto\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.8836.42\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Projeto1.dir/objects.a
-C:\Users\BERNAR~1\AppData\Local\JETBRA~1\Toolbox\apps\CLion\ch-0\223883~1.42\bin\mingw\bin\ar.exe qc CMakeFiles\Projeto1.dir/objects.a @CMakeFiles\Projeto1.dir\objects1.rsp
-C:\Users\BERNAR~1\AppData\Local\JETBRA~1\Toolbox\apps\CLion\ch-0\223883~1.42\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\Projeto1.dir/objects.a -Wl,--no-whole-archive -o Projeto1.exe -Wl,--out-implib,libProjeto1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Projeto1.dir\linklibs.rsp
+C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\Projeto1.dir/objects.a
+C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\ar.exe qc CMakeFiles\Projeto1.dir/objects.a @CMakeFiles\Projeto1.dir\objects1
+C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Projeto1.dir/objects.a -Wl,--no-whole-archive -o Projeto1.exe -Wl,--out-implib,libProjeto1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Projeto1.dir\linkLibs.rsp

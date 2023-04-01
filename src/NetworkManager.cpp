@@ -27,6 +27,11 @@ void NetworkManager::readFiles() {
     while (getline(stationsFile, line)) {
         istringstream iss(line);
         getline(iss, name, ',');
+        if(name.front()=='\"'){
+            string temp;
+            getline(iss, temp, ',');
+            name+= "." + temp;
+        }
         getline(iss, district, ',');
         getline(iss, municipality, ',');
         getline(iss, township, ',');
@@ -43,7 +48,7 @@ void NetworkManager::readFiles() {
         }
     }
     stationsFile.close();
-    cout << "There are" << stationsSet.size() << " stations!" << endl;
+    cout << "There are " << stationsSet.size() << " stations!" << endl;
 
 
     // read network.csv
@@ -103,92 +108,99 @@ void NetworkManager::setBlockLine(const string &blockline) {
 
 //2.1
 
-bool NetworkManager::augmentingPath(int source, int target) {
-    for (auto vertex: vertexSet) {
-        vertex->setVisited(false);
-        vertex->setPath(nullptr);
+void NetworkManager::testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual) {
+    if (! w->isVisited() && residual > 0) {
+        w->setVisited(true);
+        w->setPath(e);
+        q.push(w);
     }
+}
+
+bool NetworkManager::augmentingPath(Vertex *s, Vertex *t) {
+    for(auto v : vertexSet) {
+        v->setVisited(false);
+    }
+    s->setVisited(true);
     std::queue<Vertex *> q;
-    Vertex *starting = findVertex(source);
-    q.push(starting);
-    while (!q.empty()) {
-        Vertex *that = q.front();
+    q.push(s);
+    while( ! q.empty() && ! t->isVisited()) {
+        auto v = q.front();
         q.pop();
-        for (auto edge: that->getAdj()) {
-            edge->setSelected(false);
-            Vertex *dest = edge->getDest();
-            if (!dest->isVisited() && edge->getWeight() - edge->getFlow() > 0 && !that->isBlocked()) {
-                dest->setVisited(true);
-                dest->setPath(edge);
-                q.push(dest);
-            }
+        for(auto e: v->getAdj()) {
+            testAndVisit(q, e, e->getDest(), e->getWeight() - e->getFlow());
         }
-        for (auto edge: that->getIncoming()) {
-            Vertex *incoming = edge->getOrig();
-            if (!incoming->isVisited() && edge->getFlow() > 0 && !incoming->isBlocked()) {
-                incoming->setVisited(true);
-                Edge *reversed = new Edge(edge->getDest(), edge->getOrig(), edge->getWeight());
-                edge->setReverse(reversed);
-                incoming->setPath(edge);
-                q.push(incoming);
-            }
+        for(auto e: v->getIncoming()) {
+            testAndVisit(q, e, e->getOrig(), e->getFlow());
         }
     }
-    return findVertex(target)->isVisited();
+    return t->isVisited();
 }
 
-int NetworkManager::minResidual(int source, int target) {
-    int disponivel;
-    Vertex *end = findVertex(target);
-    Vertex *incoming = end->getPath()->getOrig();
-    if(incoming->getPath()== nullptr) return end->getPath()->getWeight();
-    int minFlow = end->getPath()->getWeight() - incoming->getPath()->getFlow();
-    while (incoming->getId() != source) {
-        if (incoming->getPath()->getReverse() == nullptr) {
-            disponivel = incoming->getPath()->getWeight() - incoming->getPath()->getFlow();
-            minFlow = std::min(minFlow, disponivel);
-            incoming = incoming->getPath()->getOrig();
-        } else {
-            disponivel = incoming->getPath()->getFlow();
-            minFlow = std::min(minFlow, disponivel);
-            incoming = incoming->getPath()->getDest();
+double NetworkManager::minResidual(Vertex *s, Vertex *t) {
+    double f = INF;
+    for (auto v = t; v != s; ) {
+        auto e = v->getPath();
+        if (e->getDest() == v) {
+            f = std::min(f, e->getWeight() - e->getFlow());
+            v = e->getOrig();
+        }
+        else {
+            f = std::min(f, e->getFlow());
+            v = e->getDest();
         }
     }
-    return minFlow;
+    return f;
 }
 
-void NetworkManager::update(int flow, int source, int target) {
-    Vertex *u = findVertex(target);
-    while (u != findVertex(source)) {
-        auto edge = u->getPath();
-        if (edge->getReverse() == nullptr) {
-            edge->setFlow(edge->getFlow() + flow);
-            u = edge->getOrig();
-        } else {
-            edge->setFlow(edge->getFlow() - flow);
-            u = edge->getDest();
-            edge->setReverse(nullptr);
+void NetworkManager::update(Vertex *s, Vertex *t, double f) {
+    for (auto v = t; v != s; ) {
+        auto e = v->getPath();
+        double flow = e->getFlow();
+        if (e->getDest() == v) {
+            e->setFlow(flow + f);
+            v = e->getOrig();
+        }
+        else {
+            e->setFlow(flow - f);
+            v = e->getDest();
         }
     }
 }
 
-int NetworkManager::max_trains(string A, string B, bool changed) {
+int NetworkManager::max_trains(string A, string B,int result_final, bool changed) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
     if(source == 0 | target==0) return -1;
-    int result_final = 0;
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
+            edge->setReverse(nullptr);
         }
     }
-    while (augmentingPath(source, target)) {
-        int flow = minResidual(source, target);
-        update(flow, source, target);
+    Vertex* start= findVertex(source);
+    Vertex* end = findVertex(target);
+    while (augmentingPath(start,end)) {
+        double flow = minResidual(start,end);
+        update(start,end,flow);
         result_final+=flow;
     }
-    if (result_final == 0 && changed)
-        return max_trains(B, A, false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
+    if (changed)
+        return max_trains(B, A, result_final, false); // Isto serve para ver o fluxo de comboios entre as 2 estações, nos dois sentidos.
     else return result_final;
 }
 
+//2.2
+
+int NetworkManager::max_of_max_trains() {
+    int result=0;
+    int comparing;
+    for(int i=1;i<stationsSet.size()-1;i++){
+        for(int j=i+1;j<stationsSet.size();j++){
+            string A = stations_code[i];
+            string B = stations_code[j];
+            comparing = max_trains(A,B,0,true);
+            result = max(comparing,result);
+            cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
+        }
+    }
+}
