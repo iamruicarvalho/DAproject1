@@ -44,7 +44,7 @@ void NetworkManager::readFiles() {
             i++;
             stations_code_reverse[name] = i;
             stations_code[i] = name;
-            addVertex(i);
+            addVertex(i,district,municipality,township);
         }
     }
     stationsFile.close();
@@ -200,6 +200,107 @@ int NetworkManager::max_of_max_trains() {
             string B = stations_code[j];
             comparing = max_trains(A,B,0,true);
             result = max(comparing,result);
+            cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
+        }
+    }
+}
+
+//2.3
+void NetworkManager::trainManagementByTownship(int k){
+    unordered_map<string, double> result;
+    for(auto c: vertexSet){
+        result[c->getTownship()] += c->getCapacity();
+    }
+
+    vector<pair<string, double>> vec(result.begin(), result.end());
+
+    // Sort the vector by the second element (the value) in descending order
+    sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
+        return a.second > b.second;
+    });
+    double max = vec[0].second;
+    auto c = vec.begin();
+    int i = 1;
+    while(k>0){
+        if(c->second<max){
+            k--;
+            if(k==0)break;
+            i++;
+        }
+        cout <<"Em "<<i<<"º lugar o concelho: "<< c->first << " com: " << c->second << " comboios." << endl;
+        c++;
+    }
+}
+
+void NetworkManager::trainManagementByMunicipality(int k){
+    unordered_map<string, double> result;
+    for(auto c: vertexSet){
+        result[c->getMunicipality()] += c->getCapacity();
+    }
+
+    vector<pair<string, double>> vec(result.begin(), result.end());
+
+    // Sort the vector by the second element (the value) in descending order
+    sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
+        return a.second > b.second;
+    });
+    double max = vec[0].second;
+    auto c = vec.begin();
+    int i = 1;
+    while(k>0){
+        if(c->second<max){
+            k--;
+            if(k==0)break;
+            i++;
+        }
+        cout <<"Em "<<i<<"º lugar o municipio: "<< c->first << " com: " << c->second << " comboios." << endl;
+        c++;
+    }
+}
+
+void NetworkManager::trainManagementByDistrict(int k){
+    unordered_map<string, double> result;
+    for(auto c: vertexSet){
+        result[c->getDistrict()] += c->getCapacity();
+    }
+
+    vector<pair<string, double>> vec(result.begin(), result.end());
+
+    // Sort the vector by the second element (the value) in descending order
+    sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
+        return a.second > b.second;
+    });
+    double max = vec[0].second;
+    auto c = vec.begin();
+    int i = 1;
+    while(k>0){
+        if(c->second<max){
+            k--;
+            if(k==0)break;
+            i++;
+        }
+        cout <<"Em "<<i<<"º lugar o distrito: "<< c->first << " com: " << c->second << " comboios." << endl;
+        c++;
+    }
+}
+
+
+
+
+//maximo de comboios entre 2 estações, com varias linhas bloqueada
+
+void NetworkManager::max_of_max_trains_with_block(list<string> blockLine) {
+    for(auto &c: blockLine) {
+        setBlockLine(c);
+    }
+    int result = 0;
+    int comparing;
+    for(int i = 1; i < stationsSet.size() - 1; i++) {
+        for(int j = i + 1; j < stationsSet.size(); j++) {
+            string A = stations_code[i];
+            string B = stations_code[j];
+            comparing = max_trains(A, B, 0, true);
+            result = max(comparing, result);
             cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
         }
     }

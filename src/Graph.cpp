@@ -33,10 +33,10 @@ int Graph::findVertexIdx(const int &id) const {
  *  Adds a vertex with a given content or info (in) to a graph (this).
  *  Returns true if successful, and false if a vertex with that content already exists.
  */
-bool Graph::addVertex(const int &id) {
+bool Graph::addVertex(const int &id, string district, string municipality, string township) {
     if (findVertex(id) != nullptr)
         return false;
-    vertexSet.push_back(new Vertex(id));
+    vertexSet.push_back(new Vertex(id, district, municipality, township));
     return true;
 }
 

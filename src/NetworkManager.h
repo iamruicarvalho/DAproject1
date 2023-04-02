@@ -31,6 +31,10 @@ public:
     int max_of_max_trains();
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
+    void max_of_max_trains_with_block(list<string> blockLine);
+    void trainManagementByMunicipality(int k);
+    void trainManagementByDistrict(int k);
+    void trainManagementByTownship(int k);
 
 private:
     set<Station> stationsSet;
@@ -38,6 +42,8 @@ private:
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
     unordered_map<std:: string, int> network_code_reverse;
+
+
 };
 
 #endif //NETWORKMANAGER_H

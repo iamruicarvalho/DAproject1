@@ -24,7 +24,7 @@ public:
      *  Adds a vertex with a given content or info (in) to a graph (this).
      *  Returns true if successful, and false if a vertex with that content already exists.
      */
-    bool addVertex(const int &id);
+    bool addVertex(const int &id, string district, string municipality, string township);
 
     /*
      * Adds an edge to a graph (this), given the contents of the source and

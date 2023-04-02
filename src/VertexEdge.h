@@ -11,6 +11,7 @@
 #include "MutablePriorityQueue.h"
 
 class Edge;
+using namespace std;
 
 #define INF std::numeric_limits<double>::max()
 
@@ -19,7 +20,7 @@ class Edge;
 class Vertex {
 public:
     Vertex();
-    Vertex(int id);
+    Vertex(int id, string district, string municipality, string township);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
     int getId() const;
@@ -31,6 +32,7 @@ public:
     Edge *getPath() const;
     std::vector<Edge *> getIncoming() const;
     bool isBlocked();
+    double const getCapacity();
 
     void setId(int info);
     void setVisited(bool visited);
@@ -41,10 +43,16 @@ public:
     void setBlock();
     Edge * addEdge(Vertex *dest, double w);
     bool removeEdge(int destID);
+    const string getDistrict() const;
+    const string getMunicipality() const;
+    const string getTownship() const;
 
     friend class MutablePriorityQueue<Vertex>;
 protected:
     int id;                // identifier
+    string district_;
+    string municipality_;
+    string township_;
     std::vector<Edge *> adj;  // outgoing edges
 
     // auxiliary fields
@@ -59,6 +67,8 @@ protected:
     int queueIndex = 0; 		// required by MutablePriorityQueue and UFDS
 
     bool blocked = false;
+
+    double capacity = 0;
 };
 
 /********************** Edge  ****************************/
