@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Projeto1.exe"
+			"path" : "Project.exe"
 		},
 		{
-			"path" : "Projeto1.pdb"
+			"path" : "Project.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -80,7 +80,7 @@
 			]
 		}
 	],
-	"id" : "Projeto1::@6890427a1f51a3e7e1df",
+	"id" : "Project::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -100,8 +100,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Projeto1",
-	"nameOnDisk" : "Projeto1.exe",
+	"name" : "Project",
+	"nameOnDisk" : "Project.exe",
 	"paths" : 
 	{
 		"build" : ".",

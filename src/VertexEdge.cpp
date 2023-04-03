@@ -4,7 +4,7 @@
 
 /************************* Vertex  **************************/
 
-Vertex::Vertex(int id): id(id) {}
+Vertex::Vertex(int id, string district, string municipality, string township): id(id), district_(district), municipality_(municipality), township_(township) {}
 Vertex::Vertex() {
 
 }
@@ -16,6 +16,7 @@ Vertex::Vertex() {
 Edge * Vertex::addEdge(Vertex *d, double w) {
     auto newEdge = new Edge(this, d, w);
     adj.push_back(newEdge);
+    d->capacity+=w;
     d->incoming.push_back(newEdge);
     return newEdge;
 }
@@ -117,9 +118,21 @@ void Vertex::setDist(double dist) {
 void Vertex::setPath(Edge *path) {
     this->path = path;
 }
+const string Vertex::getDistrict() const {
+    return district_;
+}
+const string Vertex::getMunicipality() const {
+    return municipality_;
+}
+const string Vertex::getTownship() const {
+    return township_;
+}
 
 void Vertex::setBlock() {
     this->blocked = true;
+}
+double const Vertex::getCapacity() {
+    return this->capacity;
 }
 
 /********************** Edge  ****************************/
