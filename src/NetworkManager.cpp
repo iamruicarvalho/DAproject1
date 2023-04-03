@@ -23,7 +23,7 @@ void NetworkManager::readFiles() {
         return;
     }
     string name, district, municipality, township, line;
-    // int i = 0;
+    int i = 0;
     getline(stationsFile, line);
     while (getline(stationsFile, line)) {
         istringstream iss(line);
@@ -36,12 +36,12 @@ void NetworkManager::readFiles() {
         Station station(name, district, municipality, township, line);
         stationsSet.insert(station);
 
-        /*if (!(stations_code_reverse.count(name)) && name != "NAME") {
+        if (!(stations_code_reverse.count(name)) && name != "NAME") {
             i++;
             stations_code_reverse[name] = i;
             stations_code[i] = name;
             addVertex(i);
-        }*/
+        }
     }
     stationsFile.close();
     cout << "There are " << stationsSet.size() << " stations!" << endl;
@@ -56,22 +56,24 @@ void NetworkManager::readFiles() {
         return;
     }
 
-    getline(networkFile, line);
+    // getline(networkFile, line);
     while (getline(networkFile, line)) {
         //row.clear();
-        string stationA, stationB, capacity, service;
+        string stationA, stationB, service;
+        double capacity;
         istringstream iss(line);
         getline(iss, stationA, ',');
         getline(iss, stationB, ',');
-        getline(iss, capacity, ',');
+        iss >> capacity;
+        iss.ignore(1);
         getline(iss, service, '\0');
 
-        Network network(stationA, stationB, stoi(capacity), service);
+        Network network(stationA, stationB, capacity, service);
         networkSet.insert(network);
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, std::stod(capacity));
+        railway.addEdge(code_StationA, code_StationB, capacity);
     }
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!" << endl;
@@ -141,8 +143,11 @@ int NetworkManager::minResidual(int source, int target) {
     int disponivel;
     Vertex *end = findVertex(target);
     Vertex *incoming = end->getPath()->getOrig();
-    if(incoming->getPath()== nullptr) return end->getPath()->getWeight();
+    if (incoming->getPath() == nullptr)
+        return end->getPath()->getWeight();
+
     int minFlow = end->getPath()->getWeight() - incoming->getPath()->getFlow();
+
     while (incoming->getId() != source) {
         if (incoming->getPath()->getReverse() == nullptr) {
             disponivel = incoming->getPath()->getWeight() - incoming->getPath()->getFlow();
@@ -185,10 +190,11 @@ int NetworkManager::max_trains(string A, string B, bool changed) {
     while (augmentingPath(source, target)) {
         int flow = minResidual(source, target);
         update(flow, source, target);
-        result_final+=flow;
+        result_final += flow;
     }
     if (result_final == 0 && changed)
         return max_trains(B, A, false); // caso as estações source e target estejam trocadas, corre-se o codigo novamente, com as estações trocadas
-    else return result_final;
+    else
+        return result_final;
 }
 

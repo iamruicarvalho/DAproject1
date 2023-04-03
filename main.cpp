@@ -20,6 +20,7 @@ int main() {
     setlocale(LC_ALL, "Portuguese");
 
     NetworkManager networkManager;
+    cout << "[LOADING FILES]" << endl;
     networkManager.readFiles();
 
     bool running = true;
