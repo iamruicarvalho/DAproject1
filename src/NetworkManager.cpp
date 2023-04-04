@@ -95,7 +95,7 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
     return result;
 }
 
-void NetworkManager::setBlockLine(const string &blockline) {
+void NetworkManager::setBlockStation(const string &blockline) {
     set<int> blockeds = returnBlockedStations(blockline);
     for (auto &c: blockeds) {
         for (auto d: vertexSet) {
@@ -127,10 +127,14 @@ bool NetworkManager::augmentingPath(Vertex *s, Vertex *t) {
         auto v = q.front();
         q.pop();
         for(auto e: v->getAdj()) {
-            testAndVisit(q, e, e->getDest(), e->getWeight() - e->getFlow());
+            if(!e->getDest()->isBlocked()){
+                testAndVisit(q, e, e->getDest(), e->getWeight() - e->getFlow());
+            }
         }
         for(auto e: v->getIncoming()) {
-            testAndVisit(q, e, e->getOrig(), e->getFlow());
+            if(!e->getDest()->isBlocked()) {
+                testAndVisit(q, e, e->getOrig(), e->getFlow());
+            }
         }
     }
     return t->isVisited();
@@ -192,7 +196,7 @@ int NetworkManager::max_trains(string A, string B,int result_final, bool changed
 //2.2
 
 int NetworkManager::max_of_max_trains() {
-    int result=0;
+    int result=-1;
     int comparing;
     for(int i=1;i<stationsSet.size()-1;i++){
         for(int j=i+1;j<stationsSet.size();j++){
@@ -206,31 +210,6 @@ int NetworkManager::max_of_max_trains() {
 }
 
 //2.3
-void NetworkManager::trainManagementByTownship(int k){
-    unordered_map<string, double> result;
-    for(auto c: vertexSet){
-        result[c->getTownship()] += c->getCapacity();
-    }
-
-    vector<pair<string, double>> vec(result.begin(), result.end());
-
-    // Sort the vector by the second element (the value) in descending order
-    sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
-        return a.second > b.second;
-    });
-    double max = vec[0].second;
-    auto c = vec.begin();
-    int i = 1;
-    while(k>0){
-        if(c->second<max){
-            k--;
-            if(k==0)break;
-            i++;
-        }
-        cout <<"Em "<<i<<"º lugar o concelho: "<< c->first << " com: " << c->second << " comboios." << endl;
-        c++;
-    }
-}
 
 void NetworkManager::trainManagementByMunicipality(int k){
     unordered_map<string, double> result;
@@ -289,10 +268,8 @@ void NetworkManager::trainManagementByDistrict(int k){
 
 //maximo de comboios entre 2 estações, com varias linhas bloqueada
 
-void NetworkManager::max_of_max_trains_with_block(list<string> blockLine) {
-    for(auto &c: blockLine) {
-        setBlockLine(c);
-    }
+void NetworkManager::max_of_max_trains_with_block(string blockLine) {
+    setBlockStation(blockLine);
     int result = 0;
     int comparing;
     for(int i = 1; i < stationsSet.size() - 1; i++) {

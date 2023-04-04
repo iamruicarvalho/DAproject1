@@ -31,7 +31,8 @@ public:
     int max_of_max_trains();
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
-    void max_of_max_trains_with_block(list<string> blockLine);
+    void setBlockStation(const string& blockline);
+    void max_of_max_trains_with_block(string blockLine);
     void trainManagementByMunicipality(int k);
     void trainManagementByDistrict(int k);
     void trainManagementByTownship(int k);

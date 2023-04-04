@@ -70,19 +70,19 @@ int main() {
                     case 1:
                         int k;
                         cin >> k;
-                        networkManager.trainManagementByTownship(k);
+                        networkManager.trainManagementByMunicipality(k);
                         break;
                     case 2:
                         cin >> k;
-                        networkManager.trainManagementByMunicipality(k);
-                        break;
-                    case 3:
-                        cin >> k;
                         networkManager.trainManagementByDistrict(k);
+                        break;
+                    default:
+                        cout << "[INVALID INPUT]" << endl;
                         break;
                 }
                 break;
             case 4:
+                networkManager.max_of_max_trains_with_block("Linha do Minho");
                 break;
             case 0:
                 running = false;
@@ -96,12 +96,4 @@ int main() {
 }
 
 
-int readBetweenInt(int low, int high) {
-    int input;
-    do {
-        cout << "Por favor insira um valor entre " << low << " e " << high << endl;
-        cin >> input;
-    } while (input < low || input > high);
-    return input;
-}
 
