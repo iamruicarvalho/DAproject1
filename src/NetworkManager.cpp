@@ -319,11 +319,16 @@ void NetworkManager::max_of_max_trains_with_block(string blockLine) {
 bool NetworkManager::set_block(std::string A, std::string B) {
     int station_start = stations_code_reverse[A];
     Vertex* first = findVertex(station_start);
-    for(auto e : first->getAdj()){
-        Vertex* x = e->getDest();
+    for(auto e1 : first->getAdj()){
+        Vertex* x = e1->getDest();
         if (x->getId()== stations_code_reverse[B]){
-            e->setSelected(true);// quando este valor está a true, depois, ao fazer o augmenting path,verifica-se se isto está a true, e, se estiver, descarta-se
-            return true;
+            e1->setSelected(true);// quando este valor está a true, depois, ao fazer o augmenting path,verifica-se se isto está a true, e, se estiver, descarta-se
+            for(auto e2: x->getAdj()){
+                if (e2->getDest()->getId() == station_start ){
+                    e2->setSelected(true);
+                    return true;
+                }
+            }
         }
     }
     return false;
@@ -336,7 +341,10 @@ bool NetworkManager::remove_block(std::string A, std::string B) {
         Vertex* x = e->getDest();
         if (x->getId()== stations_code_reverse[B]){
             e->setSelected(false);
-            return true;
+            for(auto e2: x->getAdj()){
+                if (e2->getDest()->getId() == station_start ){
+                    e2->setSelected(false);
+                    return true;
         }
     }
     return false;
