@@ -8,126 +8,128 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Projeto1">
-				<Option output="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Projeto1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug"/>
+				<Option output="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Projeto1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/davidcastro/Desktop/ProjectDA1/."/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/."/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto1"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto1"/>
+					<CompileFile command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Projeto1/fast">
-				<Option output="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Projeto1" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug"/>
+				<Option output="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Projeto1.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/davidcastro/Desktop/ProjectDA1/."/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
+					<Add directory="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/."/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto1/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Projeto1/fast"/>
+					<CompileFile command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/main.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/main.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/Graph.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Graph.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/Graph.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Graph.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/Heap.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Heap.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/Heap.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Heap.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/NetworkManager.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Network.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/NetworkManager.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Network.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/Station.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/NetworkManager.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/Station.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/NetworkManager.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/UFDS.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Station.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/UFDS.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/Station.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/VertexEdge.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/UFDS.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/VertexEdge.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/UFDS.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/network.cpp">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/VertexEdge.cpp">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/src/network.h">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/src/VertexEdge.h">
 			<Option target="Projeto1"/>
 		</Unit>
-		<Unit filename="/Users/davidcastro/Desktop/ProjectDA1/CMakeLists.txt">
+		<Unit filename="C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

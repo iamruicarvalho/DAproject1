@@ -24,7 +24,6 @@ void NetworkManager::readFiles() {
     }
     string name, district, municipality, township, line;
     int i = 0;
-    getline(stationsFile, line);
     while (getline(stationsFile, line)) {
         istringstream iss(line);
         getline(iss, name, ',');
@@ -61,27 +60,26 @@ void NetworkManager::readFiles() {
         return;
     }
 
-    // getline(networkFile, line);
+    getline(networkFile, line);
     while (getline(networkFile, line)) {
         //row.clear();
-        string stationA, stationB, service;
-        double capacity;
+        string stationA, stationB, capacity, service;
         istringstream iss(line);
         getline(iss, stationA, ',');
         getline(iss, stationB, ',');
-        iss >> capacity;
-        iss.ignore(1);
+        getline(iss, capacity, ',');
         getline(iss, service, '\0');
 
-        Network network(stationA, stationB, capacity, service);
+        Network network(stationA, stationB, stoi(capacity), service);
         networkSet.insert(network);
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        //railway.addEdge(code_StationA, code_StationB, capacity);
+        addEdge(code_StationA, code_StationB, std::stod(capacity));
     }
     networkFile.close();
-    cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!" << endl;
+    cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
+         << endl;
 }
 
 
@@ -125,7 +123,7 @@ bool NetworkManager::augmentingPath(Vertex *s, Vertex *t) {
     s->setVisited(true);
     std::queue<Vertex *> q;
     q.push(s);
-    while(!q.empty() && !t->isVisited()) {
+    while( ! q.empty() && ! t->isVisited()) {
         auto v = q.front();
         q.pop();
         for(auto e: v->getAdj()) {
@@ -169,18 +167,16 @@ void NetworkManager::update(Vertex *s, Vertex *t, double f) {
     }
 }
 
-int NetworkManager::max_trains(string A, string B, int result_final, bool changed) {
+int NetworkManager::max_trains(string A, string B,int result_final, bool changed) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
-    if (source == 0 | target==0) return -1;
-
+    if(source == 0 | target==0) return -1;
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
             edge->setReverse(nullptr);
         }
     }
-
     Vertex* start= findVertex(source);
     Vertex* end = findVertex(target);
     while (augmentingPath(start,end)) {
@@ -190,8 +186,7 @@ int NetworkManager::max_trains(string A, string B, int result_final, bool change
     }
     if (changed)
         return max_trains(B, A, result_final, false); // Isto serve para ver o fluxo de comboios entre as 2 estações, nos dois sentidos.
-    else
-        return result_final;
+    else return result_final;
 }
 
 //2.2
