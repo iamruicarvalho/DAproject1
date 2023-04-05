@@ -113,7 +113,7 @@
       <workItem from="1680646153068" duration="10013000" />
       <workItem from="1680699603076" duration="2000" />
       <workItem from="1680713500071" duration="7292000" />
-      <workItem from="1680734213897" duration="1724000" />
+      <workItem from="1680734213897" duration="2206000" />
     </task>
     <task id="LOCAL-00001" summary="Network e Station corrigidos tal como o VertexEdge">
       <created>1679356160851</created>
@@ -157,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680721787010</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="3.1 JA DA CARALHO">
+      <created>1680736420471</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680736420471</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +195,18 @@
     <MESSAGE value="set_block e remove_block corrigidos, já dão block efetivamente no grafo bidirecional" />
     <MESSAGE value="3.1 pre feito, esta a dar erro e nao da cout mas é o pensamento para o problema" />
     <MESSAGE value="3.1 JA DA COUT MAS DA MAL FDS" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.1 JA DA COUT MAS DA MAL FDS" />
+    <MESSAGE value="3.1 JA DA CARALHO" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.1 JA DA CARALHO" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/VertexEdge.h</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
