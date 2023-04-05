@@ -43,12 +43,12 @@ int main() {
         switch (input) {
             case 1: {
                 string first, second;
-                cout << "Qual e a primeira estacao?" << endl;
+                cout << "Qual é a primeira estação?" << endl;
                 cin.ignore();
                 getline(cin,first);
-                cout << "Qual e a segunda estacao?" << endl;
+                cout << "Qual é a segunda estação?" << endl;
                 getline(cin,second);
-                int result = networkManager.max_trains(first, second,0, true);
+                int result = networkManager.max_trains(first, second);
                 if (result == -1){
                     cout << "Erro ao ler as estações submetidas" << endl;
                 }
@@ -107,7 +107,7 @@ int main() {
                     cout<< "Bloqueio feito entre essas 2 estações realizado com sucesso" << endl;
                 }
                 else{
-                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações" << endl;
+                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações, ou essas estações já têm um bloqueio feito" << endl;
                 }
                 break;
             }
@@ -123,12 +123,29 @@ int main() {
                     cout<< "Bloqueio removido entre essas 2 estações realizado com sucesso" << endl;
                 }
                 else{
-                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações" << endl;
+                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações, ou essas estações já não têm um bloqueio" << endl;
                 }
                 break;
             }
-            case 9:
+            case 9:{
+                string first, second;
+                cout << "Qual é a primeira estação?" << endl;
+                cin.ignore();
+                getline(cin,first);
+                cout << "Qual é a segunda estação?" << endl;
+                getline(cin,second);
+                int result = networkManager.max_trains_with_blocks(first, second);
+                if (result == -1){
+                    cout << "Erro ao ler as estações submetidas" << endl;
+                }
+                else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
+                    cout << "Nao existe um caminho, tendo em conta as limitações da ferrovia, entre essas 2 estações" << endl;
+                } else {
+                    cout << "No máximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo"
+                         << endl;
+                }
                 break;
+            }
             case 0:
                 running = false;
                 break;

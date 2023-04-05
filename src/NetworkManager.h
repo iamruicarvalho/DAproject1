@@ -24,8 +24,11 @@ public:
     unordered_map<std::string,int> get_stations_code_reversed();
     std::unordered_map<int,std::string> get_stations_code();
     int max_trains(string source, string target);
+    int max_trains_with_blocks(string source, string target);
     void testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
+    void testAndVisitWithBlocks(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
     bool augmentingPath(Vertex *s, Vertex *t);
+    bool augmentingPathWithBlocks(Vertex *s, Vertex *t);
     double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
     pair<int,pair<string,string>> max_of_max_trains();
@@ -44,7 +47,7 @@ private:
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
-    unordered_map<std:: string, int> network_code_reverse;
+    vector<pair<Edge*,Edge*>> edgesBlocked;
 
 };
 
