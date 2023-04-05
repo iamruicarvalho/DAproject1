@@ -28,7 +28,6 @@ public:
     bool augmentingPath(Vertex *s, Vertex *t);
     double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
-    int max_of_max_trains();
     int maxTrainsArrivingAtStation(const string& arrivingStation);
     pair<int,pair<string,string>> max_of_max_trains();
     bool set_block(string A, string B);

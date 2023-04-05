@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ToolSet: w64 9.0 (local)@C:\Program Files\JetBrains\CLion 2022.2.3\bin\mingw
-=======
-ToolSet: w64 9.0 (local)@C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.174\bin\mingw
->>>>>>> a53f1127386bdc0b49a48cb4db68dbfecb2a8b45
 Options: 
 
 Options:

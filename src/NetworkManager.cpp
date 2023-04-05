@@ -100,7 +100,7 @@ void NetworkManager::readFiles() {
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
         railway.addEdge(code_StationA, code_StationB, stod(capacity)/2);
-        raywail.addEdge(code_StationB, code_StationA, stod(capacity)/2);
+        railway.addEdge(code_StationB, code_StationA, stod(capacity)/2);
 
     }
     networkFile.close();
@@ -340,7 +340,7 @@ int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStatio
 
 
 //maximo de comboios entre 2 estações, com varias linhas bloqueada
-
+/*
 void NetworkManager::max_of_max_trains_with_block(string blockLine) {
     setBlockStation(blockLine);
     int result = 0;
@@ -354,7 +354,7 @@ void NetworkManager::max_of_max_trains_with_block(string blockLine) {
             cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
         }
     }
-}
+}*/
 
 
 // 4.1
@@ -388,6 +388,8 @@ bool NetworkManager::remove_block(std::string A, std::string B) {
                 if (e2->getDest()->getId() == station_start ){
                     e2->setSelected(false);
                     return true;
+                }
+            }
         }
     }
     return false;

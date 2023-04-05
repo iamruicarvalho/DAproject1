@@ -46,7 +46,7 @@ int main() {
                 getline(cin, first);
                 cout << "Qual e a segunda estacao?" << endl;
                 getline(cin, second);
-                int result = networkManager.max_trains(first, second, 0, true);
+                int result = networkManager.max_trains(first, second);
                 if (result == -1) {
                     cout << "Erro ao ler as estações submetidas" << endl;
                 } else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
@@ -88,8 +88,13 @@ int main() {
                 break;
             case 4:
                 break;
-            case 5:
+            case 5: {
+                string station;
+                cin >> station;
+                int result = networkManager.maxTrainsArrivingAtStation(station);
+                cout << result << endl;
                 break;
+            }
             case 6:
                 break;
             case 7: {
@@ -108,7 +113,7 @@ int main() {
                 }
                 break;
             }
-            case 8:{
+            case 8: {
                 string first, second;
                 cout << "Qual é a primeira estação do bloqueio que deseja remover?" << endl;
                 cin.ignore();
@@ -126,13 +131,6 @@ int main() {
             }
             case 9:
                 break;
-            case 5: {
-                string station;
-                cin >> station;
-                int result = networkManager.maxTrainsArrivingAtStation(station);
-                cout << result << endl;
-                break;
-            }
             case 0:
                 running = false;
                 break;
