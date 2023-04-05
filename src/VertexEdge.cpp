@@ -14,8 +14,8 @@ Vertex::Vertex() {
  * Auxiliary function to add an outgoing edge to a vertex (this),
  * with a given destination vertex (d) and edge weight (w).
  */
-Edge * Vertex::addEdge(Vertex *d, double w) {
-    auto newEdge = new Edge(this, d, w);
+Edge * Vertex::addEdge(Vertex *d, double w, string service, int cost) {
+    auto newEdge = new Edge(this, d, w, service, cost);
     adj.push_back(newEdge);
     d->capacity+=w;
     d->incoming.push_back(newEdge);
@@ -138,7 +138,7 @@ double const Vertex::getCapacity() {
 
 /********************** Edge  ****************************/
 
-Edge::Edge(Vertex *orig, Vertex *dest, double w): orig(orig), dest(dest), weight(w) {}
+Edge::Edge(Vertex *orig, Vertex *dest, double w, string service, int cost): orig(orig), dest(dest), weight(w), service(service), cost(cost) {}
 Edge::Edge(){
 
 }
@@ -177,4 +177,28 @@ void Edge::setReverse(Edge *reverse) {
 
 void Edge::setFlow(double flow) {
     this->flow = flow;
+}
+void Edge::setService(std::string service) {
+    this->service = service;
+}
+std::string Edge::getService() {
+    return this->service;
+}
+void Vertex::setPrev(int prev) {
+    this->prev = prev;
+}
+int Vertex::getPrev() {
+    return this->prev;
+}
+int Vertex::getCost() {
+    return this->cost;
+}
+void Vertex::setCost(int cost) {
+    this->cost = cost;
+}
+int Edge::getCost() {
+    return this->cost;
+}
+void Edge::setCost(int cost) {
+    this->cost = cost;
 }

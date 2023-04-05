@@ -42,11 +42,15 @@ public:
     void setDist(double dist);
     void setPath(Edge *path);
     void setBlock();
-    Edge * addEdge(Vertex *dest, double w);
+    Edge * addEdge(Vertex *dest, double w, string service, int cost);
     bool removeEdge(int destID);
     const string getDistrict() const;
     const string getMunicipality() const;
     const string getTownship() const;
+    void setPrev(int prev);
+    int getPrev();
+    void setCost(int cost);
+    int getCost();
 
     friend class MutablePriorityQueue<Vertex>;
 protected:
@@ -70,6 +74,8 @@ protected:
     bool blocked = false;
 
     double capacity = 0;
+    int prev;
+    int cost;
 };
 
 /********************** Edge  ****************************/
@@ -77,7 +83,7 @@ protected:
 class Edge {
 public:
     Edge();
-    Edge(Vertex *orig, Vertex *dest, double w);
+    Edge(Vertex *orig, Vertex *dest, double w, string service, int cost);
 
     Vertex * getDest() const;
     double getWeight() const;
@@ -89,6 +95,12 @@ public:
     void setSelected(bool selected);
     void setReverse(Edge *reverse);
     void setFlow(double flow);
+    string getService() const;
+    void setService(string service);
+    string getService();
+    void setCost(int cost);
+    int getCost();
+
 protected:
     Vertex * dest; // destination vertex
     double weight; // edge weight, can also be used for capacity
@@ -96,11 +108,18 @@ protected:
     // auxiliary fields
     bool selected = false;
 
+
     // used for bidirectional edges
     Vertex *orig;
     Edge *reverse = nullptr;
 
     double flow; // for flow-related problems
+
+    string service;// for cost-related problems
+
+    int cost;
+
+
 };
 
 #endif /* DA_TP_CLASSES_VERTEX_EDGE */

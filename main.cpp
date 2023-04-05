@@ -96,8 +96,15 @@ int main() {
                 cout << result << endl;
                 break;
             }
-            case 6:
+            case 6:{
+                string station1;
+                cin >> station1;
+                string station2;
+                cin >> station2;
+                networkManager.dijkstra(station1);
+                networkManager.printShortestPath(station2);
                 break;
+            }
             case 7: {
                 string first, second;
                 cout << "Qual é a primeira estação do troço que deseja cortar?" << endl;

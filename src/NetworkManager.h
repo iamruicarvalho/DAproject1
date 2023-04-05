@@ -42,7 +42,8 @@ public:
     void trainManagementByMunicipality(int k);
     void trainManagementByDistrict(int k);
     void trainManagementByTownship(int k);
-
+    void dijkstra(string& first);
+    void printShortestPath(string& second);
 private:
     set<Station> stationsSet;
     set<Network> networkSet;
@@ -50,6 +51,7 @@ private:
     unordered_map<int,std::string> stations_code;
     unordered_map<std::string, int> network_code_reverse;
     vector<pair<Edge*,Edge*>> edgesBlocked;
+
 
 };
 

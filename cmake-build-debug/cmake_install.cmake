@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-# Install script for directory: C:/DA/project/ProjectDA1
-=======
-# Install script for directory: C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1
->>>>>>> a53f1127386bdc0b49a48cb4db68dbfecb2a8b45
+# Install script for directory: /Users/davidcastro/Desktop/ProjectDA1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Projeto1")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,11 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-<<<<<<< HEAD
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2022.2.3/bin/mingw/bin/objdump.exe")
-=======
-  set(CMAKE_OBJDUMP "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.174/bin/mingw/bin/objdump.exe")
->>>>>>> a53f1127386bdc0b49a48cb4db68dbfecb2a8b45
+  set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -53,9 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-<<<<<<< HEAD
-file(WRITE "C:/DA/project/ProjectDA1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-=======
-file(WRITE "C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
->>>>>>> a53f1127386bdc0b49a48cb4db68dbfecb2a8b45
+file(WRITE "/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

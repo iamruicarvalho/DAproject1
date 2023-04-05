@@ -72,11 +72,17 @@ void NetworkManager::readFiles() {
 
         Network network(stationA, stationB, stoi(capacity), service);
         networkSet.insert(network);
-
+        int cost;
+        if(service=="ALFA PENDULAR"){
+            cost = 4;
+        }
+        if(service=="STANDART") {
+            cost = 2;
+        }
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, stod(capacity)/2);
-        addEdge(code_StationB, code_StationA, stod(capacity)/2);
+        addEdge(code_StationA, code_StationB, stod(capacity)/2, service, cost);
+        addEdge(code_StationB, code_StationA, stod(capacity)/2, service, cost);
     }
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
@@ -297,11 +303,11 @@ void NetworkManager::trainManagementByDistrict(int k){
 
 
 int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
-    Graph auxiliarRailway = railway;
+    Graph auxiliarRailway = Graph(*this);
     Vertex superSource(stationsSet.size()+20);     // id big enough to be unique
     for (Vertex* v : auxiliarRailway.getVertexSet()) {
         if (v->getAdj().size() == 1) {
-            superSource.addEdge(v, INF);
+            superSource.addEdge(v, INF,"",v->getCost());
         }
     }
     int superSourceID = superSource.getId();
@@ -441,3 +447,57 @@ int NetworkManager::max_trains_with_blocks (string A, string B) {
     }
     return result_final*2;
 }
+
+
+//3.1
+
+// function to perform Dijkstra's algorithm
+void NetworkManager::dijkstra(string& first) {
+    int source = stations_code_reverse[first];
+    priority_queue<pair<int, int>> pq; // min-heap
+    vertexSet[source]->setCost(0);
+    pq.push({ 0, source });
+    while (!pq.empty()) {
+        int u = pq.top().second;
+        pq.pop();
+        if (vertexSet[u]->isVisited()) {
+            continue;
+        }
+        vertexSet[u]->setVisited(true);
+        for (auto& neighbor : vertexSet[u]->getAdj()) {
+            int v = neighbor->getDest()->getId();
+            int weight = neighbor->getCost();
+            if (!vertexSet[v]->isVisited() && vertexSet[u]->getCost() + weight < vertexSet[v]->getCost()){
+                vertexSet[v]->setCost(vertexSet[u]->getCost()+weight);
+                vertexSet[v]->setPrev(u);
+                pq.push({ vertexSet[v]->getCost(), v });
+            }
+        }
+    }
+}
+
+// function to print the shortest path from source to destination
+void NetworkManager:: printShortestPath(string& second) {
+    int destination = stations_code_reverse[second];
+    if (vertexSet[destination]->getCost() == numeric_limits<int>::max()) {
+        cout << "No path found." << endl;
+        return;
+    }
+    vector<int> path;
+    int current = destination;
+    while (current != -1) {
+        path.push_back(current);
+        current = vertexSet[current]->getPrev();
+    }
+    reverse(path.begin(), path.end());
+    cout << "Shortest path: ";
+    for (int i = 0; i < path.size(); i++) {
+        cout << stations_code[vertexSet[path[i]]->getId()];
+        if (i < path.size() - 1) {
+            cout << " -> ";
+        }
+    }
+    cout << endl;
+    cout << "Total cost: " << vertexSet[destination]->getCost() << endl;
+}
+

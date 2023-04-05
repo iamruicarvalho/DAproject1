@@ -45,22 +45,22 @@ bool Graph::addVertex(const int &id, string district, string municipality, strin
  * destination vertices and the edge weight (w).
  * Returns true if successful, and false if the source or destination vertex does not exist.
  */
-bool Graph::addEdge(const int &sourc, const int &dest, double w) {
+bool Graph::addEdge(const int &sourc, const int &dest, double w, string service, int cost) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    v1->addEdge(v2, w);
+    v1->addEdge(v2, w, service, cost);
     return true;
 }
 
-bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w) {
+bool Graph::addBidirectionalEdge(const int &sourc, const int &dest, double w, string service, int cost) {
     auto v1 = findVertex(sourc);
     auto v2 = findVertex(dest);
     if (v1 == nullptr || v2 == nullptr)
         return false;
-    auto e1 = v1->addEdge(v2, w);
-    auto e2 = v2->addEdge(v1, w);
+    auto e1 = v1->addEdge(v2, w, service,cost);
+    auto e2 = v2->addEdge(v1, w, service, cost);
     e1->setReverse(e2);
     e2->setReverse(e1);
     return true;
