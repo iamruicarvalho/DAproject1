@@ -48,10 +48,12 @@ public:
     const string getMunicipality() const;
     const string getTownship() const;
     void setPrev(int prev);
-    int getPrev();
+    int getPrev() const;
     void setCost(int cost);
-    int getCost();
-
+    int getCost() const;
+    void addPathForCost(string caminho);
+    std::vector<std::string> getPathForCost() const;
+    void setPathForCost(std::vector<std::string> pathForCost);
     friend class MutablePriorityQueue<Vertex>;
 protected:
     int id;                // identifier
@@ -74,8 +76,9 @@ protected:
     bool blocked = false;
 
     double capacity = 0;
+    std::vector<std::string> pathForCost;
     int prev;
-    int cost = 0;
+    int cost = std::numeric_limits<double>::infinity();
 };
 
 /********************** Edge  ****************************/
@@ -117,7 +120,7 @@ protected:
 
     string service;// for cost-related problems
 
-    int cost;
+    int cost = std::numeric_limits<double>::infinity();
 
 
 };

@@ -439,54 +439,53 @@ int NetworkManager::max_trains_with_blocks (string A, string B) {
 
 
 //3.1
+class NodeComparator {
+public:
+    bool operator()(Vertex *node1, const Vertex* node2) {
+        return node1->getCost() > node2->getCost();
+    }
+};
+
 
 // function to perform Dijkstra's algorithm
-void NetworkManager::dijkstra(string first) {
+void NetworkManager::dijkstra(string first, string second) {
+    std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
     int source = stations_code_reverse[first];
-    priority_queue<pair<int, int>> pq; // min-heap
-    vertexSet[source]->setCost(0);
-    pq.push({ 0, source });
+    Vertex* startNode = findVertex(source);
+    startNode->setCost(0.0);
+    startNode->addPathForCost(first);
+    pq.push(startNode);
     while (!pq.empty()) {
-        int u = pq.top().second;
+        Vertex* currentVertex = pq.top();
         pq.pop();
-        if (vertexSet[u]->isVisited()) {
+        if (currentVertex->isVisited()) {
             continue;
         }
-        vertexSet[u]->setVisited(true);
-        for (auto& neighbor : vertexSet[u]->getAdj()) {
-            int v = neighbor->getDest()->getId();
-            int weight = neighbor->getCost();
-            if (!vertexSet[v]->isVisited() && vertexSet[u]->getCost() + weight < vertexSet[v]->getCost()){
-                vertexSet[v]->setCost(vertexSet[u]->getCost()+weight);
-                vertexSet[v]->setPrev(u);
-                pq.push({ vertexSet[v]->getCost(), v });
+        currentVertex->setVisited(true);
+        if(currentVertex->getId() == stations_code_reverse[second]) {
+            std::cout << "Shortest path from " << first << " to " << second << " is:";
+            for (auto node : currentVertex->getPathForCost()) {
+                std::cout << " " << node;
+            }
+            std::cout << " (cost = " << currentVertex->getCost() << ")" << std::endl;
+            return;
+        }
+        for (auto edge : currentVertex->getAdj()) {
+            Vertex* nextNode = edge->getDest();
+            if (!nextNode->isVisited()) {
+                double newCost = currentVertex->getCost() + edge->getCost();
+                if (newCost < nextNode->getCost()) {
+                    // found a shorter path to nextNode, update its cost and path
+                    nextNode->setCost(newCost);
+                    nextNode->setPathForCost(currentVertex->getPathForCost());
+                    nextNode->addPathForCost(stations_code[nextNode->getId()]);
+                    pq.push(nextNode);
+                }
             }
         }
     }
 }
 
-// function to print the shortest path from source to destination
-void NetworkManager:: printShortestPath(string second) {
-    int destination = stations_code_reverse[second];
-    if (vertexSet[destination]->getCost() == 0) {
-        cout << "No path found." << endl;
-        return;
-    }
-    vector<int> path;
-    int current = destination;
-    while (current != -1) {
-        path.push_back(current);
-        current = vertexSet[current]->getPrev();
-    }
-    reverse(path.begin(), path.end());
-    cout << "Shortest path: ";
-    for (int i = 0; i < path.size(); i++) {
-        cout << stations_code[vertexSet[path[i]]->getId()];
-        if (i < path.size() - 1) {
-            cout << " -> ";
-        }
-    }
-    cout << endl;
-    cout << "Total cost: " << vertexSet[destination]->getCost() << endl;
-}
+
+
 

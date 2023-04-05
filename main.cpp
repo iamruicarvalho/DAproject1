@@ -97,8 +97,7 @@ int main() {
             }
             case 6:{
                 networkManager.readFiles();
-                networkManager.dijkstra("Casa Branca");
-                networkManager.printShortestPath("Monte das Flores");
+                networkManager.dijkstra("Casa Branca","Monte das Flores");
                 break;
             }
             case 7: {

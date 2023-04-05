@@ -40,7 +40,7 @@ public:
     void trainManagementByMunicipality(int k);
     void trainManagementByDistrict(int k);
     void trainManagementByTownship(int k);
-    void dijkstra(string first);
+    void dijkstra(string first, string second);
     void printShortestPath(string second);
 private:
     set<Station> stationsSet;

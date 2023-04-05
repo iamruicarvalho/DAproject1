@@ -187,10 +187,10 @@ std::string Edge::getService() {
 void Vertex::setPrev(int prev) {
     this->prev = prev;
 }
-int Vertex::getPrev() {
+int Vertex::getPrev() const{
     return this->prev;
 }
-int Vertex::getCost() {
+int Vertex::getCost() const{
     return this->cost;
 }
 void Vertex::setCost(int cost) {
@@ -202,3 +202,12 @@ int Edge::getCost() {
 void Edge::setCost(int cost) {
     this->cost = cost;
 }
+
+void Vertex::addPathForCost(std::string caminho) {
+    this->pathForCost.push_back(caminho);
+}
+vector<string> Vertex::getPathForCost() const{
+    return this->pathForCost;
+}
+void Vertex::setPathForCost(std::vector<std::string> pathForCost) {
+    this->pathForCost = pathForCost;}
