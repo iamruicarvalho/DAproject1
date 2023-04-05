@@ -79,8 +79,8 @@ void NetworkManager::readFiles() {
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, stod(capacity));
-        addEdge(code_StationB, code_StationA, stod(capacity));
+        railway.addEdge(code_StationA, code_StationB, stod(capacity));
+        railway.addEdge(code_StationB, code_StationA, stod(capacity));
     }*/
 
 
@@ -99,7 +99,9 @@ void NetworkManager::readFiles() {
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        railway.addEdge(code_StationA, code_StationB, stod(capacity));
+        railway.addEdge(code_StationA, code_StationB, stod(capacity)/2);
+        raywail.addEdge(code_StationB, code_StationA, stod(capacity)/2);
+
     }
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
@@ -119,7 +121,7 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
     return result;
 }
 
-void NetworkManager::setBlockStation(const string &blockline) {
+void NetworkManager::setBlockLine(const string &blockline) {
     set<int> blockeds = returnBlockedStations(blockline);
     for (auto &c: blockeds) {
         for (auto d: vertexSet) {
@@ -151,14 +153,10 @@ bool NetworkManager::augmentingPath(Vertex *s, Vertex *t) {
         auto v = q.front();
         q.pop();
         for(auto e: v->getAdj()) {
-            if(!e->getDest()->isBlocked()){
-                testAndVisit(q, e, e->getDest(), e->getWeight() - e->getFlow());
-            }
+            testAndVisit(q, e, e->getDest(), e->getWeight() - e->getFlow());
         }
         for(auto e: v->getIncoming()) {
-            if(!e->getDest()->isBlocked()) {
-                testAndVisit(q, e, e->getOrig(), e->getFlow());
-            }
+            testAndVisit(q, e, e->getOrig(), e->getFlow());
         }
     }
     return t->isVisited();
@@ -195,10 +193,12 @@ void NetworkManager::update(Vertex *s, Vertex *t, double f) {
     }
 }
 
-int NetworkManager::max_trains(string A, string B,int result_final, bool changed) {
+int NetworkManager::max_trains(string A, string B) {
+    int result_final=0;
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
     if(source == 0 | target==0) return -1;
+
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
@@ -212,39 +212,61 @@ int NetworkManager::max_trains(string A, string B,int result_final, bool changed
         update(start,end,flow);
         result_final+=flow;
     }
-    if (changed)
-        return max_trains(B, A, result_final, false); // Isto serve para ver o fluxo de comboios entre as 2 estações, nos dois sentidos.
-    else return result_final;
+    return result_final*2;
 }
 
 //2.2
 
-int NetworkManager::max_of_max_trains() {
-    int result = -1;
+pair<int,pair<string,string>> NetworkManager::max_of_max_trains() {
+    int result = 0;
     int comparing;
-    string sourceStation;
-    string targetStation;
+    pair<int, pair<string,string>> all;
 
-    for (int i = 1; i < stationsSet.size()-1; i++) {
-        for (int j = i+1; j < stationsSet.size(); j++) {
+    for(int i=1; i<stationsSet.size()-1; i++){
+        for(int j=i+1; j<stationsSet.size(); j++){
             string A = stations_code[i];
             string B = stations_code[j];
-            comparing = max_trains(A,B,0,true);
-            // result = max(comparing,result);
-            if (comparing > result) {
-                result = comparing;
-                sourceStation = A;
-                targetStation = B;
+            comparing = max_trains(A,B);
+            result = max(comparing,result);
+            // cout << "comparing: " << comparing << " result: " <<result << endl;
+            if (result == comparing) {
+                all.first = result;
+                all.second.first = A;
+                all.second.second = B;
             }
-            // cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
         }
     }
-
-    cout << "The two stations who require the most amount of trains (" << result << ") are " << sourceStation << " and " << targetStation << '.' << endl;
-    return result;
+    return all;
 }
 
+
+
 //2.3
+void NetworkManager::trainManagementByTownship(int k){
+    unordered_map<string, double> result;
+    for(auto c: vertexSet){
+        result[c->getTownship()] += c->getCapacity();
+    }
+
+    vector<pair<string, double>> vec(result.begin(), result.end());
+
+    // Sort the vector by the second element (the value) in descending order
+    sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
+        return a.second > b.second;
+    });
+    double max = vec[0].second;
+    auto c = vec.begin();
+    int i = 1;
+    while(k>0){
+        if(c->second<max){
+            k--;
+            if(k==0)break;
+            i++;
+        }
+        cout <<"Em "<<i<<"º lugar o concelho: "<< c->first << " com: " << c->second << " comboios." << endl;
+        c++;
+    }
+}
 
 void NetworkManager::trainManagementByMunicipality(int k){
     unordered_map<string, double> result;
@@ -299,25 +321,6 @@ void NetworkManager::trainManagementByDistrict(int k){
 }
 
 
-
-
-//maximo de comboios entre 2 estações, com varias linhas bloqueada
-
-void NetworkManager::max_of_max_trains_with_block(string blockLine) {
-    setBlockStation(blockLine);
-    int result = 0;
-    int comparing;
-    for(int i = 1; i < stationsSet.size() - 1; i++) {
-        for(int j = i + 1; j < stationsSet.size(); j++) {
-            string A = stations_code[i];
-            string B = stations_code[j];
-            comparing = max_trains(A, B, 0, true);
-            result = max(comparing, result);
-            cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
-        }
-    }
-}
-
 int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
     Graph auxiliarRailway = railway;
     Vertex superSource(stationsSet.size()+20);     // id big enough to be unique
@@ -330,7 +333,63 @@ int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStatio
     string superSourceName = stations_code[superSourceID];
     superSourceID = stations_code_reverse[superSourceName];
 
-    int result = max_trains(superSourceName, arrivingStation, 0, true);
+    int result = max_trains(superSourceName, arrivingStation);
 
     return result;
 }
+
+
+//maximo de comboios entre 2 estações, com varias linhas bloqueada
+
+void NetworkManager::max_of_max_trains_with_block(string blockLine) {
+    setBlockStation(blockLine);
+    int result = 0;
+    int comparing;
+    for(int i = 1; i < stationsSet.size() - 1; i++) {
+        for(int j = i + 1; j < stationsSet.size(); j++) {
+            string A = stations_code[i];
+            string B = stations_code[j];
+            comparing = max_trains(A, B);
+            result = max(comparing, result);
+            cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
+        }
+    }
+}
+
+
+// 4.1
+
+bool NetworkManager::set_block(std::string A, std::string B) {
+    int station_start = stations_code_reverse[A];
+    Vertex* first = findVertex(station_start);
+    for(auto e1 : first->getAdj()){
+        Vertex* x = e1->getDest();
+        if (x->getId()== stations_code_reverse[B]){
+            e1->setSelected(true);// quando este valor está a true, depois, ao fazer o augmenting path,verifica-se se isto está a true, e, se estiver, descarta-se
+            for(auto e2: x->getAdj()){
+                if (e2->getDest()->getId() == station_start ){
+                    e2->setSelected(true);
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+}
+
+bool NetworkManager::remove_block(std::string A, std::string B) {
+    int station_start = stations_code_reverse[A];
+    Vertex* first = findVertex(station_start);
+    for(auto e : first->getAdj()) {
+        Vertex* x = e->getDest();
+        if (x->getId()== stations_code_reverse[B]){
+            e->setSelected(false);
+            for(auto e2: x->getAdj()){
+                if (e2->getDest()->getId() == station_start ){
+                    e2->setSelected(false);
+                    return true;
+        }
+    }
+    return false;
+}
+

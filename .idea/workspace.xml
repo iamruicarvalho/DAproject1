@@ -20,6 +20,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="99d7b5b1-6ece-45b1-a71d-656c8e08da7f" name="Changes" comment="NetworkManager corrigido">
       <change afterPath="$PROJECT_DIR$/.idea/ProjectDA1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
@@ -44,6 +45,11 @@
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VertexEdge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/VertexEdge.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VertexEdge.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/VertexEdge.h" afterDir="false" />
+=======
+    <list default="true" id="f9ce0fbf-6214-4d8e-bdf8-99afaaa55df4" name="Changes" comment="set_block e remove_block">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
+>>>>>>> a53f1127386bdc0b49a48cb4db68dbfecb2a8b45
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +105,14 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> a53f1127386bdc0b49a48cb4db68dbfecb2a8b45
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -122,6 +136,7 @@
       <workItem from="1680320600640" duration="604000" />
       <workItem from="1680357215174" duration="34000" />
       <workItem from="1680357259640" duration="9797000" />
+      <workItem from="1680646153068" duration="1938000" />
     </task>
     <task id="LOCAL-00001" summary="Network e Station corrigidos tal como o VertexEdge">
       <created>1679356160851</created>
@@ -137,12 +152,12 @@
       <option name="project" value="LOCAL" />
       <updated>1679595705453</updated>
     </task>
-    <task id="LOCAL-00003" summary="2.3">
-      <created>1680602265279</created>
+    <task id="LOCAL-00003" summary="set_block e remove_block">
+      <created>1680646778512</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1680602265279</updated>
+      <updated>1680646778512</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -171,7 +186,7 @@
     <MESSAGE value="NetworkSet e leitura de ficheiros corrigidos" />
     <MESSAGE value="Network e Station corrigidos tal como o VertexEdge" />
     <MESSAGE value="NetworkManager corrigido" />
-    <MESSAGE value="2.3" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.3" />
+    <MESSAGE value="set_block e remove_block" />
+    <option name="LAST_COMMIT_MESSAGE" value="set_block e remove_block" />
   </component>
 </project>
