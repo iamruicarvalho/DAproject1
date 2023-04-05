@@ -11,6 +11,7 @@ void showMenu() {
     cout << "2 - Pretendo saber qual é o máximo valor possível de fluxo entre 2 estações quaisquer" << endl;
     cout << "3 - 2.3" << endl; // nao sei que nome colocar
     cout << "4 - " << endl << endl;
+    cout << "5 - See how many trains can arrive at a specific station" << endl;
 
     cout << "0 - Sair" << endl;
 }
@@ -38,32 +39,31 @@ int main() {
                 string first, second;
                 cout << "Qual e a primeira estacao?" << endl;
                 cin.ignore();
-                getline(cin,first);
+                getline(cin, first);
                 cout << "Qual e a segunda estacao?" << endl;
-                getline(cin,second);
-                int result = networkManager.max_trains(first, second,0, true);
-                if (result == -1){
+                getline(cin, second);
+                int result = networkManager.max_trains(first, second, 0, true);
+                if (result == -1) {
                     cout << "Erro ao ler as estações submetidas" << endl;
-                }
-                else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
+                } else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
                     cout << "Nao existe um caminho entre essas 2 estações" << endl;
                 } else {
-                    cout << "No máximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo"
+                    cout << "No máximo, entre essas duas estacoes, podem passar " << result
+                         << " comboios ao mesmo tempo"
                          << endl;
                 }
                 break;
             }
-            case 2 :{
-                int result= networkManager.max_of_max_trains();
-                cout << "No máximo, entre 2 estações quaisquer, podem passar " << result <<" comboios ao mesmo tempo"
-                        << endl;
+            case 2: {
+                networkManager.max_of_max_trains();
+                /*cout << "No máximo, entre 2 estações quaisquer, podem passar " << result <<" comboios ao mesmo tempo."
+                     << endl;*/
                 break;
             }
-
             case 3:
-                cout << "1 - Pretendo saber qual o concelho que necessita de mais combios" << endl;
-                cout << "2 - Pretendo saber qual o municipio que necessita de mais combios" << endl;
-                cout << "3 - Pretendo saber qual o distrito que necessita de mais combios" << endl;
+                cout << "1 - Pretendo saber qual o concelho que necessita de mais comboios" << endl;
+                cout << "2 - Pretendo saber qual o municipio que necessita de mais comboios" << endl;
+                cout << "3 - Pretendo saber qual o distrito que necessita de mais comboios" << endl;
                 int n;
                 cin >> n;
                 switch (n) {
@@ -84,6 +84,13 @@ int main() {
             case 4:
                 networkManager.max_of_max_trains_with_block("Linha do Minho");
                 break;
+            case 5: {
+                string station;
+                cin >> station;
+                int result = networkManager.maxTrainsArrivingAtStation(station);
+                cout << result << endl;
+                break;
+            }
             case 0:
                 running = false;
                 break;

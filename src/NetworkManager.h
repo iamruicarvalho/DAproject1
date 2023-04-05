@@ -29,6 +29,7 @@ public:
     double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
     int max_of_max_trains();
+    int maxTrainsArrivingAtStation(const string& arrivingStation);
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
     void setBlockStation(const string& blockline);
@@ -38,11 +39,12 @@ public:
     void trainManagementByTownship(int k);
 
 private:
+    Graph railway;
     set<Station> stationsSet;
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
-    unordered_map<std:: string, int> network_code_reverse;
+    unordered_map<std::string, int> network_code_reverse;
 
 
 };

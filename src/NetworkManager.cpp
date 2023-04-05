@@ -44,7 +44,7 @@ void NetworkManager::readFiles() {
             i++;
             stations_code_reverse[name] = i;
             stations_code[i] = name;
-            addVertex(i,district,municipality,township);
+            railway.addVertex(i,district,municipality,township);
         }
     }
     stationsFile.close();
@@ -59,6 +59,30 @@ void NetworkManager::readFiles() {
         cout << "File not found\n";
         return;
     }
+
+    /*getline(networkFile, line);
+    while (getline(networkFile, line)) {
+        //row.clear();
+        string stationA, stationB, service;
+        double capacity;
+        istringstream iss(line);
+        getline(iss, stationA, ',');
+        getline(iss, stationB, ',');
+        iss >> capacity;
+        iss.ignore(1);
+        getline(iss, service, '\0');
+
+        capacity = capacity/2;
+
+        Network network(stationA, stationB, capacity, service);
+        networkSet.insert(network);
+
+        int code_StationA = stations_code_reverse[stationA];
+        int code_StationB = stations_code_reverse[stationB];
+        addEdge(code_StationA, code_StationB, stod(capacity));
+        addEdge(code_StationB, code_StationA, stod(capacity));
+    }*/
+
 
     getline(networkFile, line);
     while (getline(networkFile, line)) {
@@ -75,7 +99,7 @@ void NetworkManager::readFiles() {
 
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, std::stod(capacity));
+        railway.addEdge(code_StationA, code_StationB, stod(capacity));
     }
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
@@ -196,17 +220,28 @@ int NetworkManager::max_trains(string A, string B,int result_final, bool changed
 //2.2
 
 int NetworkManager::max_of_max_trains() {
-    int result=-1;
+    int result = -1;
     int comparing;
-    for(int i=1;i<stationsSet.size()-1;i++){
-        for(int j=i+1;j<stationsSet.size();j++){
+    string sourceStation;
+    string targetStation;
+
+    for (int i = 1; i < stationsSet.size()-1; i++) {
+        for (int j = i+1; j < stationsSet.size(); j++) {
             string A = stations_code[i];
             string B = stations_code[j];
             comparing = max_trains(A,B,0,true);
-            result = max(comparing,result);
-            cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
+            // result = max(comparing,result);
+            if (comparing > result) {
+                result = comparing;
+                sourceStation = A;
+                targetStation = B;
+            }
+            // cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
         }
     }
+
+    cout << "The two stations who require the most amount of trains (" << result << ") are " << sourceStation << " and " << targetStation << '.' << endl;
+    return result;
 }
 
 //2.3
@@ -227,7 +262,7 @@ void NetworkManager::trainManagementByMunicipality(int k){
     auto c = vec.begin();
     int i = 1;
     while(k>0){
-        if(c->second<max){
+        if(c->second < max){
             k--;
             if(k==0)break;
             i++;
@@ -281,4 +316,21 @@ void NetworkManager::max_of_max_trains_with_block(string blockLine) {
             cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
         }
     }
+}
+
+int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
+    Graph auxiliarRailway = railway;
+    Vertex superSource(stationsSet.size()+20);     // id big enough to be unique
+    for (Vertex* v : auxiliarRailway.getVertexSet()) {
+        if (v->getAdj().size() == 1) {
+            superSource.addEdge(v, INF);
+        }
+    }
+    int superSourceID = superSource.getId();
+    string superSourceName = stations_code[superSourceID];
+    superSourceID = stations_code_reverse[superSourceName];
+
+    int result = max_trains(superSourceName, arrivingStation, 0, true);
+
+    return result;
 }

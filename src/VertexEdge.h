@@ -20,6 +20,7 @@ using namespace std;
 class Vertex {
 public:
     Vertex();
+    Vertex(int id);
     Vertex(int id, string district, string municipality, string township);
     bool operator<(Vertex & vertex) const; // // required by MutablePriorityQueue
 
