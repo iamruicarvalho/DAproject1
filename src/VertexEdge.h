@@ -75,7 +75,7 @@ protected:
 
     double capacity = 0;
     int prev;
-    int cost;
+    int cost = 0;
 };
 
 /********************** Edge  ****************************/

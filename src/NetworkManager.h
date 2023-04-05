@@ -23,13 +23,13 @@ public:
     int indexB(string a);
     unordered_map<std::string,int> get_stations_code_reversed();
     std::unordered_map<int,std::string> get_stations_code();
-    int max_trains(string source, string target);
+    double max_trains(string source, string target);
     int max_trains_with_blocks(string source, string target);
     void testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
     void testAndVisitWithBlocks(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
     bool augmentingPath(Vertex *s, Vertex *t);
     bool augmentingPathWithBlocks(Vertex *s, Vertex *t);
-    double minResidual(Vertex *s, Vertex *t);
+    static double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
     int maxTrainsArrivingAtStation(const string& arrivingStation);
     pair<int,pair<string,string>> max_of_max_trains();
@@ -37,13 +37,11 @@ public:
     bool remove_block(string A, string B);
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
-    void setBlockStation(const string& blockline);
-    void max_of_max_trains_with_block(string blockLine);
     void trainManagementByMunicipality(int k);
     void trainManagementByDistrict(int k);
     void trainManagementByTownship(int k);
-    void dijkstra(string& first);
-    void printShortestPath(string& second);
+    void dijkstra(string first);
+    void printShortestPath(string second);
 private:
     set<Station> stationsSet;
     set<Network> networkSet;

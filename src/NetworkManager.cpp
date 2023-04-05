@@ -2,8 +2,6 @@
 // Created by Utilizador on 12/03/2023.
 //
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include "NetworkManager.h"
 
 using namespace std;
@@ -76,7 +74,7 @@ void NetworkManager::readFiles() {
         if(service=="ALFA PENDULAR"){
             cost = 4;
         }
-        if(service=="STANDART") {
+        if(service=="STANDARD") {
             cost = 2;
         }
         int code_StationA = stations_code_reverse[stationA];
@@ -102,16 +100,7 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
     return result;
 }
 
-void NetworkManager::setBlockLine(const string &blockline) {
-    set<int> blockeds = returnBlockedStations(blockline);
-    for (auto &c: blockeds) {
-        for (auto d: vertexSet) {
-            if (c == d->getId()) {
-                d->setBlock();
-            }
-        }
-    }
-}
+
 
 //2.1
 
@@ -174,8 +163,8 @@ void NetworkManager::update(Vertex *s, Vertex *t, double f) {
     }
 }
 
-int NetworkManager::max_trains(string A, string B) {
-    int result_final=0;
+double NetworkManager::max_trains(string A, string B) {
+    double result_final=0;
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
     if(source == 0 | target==0) return -1;
@@ -452,7 +441,7 @@ int NetworkManager::max_trains_with_blocks (string A, string B) {
 //3.1
 
 // function to perform Dijkstra's algorithm
-void NetworkManager::dijkstra(string& first) {
+void NetworkManager::dijkstra(string first) {
     int source = stations_code_reverse[first];
     priority_queue<pair<int, int>> pq; // min-heap
     vertexSet[source]->setCost(0);
@@ -477,9 +466,9 @@ void NetworkManager::dijkstra(string& first) {
 }
 
 // function to print the shortest path from source to destination
-void NetworkManager:: printShortestPath(string& second) {
+void NetworkManager:: printShortestPath(string second) {
     int destination = stations_code_reverse[second];
-    if (vertexSet[destination]->getCost() == numeric_limits<int>::max()) {
+    if (vertexSet[destination]->getCost() == 0) {
         cout << "No path found." << endl;
         return;
     }

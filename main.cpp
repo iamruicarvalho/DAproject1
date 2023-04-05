@@ -27,7 +27,6 @@ int main() {
 
     NetworkManager networkManager;
     cout << "[LOADING FILES]" << endl;
-    networkManager.readFiles();
 
     bool running = true;
     while (running) {
@@ -97,12 +96,9 @@ int main() {
                 break;
             }
             case 6:{
-                string station1;
-                cin >> station1;
-                string station2;
-                cin >> station2;
-                networkManager.dijkstra(station1);
-                networkManager.printShortestPath(station2);
+                networkManager.readFiles();
+                networkManager.dijkstra("Casa Branca");
+                networkManager.printShortestPath("Monte das Flores");
                 break;
             }
             case 7: {
