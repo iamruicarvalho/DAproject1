@@ -4,6 +4,7 @@
 
 /************************* Vertex  **************************/
 
+Vertex::Vertex(int id): id(id) {}
 Vertex::Vertex(int id, string district, string municipality, string township): id(id), district_(district), municipality_(municipality), township_(township) {}
 Vertex::Vertex() {
 

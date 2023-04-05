@@ -11,8 +11,7 @@ void showMenu() {
     cout << "2 - Pretendo saber qual é o máximo valor possível de fluxo entre 2 estações quaisquer" << endl;
     cout << "3 - 2.3" << endl; // nao sei que nome colocar
     cout << "4 - " << endl << endl;
-
-    cout << "5 - " << endl;
+    cout << "5 - See how many trains can arrive at a specific station" << endl;
     cout << "6 - " << endl;
 
     cout << "7 - Desejo reportar um troço do caminho de ferro que não está operacional" << endl;
@@ -51,8 +50,7 @@ int main() {
                 int result = networkManager.max_trains(first, second);
                 if (result == -1){
                     cout << "Erro ao ler as estações submetidas" << endl;
-                }
-                else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
+                } else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
                     cout << "Nao existe um caminho entre essas 2 estações" << endl;
                 } else {
                     cout << "No máximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo"
@@ -91,8 +89,13 @@ int main() {
                 break;
             case 4:
                 break;
-            case 5:
+            case 5:{
+                string station;
+                cin >> station;
+                int result = networkManager.maxTrainsArrivingAtStation(station);
+                cout << result << endl;
                 break;
+            }
             case 6:
                 break;
             case 7: {
@@ -107,7 +110,7 @@ int main() {
                     cout<< "Bloqueio feito entre essas 2 estações realizado com sucesso" << endl;
                 }
                 else{
-                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações, ou essas estações já têm um bloqueio feito" << endl;
+                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações" << endl;
                 }
                 break;
             }
@@ -123,29 +126,31 @@ int main() {
                     cout<< "Bloqueio removido entre essas 2 estações realizado com sucesso" << endl;
                 }
                 else{
-                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações, ou essas estações já não têm um bloqueio" << endl;
+                    cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações" << endl;
                 }
                 break;
             }
-            case 9:{
+            case 9: {
                 string first, second;
                 cout << "Qual é a primeira estação?" << endl;
                 cin.ignore();
-                getline(cin,first);
+                getline(cin, first);
                 cout << "Qual é a segunda estação?" << endl;
-                getline(cin,second);
+                getline(cin, second);
                 int result = networkManager.max_trains_with_blocks(first, second);
-                if (result == -1){
+                if (result == -1) {
                     cout << "Erro ao ler as estações submetidas" << endl;
-                }
-                else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
-                    cout << "Nao existe um caminho, tendo em conta as limitações da ferrovia, entre essas 2 estações" << endl;
-                } else {
-                    cout << "No máximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo"
+                } else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
+                    cout << "Nao existe um caminho, tendo em conta as limitações da ferrovia, entre essas 2 estações"
                          << endl;
+                } else {
+                    cout << "No máximo, entre essas duas estacoes, podem passar " << result
+                         << " comboios ao mesmo tempo"
+                         << endl;
+                    break;
                 }
-                break;
             }
+
             case 0:
                 running = false;
                 break;

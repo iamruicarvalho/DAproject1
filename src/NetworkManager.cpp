@@ -173,6 +173,7 @@ int NetworkManager::max_trains(string A, string B) {
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
     if(source == 0 | target==0) return -1;
+
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
@@ -192,16 +193,17 @@ int NetworkManager::max_trains(string A, string B) {
 //2.2
 
 pair<int,pair<string,string>> NetworkManager::max_of_max_trains() {
-    int result=0;
+    int result = 0;
     int comparing;
-    pair<int,pair<string,string>> all;
-    for(int i=1;i<stationsSet.size()-1;i++){
-        for(int j=i+1;j<stationsSet.size();j++){
+    pair<int, pair<string,string>> all;
+
+    for(int i=1; i<stationsSet.size()-1; i++){
+        for(int j=i+1; j<stationsSet.size(); j++){
             string A = stations_code[i];
             string B = stations_code[j];
             comparing = max_trains(A,B);
             result = max(comparing,result);
-            cout << "comparing: " << comparing << " result: " <<result << endl;
+            // cout << "comparing: " << comparing << " result: " <<result << endl;
             if (result == comparing) {
                 all.first = result;
                 all.second.first = A;
@@ -257,7 +259,7 @@ void NetworkManager::trainManagementByMunicipality(int k){
     auto c = vec.begin();
     int i = 1;
     while(k>0){
-        if(c->second<max){
+        if(c->second < max){
             k--;
             if(k==0)break;
             i++;
@@ -294,6 +296,22 @@ void NetworkManager::trainManagementByDistrict(int k){
 }
 
 
+int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
+    Graph auxiliarRailway = railway;
+    Vertex superSource(stationsSet.size()+20);     // id big enough to be unique
+    for (Vertex* v : auxiliarRailway.getVertexSet()) {
+        if (v->getAdj().size() == 1) {
+            superSource.addEdge(v, INF);
+        }
+    }
+    int superSourceID = superSource.getId();
+    string superSourceName = stations_code[superSourceID];
+    superSourceID = stations_code_reverse[superSourceName];
+
+    int result = max_trains(superSourceName, arrivingStation);
+
+    return result;
+}
 
 
 //maximo de comboios entre 2 estações, com varias linhas bloqueada

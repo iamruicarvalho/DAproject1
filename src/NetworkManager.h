@@ -31,6 +31,7 @@ public:
     bool augmentingPathWithBlocks(Vertex *s, Vertex *t);
     double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
+    int maxTrainsArrivingAtStation(const string& arrivingStation);
     pair<int,pair<string,string>> max_of_max_trains();
     bool set_block(string A, string B);
     bool remove_block(string A, string B);
@@ -47,6 +48,7 @@ private:
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
+    unordered_map<std::string, int> network_code_reverse;
     vector<pair<Edge*,Edge*>> edgesBlocked;
 
 };
