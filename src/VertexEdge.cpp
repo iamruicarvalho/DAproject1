@@ -203,11 +203,11 @@ void Edge::setCost(int cost) {
     this->cost = cost;
 }
 
-void Vertex::addPathForCost(std::string caminho) {
+void Vertex::addPathForCost(pair<string, int> caminho) {
     this->pathForCost.push_back(caminho);
 }
-vector<string> Vertex::getPathForCost() const{
+vector<pair<string,int>> Vertex::getPathForCost() const{
     return this->pathForCost;
 }
-void Vertex::setPathForCost(std::vector<std::string> pathForCost) {
+void Vertex::setPathForCost(std::vector<pair<string,int>> pathForCost) {
     this->pathForCost = pathForCost;}
