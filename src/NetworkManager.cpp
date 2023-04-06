@@ -343,7 +343,7 @@ int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStatio
         }
     }
     int result = max_trains(startingStation, arrivingStation);
-
+    result /= 2;
     return result;
 }
 
