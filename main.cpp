@@ -90,7 +90,8 @@ int main() {
                 break;
             case 5: {
                 string station;
-                cin >> station;
+                cin.ignore();
+                getline(cin, station);
                 int result = networkManager.maxTrainsArrivingAtStation(station);
                 cout << result << endl;
                 break;
