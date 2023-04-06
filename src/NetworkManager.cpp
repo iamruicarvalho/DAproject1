@@ -340,9 +340,10 @@ public:
 void NetworkManager::dijkstra(string first, string second) {
     std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
     int source = stations_code_reverse[first];
+    double flow = numeric_limits<int>::max();
     Vertex* startNode = findVertex(source);
     startNode->setCost(0.0);
-    startNode->addPathForCost(first);
+    startNode->addPathForCost({first, numeric_limits<int>::max()});
     pq.push(startNode);
     while (!pq.empty()) {
         Vertex* currentVertex = pq.top();
@@ -354,9 +355,12 @@ void NetworkManager::dijkstra(string first, string second) {
         if(currentVertex->getId() == stations_code_reverse[second]) {
             std::cout << "Shortest path from " << first << " to " << second << " is:";
             for (auto node : currentVertex->getPathForCost()) {
-                std::cout << " " << node;
+                std::cout << " " << node.first<<" com flow: "<<node.second<<endl;
+                if (node.second < flow) {
+                    flow = node.second;
+                }
             }
-            std::cout << " (cost = " << currentVertex->getCost() << ")" << std::endl;
+            std::cout << " (cost = " << currentVertex->getCost() * flow  <<")" << std::endl;
             return;
         }
         for (auto edge : currentVertex->getAdj()) {
@@ -367,13 +371,14 @@ void NetworkManager::dijkstra(string first, string second) {
                     // found a shorter path to nextNode, update its cost and path
                     nextNode->setCost(newCost);
                     nextNode->setPathForCost(currentVertex->getPathForCost());
-                    nextNode->addPathForCost(stations_code[nextNode->getId()]);
+                    nextNode->addPathForCost({stations_code[nextNode->getId()], edge->getWeight()});
                     pq.push(nextNode);
                 }
             }
         }
     }
 }
+
 
 // pré 4
 

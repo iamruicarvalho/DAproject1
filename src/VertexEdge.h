@@ -51,9 +51,9 @@ public:
     int getPrev() const;
     void setCost(int cost);
     int getCost() const;
-    void addPathForCost(string caminho);
-    std::vector<std::string> getPathForCost() const;
-    void setPathForCost(std::vector<std::string> pathForCost);
+    void addPathForCost(pair<string,int> caminho);
+    vector<pair<string,int>> getPathForCost() const;
+    void setPathForCost(vector<pair<string,int>> pathForCost);
     friend class MutablePriorityQueue<Vertex>;
 protected:
     int id;                // identifier
@@ -76,7 +76,7 @@ protected:
     bool blocked = false;
 
     double capacity = 0;
-    std::vector<std::string> pathForCost;
+    vector<pair<string,int>> pathForCost;
     int prev;
     int cost = std::numeric_limits<double>::infinity();
 };
