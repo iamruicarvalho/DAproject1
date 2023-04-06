@@ -17,7 +17,7 @@ void showMenu() {
     cout << "7 - Desejo reportar um troço do caminho de ferro que não está operacional" << endl;
     cout << "8 - Desejo reportar um troço do caminho de ferro que já está operacional" << endl;
     cout << "9 - Pretendo saber o fluxo maximo de comboios entre 2 estações, tendo em conta as linhas que foram cortadas " << endl;
-    cout << "10 - Pretendo saber quais as estações mais afetadas por um determinado bloqueio da ferrovia" <<endl<<endl;
+    cout << "10 - Pretendo saber quais as estações mais afetadas por cada bloqueio da ferrovia" <<endl<<endl;
 
     cout << "0 - Sair" << endl;
 }
@@ -71,32 +71,33 @@ int main() {
                 cout << "2 - Pretendo saber qual o municipio que necessita de mais comboios" << endl;
                 cout << "3 - Pretendo saber qual o distrito que necessita de mais comboios" << endl;
                 int n;
+                int k;
                 cin >> n;
+                cout << "Digite o top-k que deseja ver" <<endl;
+                cin >> k;
                 switch (n) {
                     case 1:
-                        int k;
-                        cin >> k;
                         networkManager.trainManagementByTownship(k);
                         break;
                     case 2:
-                        cin >> k;
                         networkManager.trainManagementByMunicipality(k);
                         break;
                     case 3:
-                        cin >> k;
                         networkManager.trainManagementByDistrict(k);
                         break;
                 }
                 break;
-            case 4:
-                break;
-            case 5:{
+            case 4:{
                 string station;
-                cin >> station;
+                cout << "Qual é a estação?" << endl;
+                cin.ignore();
+                getline(cin,station);
                 int result = networkManager.maxTrainsArrivingAtStation(station);
                 cout << result << endl;
                 break;
             }
+            case 5:
+                break;
             case 6:{
                 string first, second;
                 cout << "Qual é a primeira estação?" << endl;
@@ -116,7 +117,7 @@ int main() {
                 getline(cin, second);
                 bool found= networkManager.set_block(first,second);
                 if(found){
-                    cout<< "Bloqueio feito entre essas 2 estações realizado com sucesso" << endl;
+                    cout<< "Bloqueio feito entre essas 2 estações com sucesso" << endl;
                 }
                 else{
                     cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações" << endl;
@@ -132,7 +133,7 @@ int main() {
                 getline(cin, second);
                 bool found = networkManager.remove_block(first, second);
                 if(found){
-                    cout<< "Bloqueio removido entre essas 2 estações realizado com sucesso" << endl;
+                    cout<< "Bloqueio removido entre essas 2 estações com sucesso" << endl;
                 }
                 else{
                     cout<< "Não foi encontrado um troço que conecte diretamente essas 2 estações" << endl;
@@ -156,10 +157,16 @@ int main() {
                     cout << "No máximo, entre essas duas estacoes, podem passar " << result
                          << " comboios ao mesmo tempo"
                          << endl;
-                    break;
                 }
+                break;
             }
-
+            case 10: {
+                int rank;
+                cout << "Digite o top-k de estações mais afetadas que deseja ver" << endl;
+                cin >> rank;
+                networkManager.most_affected_stations(rank);
+                break;
+            }
             case 0:
                 running = false;
                 break;

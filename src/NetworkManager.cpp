@@ -487,5 +487,99 @@ int NetworkManager::max_trains_with_blocks (string A, string B) {
     return result_final*2;
 }
 
+//4.2
+/*
+void NetworkManager::testAndVisitWithSpecificBlock(std::queue<Vertex *> &q, Edge *e, Vertex *w, double residual) {
+    if (! w->isVisited() && residual > 0 && !(e->isTesting())) {
+        w->setVisited(true);
+        w->setPath(e);
+        q.push(w);
+    }
+}
 
+bool NetworkManager::augmentingPathWithSpecificBlock(Vertex *s, Vertex *t) {
+    for(auto v : vertexSet) {
+        v->setVisited(false);
+    }
+    s->setVisited(true);
+    std::queue<Vertex *> q;
+    q.push(s);
+    while( ! q.empty() && ! t->isVisited()) {
+        auto v = q.front();
+        q.pop();
+        for(auto e: v->getAdj()) {
+            testAndVisitWithSpecificBlock(q, e, e->getDest(), e->getWeight() - e->getFlow());
+        }
+        for(auto e: v->getIncoming()) {
+            testAndVisitWithSpecificBlock(q, e, e->getOrig(), e->getFlow());
+        }
+    }
+    return t->isVisited();
+}
+
+int NetworkManager::max_trains_with_specific_block (string A, string B) {
+    int result_final=0;
+    int source = stations_code_reverse[A];
+    int target = stations_code_reverse[B];
+    if(source == 0 | target==0) return -1;
+    for (auto vertex: vertexSet) {
+        for (auto edge: vertex->getAdj()) {
+            edge->setFlow(0);
+            edge->setReverse(nullptr);
+        }
+    }
+    Vertex* start = findVertex(source);
+    Vertex* end = findVertex(target);
+    while (augmentingPathWithSpecificBlock(start,end)) {
+        double flow = minResidual(start,end);
+        update(start,end,flow);
+        result_final+=flow;
+    }
+    return result_final*2;
+}
+
+
+static bool comp(pair<string, int>& x, pair<string, int>& y) {
+    if (x.second == y.second) {
+        return x.first < y.first;
+    }
+    return x.second > y.second;
+}
+
+void NetworkManager::add_or_update(std::string key, int value) {
+    // Verifica se a chave já existe no map
+    if (my_map.find(key) == my_map.end()) {
+        // A chave não existe, então insere um novo par chave-valor
+        my_map[key] = value;
+    } else {
+        // A chave já existe, então atualiza o valor existente
+        my_map[key] += value;
+    }
+}
+*/
+
+void NetworkManager::setEdgeTesting(pair<Edge*,Edge*> that) {
+    that.first->setTesting(true);
+    that.first->setTesting(true);
+}
+
+void NetworkManager::removeEdgeTesting(pair<Edge *, Edge *> that) {
+    that.first->setTesting(false);
+    that.second->setTesting(false);
+}
+
+void NetworkManager::most_affected_stations(int rank) {
+    unordered_map<string,int> capacityNormal;
+    unordered_map<string,int> capacityCutted;
+    for(auto station: stationsSet){
+        int x = maxTrainsArrivingAtStation(station.getName());
+        capacityNormal[station.getName()] = x;
+    }
+    for(auto pair:edgesBlocked) {
+        setEdgeTesting(pair);
+        cout << "Por causa do corte da linha entre " << stations_code[pair.first->getOrig()->getId()] << " e " << stations_code[pair.first->getDest()->getId()] <<", as estações mais afetadas foram as seguintes:" << endl;
+
+        removeEdgeTesting(pair);
+    }
+}
 

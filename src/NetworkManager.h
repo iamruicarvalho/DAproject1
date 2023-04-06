@@ -25,10 +25,13 @@ public:
     std::unordered_map<int,std::string> get_stations_code();
     double max_trains(string source, string target);
     int max_trains_with_blocks(string source, string target);
+    int max_trains_with_specific_block(string source, string target);
     void testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
     void testAndVisitWithBlocks(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
+    void testAndVisitWithSpecificBlock(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
     bool augmentingPath(Vertex *s, Vertex *t);
     bool augmentingPathWithBlocks(Vertex *s, Vertex *t);
+    bool augmentingPathWithSpecificBlock(Vertex *s, Vertex *t);
     static double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
     int maxTrainsArrivingAtStation(const string& arrivingStation);
@@ -42,6 +45,10 @@ public:
     void trainManagementByTownship(int k);
     void dijkstra(string first, string second);
     void printShortestPath(string second);
+    void most_affected_stations(int rank);
+    void setEdgeTesting(pair<Edge*,Edge*> that);
+    void removeEdgeTesting(pair<Edge*,Edge*> that);
+    void add_or_update(string key, int value);
 private:
     set<Station> stationsSet;
     set<Network> networkSet;
@@ -49,6 +56,7 @@ private:
     unordered_map<int,std::string> stations_code;
     unordered_map<std::string, int> network_code_reverse;
     vector<pair<Edge*,Edge*>> edgesBlocked;
+    unordered_map<string, int> my_map; //4.2
 
 
 };

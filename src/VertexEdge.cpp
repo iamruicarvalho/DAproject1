@@ -163,12 +163,20 @@ bool Edge::isSelected() const {
     return this->selected;
 }
 
+bool Edge::isTesting() const {
+    return this->testing;
+}
+
 double Edge::getFlow() const {
     return flow;
 }
 
 void Edge::setSelected(bool selected) {
     this->selected = selected;
+}
+
+void Edge::setTesting(bool testing) {
+    this->testing = testing;
 }
 
 void Edge::setReverse(Edge *reverse) {

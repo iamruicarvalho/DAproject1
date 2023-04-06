@@ -91,11 +91,13 @@ public:
     Vertex * getDest() const;
     double getWeight() const;
     bool isSelected() const;
+    bool isTesting() const;
     Vertex * getOrig() const;
     Edge *getReverse() const;
     double getFlow() const;
 
     void setSelected(bool selected);
+    void setTesting(bool testing);
     void setReverse(Edge *reverse);
     void setFlow(double flow);
     string getService() const;
@@ -110,6 +112,7 @@ protected:
 
     // auxiliary fields
     bool selected = false;
+    bool testing = false; //para o 4.2
 
 
     // used for bidirectional edges
