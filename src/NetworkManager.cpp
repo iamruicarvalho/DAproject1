@@ -290,7 +290,7 @@ void NetworkManager::trainManagementByDistrict(int k){
     }
 }
 
-
+//2.4
 int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
     Graph auxiliarRailway = Graph(*this);
     Vertex superSource(stationsSet.size()+20);     // id big enough to be unique
@@ -327,15 +327,64 @@ int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStatio
 }
 */
 
+//3.1
+class NodeComparator {
+public:
+    bool operator()(Vertex *node1, const Vertex* node2) {
+        return node1->getCost() > node2->getCost();
+    }
+};
+
+
+// function to perform Dijkstra's algorithm
+void NetworkManager::dijkstra(string first, string second) {
+    std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
+    int source = stations_code_reverse[first];
+    Vertex* startNode = findVertex(source);
+    startNode->setCost(0.0);
+    startNode->addPathForCost(first);
+    pq.push(startNode);
+    while (!pq.empty()) {
+        Vertex* currentVertex = pq.top();
+        pq.pop();
+        if (currentVertex->isVisited()) {
+            continue;
+        }
+        currentVertex->setVisited(true);
+        if(currentVertex->getId() == stations_code_reverse[second]) {
+            std::cout << "Shortest path from " << first << " to " << second << " is:";
+            for (auto node : currentVertex->getPathForCost()) {
+                std::cout << " " << node;
+            }
+            std::cout << " (cost = " << currentVertex->getCost() << ")" << std::endl;
+            return;
+        }
+        for (auto edge : currentVertex->getAdj()) {
+            Vertex* nextNode = edge->getDest();
+            if (!nextNode->isVisited()) {
+                double newCost = currentVertex->getCost() + edge->getCost();
+                if (newCost < nextNode->getCost()) {
+                    // found a shorter path to nextNode, update its cost and path
+                    nextNode->setCost(newCost);
+                    nextNode->setPathForCost(currentVertex->getPathForCost());
+                    nextNode->addPathForCost(stations_code[nextNode->getId()]);
+                    pq.push(nextNode);
+                }
+            }
+        }
+    }
+}
+
 // pré 4
 
 bool NetworkManager::set_block(std::string A, std::string B) {
     int station_start = stations_code_reverse[A];
-    if(station_start == 0 || stations_code_reverse[B]==0) return false;
+    int station_finish = stations_code_reverse[B];
+    if(station_start == 0 || station_finish==0) return false;
     Vertex* first = findVertex(station_start);
     for(auto e1 : first->getAdj()){
         Vertex* x = e1->getDest();
-        if (x->getId()== stations_code_reverse[B]){
+        if (x->getId()== station_finish){
             if(e1->isSelected()) return false; // retorna falso por já ter sido estabelecido neste edge um bloqueio
             e1->setSelected(true);// quando este valor está a true, depois, ao fazer o augmenting path,verifica-se se isto está a true, e, se estiver, descarta-se
             for(auto e2: x->getAdj()){
@@ -356,12 +405,13 @@ bool NetworkManager::set_block(std::string A, std::string B) {
 
 bool NetworkManager::remove_block(std::string A, std::string B) {
     int station_start = stations_code_reverse[A];
-    if(station_start == 0 || stations_code_reverse[B]==0) return false;
+    int station_finish = stations_code_reverse[B];
+    if(station_start == 0 || station_finish==0) return false;
     Vertex *first = findVertex(station_start);
     pair<Edge*,Edge*> to_remove;
     for (auto e1: first->getAdj()) {
         Vertex *x = e1->getDest();
-        if (x->getId() == stations_code_reverse[B]) {
+        if (x->getId() == station_finish) {
             if(!(e1->isSelected())) return false; // a mesma coisa da função de cima, só que ao contrário
             e1->setSelected(false);
             for (auto e2: x->getAdj()) {
@@ -436,56 +486,6 @@ int NetworkManager::max_trains_with_blocks (string A, string B) {
     }
     return result_final*2;
 }
-
-
-//3.1
-class NodeComparator {
-public:
-    bool operator()(Vertex *node1, const Vertex* node2) {
-        return node1->getCost() > node2->getCost();
-    }
-};
-
-
-// function to perform Dijkstra's algorithm
-void NetworkManager::dijkstra(string first, string second) {
-    std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
-    int source = stations_code_reverse[first];
-    Vertex* startNode = findVertex(source);
-    startNode->setCost(0.0);
-    startNode->addPathForCost(first);
-    pq.push(startNode);
-    while (!pq.empty()) {
-        Vertex* currentVertex = pq.top();
-        pq.pop();
-        if (currentVertex->isVisited()) {
-            continue;
-        }
-        currentVertex->setVisited(true);
-        if(currentVertex->getId() == stations_code_reverse[second]) {
-            std::cout << "Shortest path from " << first << " to " << second << " is:";
-            for (auto node : currentVertex->getPathForCost()) {
-                std::cout << " " << node;
-            }
-            std::cout << " (cost = " << currentVertex->getCost() << ")" << std::endl;
-            return;
-        }
-        for (auto edge : currentVertex->getAdj()) {
-            Vertex* nextNode = edge->getDest();
-            if (!nextNode->isVisited()) {
-                double newCost = currentVertex->getCost() + edge->getCost();
-                if (newCost < nextNode->getCost()) {
-                    // found a shorter path to nextNode, update its cost and path
-                    nextNode->setCost(newCost);
-                    nextNode->setPathForCost(currentVertex->getPathForCost());
-                    nextNode->addPathForCost(stations_code[nextNode->getId()]);
-                    pq.push(nextNode);
-                }
-            }
-        }
-    }
-}
-
 
 
 

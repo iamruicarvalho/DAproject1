@@ -11,7 +11,7 @@
 #include "Graph.h"
 using namespace std;
 
-class Network : public Graph, public Edge {
+class Network  {
 public:
     Network(string stationA, string stationB);
     Network(string stationA, string stationB, double capacity, string service);

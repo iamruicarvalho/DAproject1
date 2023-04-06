@@ -9,7 +9,7 @@
 #include <string>
 using namespace std;
 
-class Station : public Graph, public Vertex {
+class Station {
 public:
     Station(string name);
     Station(string name, string district, string municipality, string township, string line);

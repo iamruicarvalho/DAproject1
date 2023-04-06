@@ -10,13 +10,14 @@ void showMenu() {
     cout << "1 - Pretendo saber o fluxo maximo de comboios entre 2 estações" << endl;
     cout << "2 - Pretendo saber qual é o máximo valor possível de fluxo entre 2 estações quaisquer" << endl;
     cout << "3 - 2.3" << endl; // nao sei que nome colocar
-    cout << "4 - " << endl << endl;
-    cout << "5 - See how many trains can arrive at a specific station" << endl;
+    cout << "4 - Desejo ver quantos comboios podem chegar ao mesmo tempo a uma estação" << endl << endl;
+    cout << "5 - " << endl;
     cout << "6 - " << endl;
 
     cout << "7 - Desejo reportar um troço do caminho de ferro que não está operacional" << endl;
     cout << "8 - Desejo reportar um troço do caminho de ferro que já está operacional" << endl;
-    cout << "9 - Pretendo saber o fluxo maximo de comboios entre 2 estações, tendo em conta as linhas que foram cortadas " << endl << endl;
+    cout << "9 - Pretendo saber o fluxo maximo de comboios entre 2 estações, tendo em conta as linhas que foram cortadas " << endl;
+    cout << "10 - Pretendo saber quais as estações mais afetadas por um determinado bloqueio da ferrovia" <<endl<<endl;
 
     cout << "0 - Sair" << endl;
 }
@@ -27,6 +28,7 @@ int main() {
 
     NetworkManager networkManager;
     cout << "[LOADING FILES]" << endl;
+    networkManager.readFiles();
 
     bool running = true;
     while (running) {
@@ -96,8 +98,13 @@ int main() {
                 break;
             }
             case 6:{
-                networkManager.readFiles();
-                networkManager.dijkstra("Casa Branca","Monte das Flores");
+                string first, second;
+                cout << "Qual é a primeira estação?" << endl;
+                cin.ignore();
+                getline(cin,first);
+                cout << "Qual é a segunda estação?" << endl;
+                getline(cin,second);
+                networkManager.dijkstra(first,second);
                 break;
             }
             case 7: {
