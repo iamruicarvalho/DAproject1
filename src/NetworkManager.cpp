@@ -2,8 +2,6 @@
 // Created by Utilizador on 12/03/2023.
 //
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include "NetworkManager.h"
 
 using namespace std;
@@ -60,30 +58,6 @@ void NetworkManager::readFiles() {
         return;
     }
 
-    /*getline(networkFile, line);
-    while (getline(networkFile, line)) {
-        //row.clear();
-        string stationA, stationB, service;
-        double capacity;
-        istringstream iss(line);
-        getline(iss, stationA, ',');
-        getline(iss, stationB, ',');
-        iss >> capacity;
-        iss.ignore(1);
-        getline(iss, service, '\0');
-
-        capacity = capacity/2;
-
-        Network network(stationA, stationB, capacity, service);
-        networkSet.insert(network);
-
-        int code_StationA = stations_code_reverse[stationA];
-        int code_StationB = stations_code_reverse[stationB];
-        railway.addEdge(code_StationA, code_StationB, stod(capacity));
-        railway.addEdge(code_StationB, code_StationA, stod(capacity));
-    }*/
-
-
     getline(networkFile, line);
     while (getline(networkFile, line)) {
         //row.clear();
@@ -96,12 +70,18 @@ void NetworkManager::readFiles() {
 
         Network network(stationA, stationB, stoi(capacity), service);
         networkSet.insert(network);
-
+        int cost;
+        if(service=="ALFA PENDULAR"){
+            cost = 4;
+        }
+        if(service=="STANDARD") {
+            cost = 2;
+        }
         int code_StationA = stations_code_reverse[stationA];
         int code_StationB = stations_code_reverse[stationB];
-        addEdge(code_StationA, code_StationB, stod(capacity)/2);
-        addEdge(code_StationB, code_StationA, stod(capacity)/2);
 
+        addEdge(code_StationA, code_StationB, stod(capacity)/2, service, cost);
+        addEdge(code_StationB, code_StationA, stod(capacity)/2, service, cost);
     }
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
@@ -121,16 +101,7 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
     return result;
 }
 
-void NetworkManager::setBlockLine(const string &blockline) {
-    set<int> blockeds = returnBlockedStations(blockline);
-    for (auto &c: blockeds) {
-        for (auto d: vertexSet) {
-            if (c == d->getId()) {
-                d->setBlock();
-            }
-        }
-    }
-}
+
 
 //2.1
 
@@ -193,8 +164,8 @@ void NetworkManager::update(Vertex *s, Vertex *t, double f) {
     }
 }
 
-int NetworkManager::max_trains(string A, string B) {
-    int result_final=0;
+double NetworkManager::max_trains(string A, string B) {
+    double result_final=0;
     int source = stations_code_reverse[A];
     int target = stations_code_reverse[B];
     if(source == 0 | target==0) return -1;
@@ -320,7 +291,7 @@ void NetworkManager::trainManagementByDistrict(int k){
     }
 }
 
-
+//2.4
 int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
     Station superStation("superStation");
     stations_code_reverse[superStation.getName()] = stationsSet.size()+1;    // id big enough to be unique
@@ -332,52 +303,96 @@ int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStatio
 
     for (Vertex* v : vertexSet) {
         if (v->getAdj().size() == 1) {
-            superSource->addEdge(v, INF);
+            superSource->addEdge(v, INF, "", v->getCost());
         }
     }
-
     string startingStation = stations_code[superStationID];
-    for (Vertex* v : vertexSet) {
+    /*for (Vertex* v : vertexSet) {
         for (Edge* e : v->getAdj()) {
             e->setFlow(0);
         }
-    }
+    }*/
     int result = max_trains(startingStation, arrivingStation);
     result /= 2;
     return result;
 }
 
 
-//maximo de comboios entre 2 estações, com varias linhas bloqueada
-/*
-void NetworkManager::max_of_max_trains_with_block(string blockLine) {
-    setBlockStation(blockLine);
-    int result = 0;
-    int comparing;
-    for(int i = 1; i < stationsSet.size() - 1; i++) {
-        for(int j = i + 1; j < stationsSet.size(); j++) {
-            string A = stations_code[i];
-            string B = stations_code[j];
-            comparing = max_trains(A, B);
-            result = max(comparing, result);
-            cout << "comparing: " << comparing << "; result: " << result << ";" << endl;
+
+
+//3.1
+class NodeComparator {
+public:
+    bool operator()(Vertex *node1, const Vertex* node2) {
+        return node1->getCost() > node2->getCost();
+    }
+};
+
+
+// function to perform Dijkstra's algorithm
+void NetworkManager::dijkstra(string first, string second) {
+    std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
+    int source = stations_code_reverse[first];
+    double flow = numeric_limits<int>::max();
+    Vertex* startNode = findVertex(source);
+    startNode->setCost(0.0);
+    startNode->addPathForCost({first, numeric_limits<int>::max()});
+    pq.push(startNode);
+    while (!pq.empty()) {
+        Vertex* currentVertex = pq.top();
+        pq.pop();
+        if (currentVertex->isVisited()) {
+            continue;
+        }
+        currentVertex->setVisited(true);
+        if(currentVertex->getId() == stations_code_reverse[second]) {
+            std::cout << "Shortest path from " << first << " to " << second << " is:";
+            for (auto node : currentVertex->getPathForCost()) {
+                std::cout << " " << node.first<<" com flow: "<<node.second<<endl;
+                if (node.second < flow) {
+                    flow = node.second;
+                }
+            }
+            std::cout << " (cost = " << currentVertex->getCost() * flow  <<")" << std::endl;
+            return;
+        }
+        for (auto edge : currentVertex->getAdj()) {
+            Vertex* nextNode = edge->getDest();
+            if (!nextNode->isVisited()) {
+                double newCost = currentVertex->getCost() + edge->getCost();
+                if (newCost < nextNode->getCost()) {
+                    // found a shorter path to nextNode, update its cost and path
+                    nextNode->setCost(newCost);
+                    nextNode->setPathForCost(currentVertex->getPathForCost());
+                    nextNode->addPathForCost({stations_code[nextNode->getId()], edge->getWeight()});
+                    pq.push(nextNode);
+                }
+            }
         }
     }
-}*/
+}
 
 
-// 4.1
+// pré 4
 
 bool NetworkManager::set_block(std::string A, std::string B) {
     int station_start = stations_code_reverse[A];
+    int station_finish = stations_code_reverse[B];
+    if(station_start == 0 || station_finish==0) return false;
     Vertex* first = findVertex(station_start);
     for(auto e1 : first->getAdj()){
         Vertex* x = e1->getDest();
-        if (x->getId()== stations_code_reverse[B]){
+        if (x->getId()== station_finish){
+            if(e1->isSelected()) return false; // retorna falso por já ter sido estabelecido neste edge um bloqueio
             e1->setSelected(true);// quando este valor está a true, depois, ao fazer o augmenting path,verifica-se se isto está a true, e, se estiver, descarta-se
             for(auto e2: x->getAdj()){
                 if (e2->getDest()->getId() == station_start ){
+                    if(e2->isSelected()){
+                        e1->setSelected(false);
+                        return false;
+                    }
                     e2->setSelected(true);
+                    edgesBlocked.push_back(make_pair(e1,e2));
                     return true;
                 }
             }
@@ -388,19 +403,181 @@ bool NetworkManager::set_block(std::string A, std::string B) {
 
 bool NetworkManager::remove_block(std::string A, std::string B) {
     int station_start = stations_code_reverse[A];
-    Vertex* first = findVertex(station_start);
-    for(auto e : first->getAdj()) {
-        Vertex* x = e->getDest();
-        if (x->getId()== stations_code_reverse[B]){
-            e->setSelected(false);
-            for(auto e2: x->getAdj()){
-                if (e2->getDest()->getId() == station_start ){
+    int station_finish = stations_code_reverse[B];
+    if(station_start == 0 || station_finish==0) return false;
+    Vertex *first = findVertex(station_start);
+    pair<Edge*,Edge*> to_remove;
+    for (auto e1: first->getAdj()) {
+        Vertex *x = e1->getDest();
+        if (x->getId() == station_finish) {
+            if(!(e1->isSelected())) return false; // a mesma coisa da função de cima, só que ao contrário
+            e1->setSelected(false);
+            for (auto e2: x->getAdj()) {
+                if(!(e2->isSelected())){
+                    e1->setSelected(true);
+                    return false;
+                }
+                if (e2->getDest()->getId() == station_start) {
                     e2->setSelected(false);
+                    to_remove = make_pair(e1,e2);
+                    break;
+                }
+            }
+            for (auto it = edgesBlocked.begin();it!=edgesBlocked.end();it++){
+                if (it->first == to_remove.first && it->second == to_remove.second){
+                    edgesBlocked.erase(it);
                     return true;
                 }
             }
         }
     }
     return false;
+}
+
+//4.1
+
+void NetworkManager::testAndVisitWithBlocks(std::queue<Vertex *> &q, Edge *e, Vertex *w, double residual) {
+    if (! w->isVisited() && residual > 0 && !(e->isSelected())) {
+        w->setVisited(true);
+        w->setPath(e);
+        q.push(w);
+    }
+}
+
+bool NetworkManager::augmentingPathWithBlocks(Vertex *s, Vertex *t) {
+    for(auto v : vertexSet) {
+        v->setVisited(false);
+    }
+    s->setVisited(true);
+    std::queue<Vertex *> q;
+    q.push(s);
+    while( ! q.empty() && ! t->isVisited()) {
+        auto v = q.front();
+        q.pop();
+        for(auto e: v->getAdj()) {
+            testAndVisitWithBlocks(q, e, e->getDest(), e->getWeight() - e->getFlow());
+        }
+        for(auto e: v->getIncoming()) {
+            testAndVisitWithBlocks(q, e, e->getOrig(), e->getFlow());
+        }
+    }
+    return t->isVisited();
+}
+
+int NetworkManager::max_trains_with_blocks (string A, string B) {
+    int result_final=0;
+    int source = stations_code_reverse[A];
+    int target = stations_code_reverse[B];
+    if(source == 0 | target==0) return -1;
+    for (auto vertex: vertexSet) {
+        for (auto edge: vertex->getAdj()) {
+            edge->setFlow(0);
+            edge->setReverse(nullptr);
+        }
+    }
+    Vertex* start= findVertex(source);
+    Vertex* end = findVertex(target);
+    while (augmentingPathWithBlocks(start,end)) {
+        double flow = minResidual(start,end);
+        update(start,end,flow);
+        result_final+=flow;
+    }
+    return result_final*2;
+}
+
+//4.2
+/*
+void NetworkManager::testAndVisitWithSpecificBlock(std::queue<Vertex *> &q, Edge *e, Vertex *w, double residual) {
+    if (! w->isVisited() && residual > 0 && !(e->isTesting())) {
+        w->setVisited(true);
+        w->setPath(e);
+        q.push(w);
+    }
+}
+
+bool NetworkManager::augmentingPathWithSpecificBlock(Vertex *s, Vertex *t) {
+    for(auto v : vertexSet) {
+        v->setVisited(false);
+    }
+    s->setVisited(true);
+    std::queue<Vertex *> q;
+    q.push(s);
+    while( ! q.empty() && ! t->isVisited()) {
+        auto v = q.front();
+        q.pop();
+        for(auto e: v->getAdj()) {
+            testAndVisitWithSpecificBlock(q, e, e->getDest(), e->getWeight() - e->getFlow());
+        }
+        for(auto e: v->getIncoming()) {
+            testAndVisitWithSpecificBlock(q, e, e->getOrig(), e->getFlow());
+        }
+    }
+    return t->isVisited();
+}
+
+int NetworkManager::max_trains_with_specific_block (string A, string B) {
+    int result_final=0;
+    int source = stations_code_reverse[A];
+    int target = stations_code_reverse[B];
+    if(source == 0 | target==0) return -1;
+    for (auto vertex: vertexSet) {
+        for (auto edge: vertex->getAdj()) {
+            edge->setFlow(0);
+            edge->setReverse(nullptr);
+        }
+    }
+    Vertex* start = findVertex(source);
+    Vertex* end = findVertex(target);
+    while (augmentingPathWithSpecificBlock(start,end)) {
+        double flow = minResidual(start,end);
+        update(start,end,flow);
+        result_final+=flow;
+    }
+    return result_final*2;
+}
+
+
+static bool comp(pair<string, int>& x, pair<string, int>& y) {
+    if (x.second == y.second) {
+        return x.first < y.first;
+    }
+    return x.second > y.second;
+}
+
+void NetworkManager::add_or_update(std::string key, int value) {
+    // Verifica se a chave já existe no map
+    if (my_map.find(key) == my_map.end()) {
+        // A chave não existe, então insere um novo par chave-valor
+        my_map[key] = value;
+    } else {
+        // A chave já existe, então atualiza o valor existente
+        my_map[key] += value;
+    }
+}
+*/
+
+void NetworkManager::setEdgeTesting(pair<Edge*,Edge*> that) {
+    that.first->setTesting(true);
+    that.first->setTesting(true);
+}
+
+void NetworkManager::removeEdgeTesting(pair<Edge *, Edge *> that) {
+    that.first->setTesting(false);
+    that.second->setTesting(false);
+}
+
+void NetworkManager::most_affected_stations(int rank) {
+    unordered_map<string,int> capacityNormal;
+    unordered_map<string,int> capacityCutted;
+    for(auto station: stationsSet){
+        int x = maxTrainsArrivingAtStation(station.getName());
+        capacityNormal[station.getName()] = x;
+    }
+    for(auto pair:edgesBlocked) {
+        setEdgeTesting(pair);
+        cout << "Por causa do corte da linha entre " << stations_code[pair.first->getOrig()->getId()] << " e " << stations_code[pair.first->getDest()->getId()] <<", as estações mais afetadas foram as seguintes:" << endl;
+
+        removeEdgeTesting(pair);
+    }
 }
 

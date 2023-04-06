@@ -23,10 +23,16 @@ public:
     int indexB(string a);
     unordered_map<std::string,int> get_stations_code_reversed();
     std::unordered_map<int,std::string> get_stations_code();
-    int max_trains(string source, string target);
+    double max_trains(string source, string target);
+    int max_trains_with_blocks(string source, string target);
+    int max_trains_with_specific_block(string source, string target);
     void testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
+    void testAndVisitWithBlocks(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
+    void testAndVisitWithSpecificBlock(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual);
     bool augmentingPath(Vertex *s, Vertex *t);
-    double minResidual(Vertex *s, Vertex *t);
+    bool augmentingPathWithBlocks(Vertex *s, Vertex *t);
+    bool augmentingPathWithSpecificBlock(Vertex *s, Vertex *t);
+    static double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
     int maxTrainsArrivingAtStation(const string& arrivingStation);
     pair<int,pair<string,string>> max_of_max_trains();
@@ -34,18 +40,24 @@ public:
     bool remove_block(string A, string B);
     set<int> returnBlockedStations(const string& line);
     void setBlockLine(const string& blockline);
-    void setBlockStation(const string& blockline);
-    void max_of_max_trains_with_block(string blockLine);
     void trainManagementByMunicipality(int k);
     void trainManagementByDistrict(int k);
     void trainManagementByTownship(int k);
-
+    void dijkstra(string first, string second);
+    void printShortestPath(string second);
+    void most_affected_stations(int rank);
+    void setEdgeTesting(pair<Edge*,Edge*> that);
+    void removeEdgeTesting(pair<Edge*,Edge*> that);
+    void add_or_update(string key, int value);
 private:
     set<Station> stationsSet;
     set<Network> networkSet;
     unordered_map<std::string,int> stations_code_reverse;
     unordered_map<int,std::string> stations_code;
     unordered_map<std::string, int> network_code_reverse;
+    vector<pair<Edge*,Edge*>> edgesBlocked;
+    unordered_map<string, int> my_map; //4.2
+
 
 };
 
