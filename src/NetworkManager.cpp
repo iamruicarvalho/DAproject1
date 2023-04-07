@@ -457,29 +457,14 @@ bool NetworkManager::remove_block(std::string A, std::string B) {
     int station_finish = stations_code_reverse[B];
     if(station_start == 0 || station_finish==0) return false;
     Vertex *first = findVertex(station_start);
-    pair<Edge*,Edge*> to_remove;
-    for (auto e1: first->getAdj()) {
-        Vertex *x = e1->getDest();
-        if (x->getId() == station_finish) {
-            if(!(e1->isSelected())) return false; // a mesma coisa da função de cima, só que ao contrário
-            e1->setSelected(false);
-            for (auto e2: x->getAdj()) {
-                if(!(e2->isSelected())){
-                    e1->setSelected(true);
-                    return false;
-                }
-                if (e2->getDest()->getId() == station_start) {
-                    e2->setSelected(false);
-                    to_remove = make_pair(e1,e2);
-                    break;
-                }
-            }
-            for (auto it = edgesBlocked.begin();it!=edgesBlocked.end();it++){
-                if (it->first == to_remove.first && it->second == to_remove.second){
-                    edgesBlocked.erase(it);
-                    return true;
-                }
-            }
+    Vertex *second = findVertex(station_finish);
+    for(auto it = edgesBlocked.begin();it!=edgesBlocked.end(); it++ ){
+        pair<Edge*,Edge*> my_pair =*it;
+        if((my_pair.first->getDest()==first && my_pair.first->getOrig()==second) || (my_pair.first->getDest()==second && my_pair.first->getOrig()==first)){
+            my_pair.first->setSelected(false);
+            my_pair.second->setSelected(false);
+            edgesBlocked.erase(it);
+            return true;
         }
     }
     return false;
@@ -598,7 +583,12 @@ void NetworkManager::most_affected_stations(int rank) {
         for(int i = 0; i<rank;i++){
             pair<string,int> to_cout = my_vector[i];
             if(to_cout.second==0){
-                cout << "Não há mais estações afetadas por este corte" << endl;
+                if(i==0){
+                    cout << "Não há estações afetadas por este corte" << endl;
+                }
+                else {
+                    cout << "Não há mais estações afetadas por este corte" << endl;
+                }
                 break;
             }
             cout << i+1 <<"ª estação mais afetada: " << to_cout.first << "    " << capacityNormal[to_cout.first] << " -> " << capacityNormal[to_cout.first] - capacityCutted[to_cout.first] << " ." << endl;

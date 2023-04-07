@@ -70,9 +70,8 @@ int main() {
                 break;
             }
             case 3:
-                cout << "1 - Pretendo saber qual o concelho que necessita de mais comboios" << endl;
-                cout << "2 - Pretendo saber qual o municipio que necessita de mais comboios" << endl;
-                cout << "3 - Pretendo saber qual o distrito que necessita de mais comboios" << endl;
+                cout << "1 - Pretendo saber qual o municipio que necessita de mais comboios" << endl;
+                cout << "2 - Pretendo saber qual o distrito que necessita de mais comboios" << endl;
                 int n;
                 int k;
                 cin >> n;
@@ -80,12 +79,9 @@ int main() {
                 cin >> k;
                 switch (n) {
                     case 1:
-                        networkManager.trainManagementByTownship(k);
-                        break;
-                    case 2:
                         networkManager.trainManagementByMunicipality(k);
                         break;
-                    case 3:
+                    case 2:
                         networkManager.trainManagementByDistrict(k);
                         break;
                 }

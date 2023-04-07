@@ -57,7 +57,6 @@ private:
     unordered_map<int,std::string> stations_code;
     unordered_map<std::string, int> network_code_reverse;
     vector<pair<Edge*,Edge*>> edgesBlocked;
-    unordered_map<string, int> my_map; //4.2
 
 
 };
