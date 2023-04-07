@@ -86,6 +86,19 @@ void NetworkManager::readFiles() {
     networkFile.close();
     cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
          << endl;
+    Station superStation("superStation");
+    stations_code_reverse[superStation.getName()] = stationsSet.size()+1;    // id big enough to be unique
+    stations_code[stationsSet.size()+1] = superStation.getName();
+
+    int superStationID = stations_code_reverse[superStation.getName()];
+    addVertex(superStationID, "none", "none", "none");
+    Vertex* superSource = findVertex(superStationID);
+
+    for (Vertex* v : vertexSet) {
+        if (v->getAdj().size() == 1) {
+            superSource->addEdge(v, INF, "", v->getCost());
+        }
+    }
 }
 
 
@@ -106,7 +119,7 @@ set<int> NetworkManager::returnBlockedStations(const string &blockLine) {
 //2.1
 
 void NetworkManager::testAndVisit(std::queue< Vertex*> &q, Edge *e, Vertex *w, double residual) {
-    if (! w->isVisited() && residual > 0) {
+    if (! w->isVisited() && residual > 0 && !(e->isTesting())) {
         w->setVisited(true);
         w->setPath(e);
         q.push(w);
@@ -173,7 +186,6 @@ double NetworkManager::max_trains(string A, string B) {
     for (auto vertex: vertexSet) {
         for (auto edge: vertex->getAdj()) {
             edge->setFlow(0);
-            edge->setReverse(nullptr);
         }
     }
     Vertex* start= findVertex(source);
@@ -188,26 +200,47 @@ double NetworkManager::max_trains(string A, string B) {
 
 //2.2
 
-pair<int,pair<string,string>> NetworkManager::max_of_max_trains() {
+struct PairHash {
+    size_t operator()(const pair<string, string> &p) const {
+        return hash<string>()(p.first) ^ hash<string>()(p.second);
+    }
+};
+
+vector<pair<int,pair<string,string>>> NetworkManager::max_of_max_trains() {
+    vector<pair<int,pair<string,string>>> that;
+    unordered_set<pair<string,string>,PairHash> edges_verified{};
     int result = 0;
     int comparing;
     pair<int, pair<string,string>> all;
-
-    for(int i=1; i<stationsSet.size()-1; i++){
-        for(int j=i+1; j<stationsSet.size(); j++){
-            string A = stations_code[i];
-            string B = stations_code[j];
+    for(auto vertex: vertexSet){
+        for(auto edge: vertex->getAdj()){
+            pair<string,string> connection1 = make_pair(stations_code[edge->getDest()->getId()],stations_code[vertex->getId()]);
+            pair<string,string> connection2 = make_pair(stations_code[vertex->getId()],stations_code[edge->getDest()->getId()]);
+            if(connection1.first == "superStation" || connection1.first == "superStation") continue;
+            if(edges_verified.count(connection1) || edges_verified.count(connection2)) continue;
+            edges_verified.insert(connection1);
+            string A = connection1.second;
+            string B = connection1.first;
             comparing = max_trains(A,B);
+            if(comparing==result){
+                all.first = result;
+                all.second.first = A;
+                all.second.second = B;
+                that.push_back(all);
+                continue;
+            }
             result = max(comparing,result);
             // cout << "comparing: " << comparing << " result: " <<result << endl;
             if (result == comparing) {
                 all.first = result;
                 all.second.first = A;
                 all.second.second = B;
+                that.clear();
+                that.push_back(all);
             }
         }
     }
-    return all;
+    return that;
 }
 
 
@@ -291,28 +324,12 @@ void NetworkManager::trainManagementByDistrict(int k){
     }
 }
 
+
+
 //2.4
+
 int NetworkManager::maxTrainsArrivingAtStation(const std::string &arrivingStation) {
-    Station superStation("superStation");
-    stations_code_reverse[superStation.getName()] = stationsSet.size()+1;    // id big enough to be unique
-    stations_code[stationsSet.size()+1] = superStation.getName();
-
-    int superStationID = stations_code_reverse[superStation.getName()];
-    addVertex(superStationID, "none", "none", "none");
-    Vertex* superSource = findVertex(superStationID);
-
-    for (Vertex* v : vertexSet) {
-        if (v->getAdj().size() == 1) {
-            superSource->addEdge(v, INF, "", v->getCost());
-        }
-    }
-    string startingStation = stations_code[superStationID];
-    /*for (Vertex* v : vertexSet) {
-        for (Edge* e : v->getAdj()) {
-            e->setFlow(0);
-        }
-    }*/
-    int result = max_trains(startingStation, arrivingStation);
+    int result = max_trains("superStation", arrivingStation);
     result /= 2;
     return result;
 }
@@ -535,7 +552,7 @@ int NetworkManager::max_trains_with_specific_block (string A, string B) {
     }
     return result_final*2;
 }
-
+*/
 
 static bool comp(pair<string, int>& x, pair<string, int>& y) {
     if (x.second == y.second) {
@@ -554,11 +571,11 @@ void NetworkManager::add_or_update(std::string key, int value) {
         my_map[key] += value;
     }
 }
-*/
+
 
 void NetworkManager::setEdgeTesting(pair<Edge*,Edge*> that) {
     that.first->setTesting(true);
-    that.first->setTesting(true);
+    that.second->setTesting(true);
 }
 
 void NetworkManager::removeEdgeTesting(pair<Edge *, Edge *> that) {
@@ -573,11 +590,25 @@ void NetworkManager::most_affected_stations(int rank) {
         int x = maxTrainsArrivingAtStation(station.getName());
         capacityNormal[station.getName()] = x;
     }
-    for(auto pair:edgesBlocked) {
-        setEdgeTesting(pair);
-        cout << "Por causa do corte da linha entre " << stations_code[pair.first->getOrig()->getId()] << " e " << stations_code[pair.first->getDest()->getId()] <<", as estações mais afetadas foram as seguintes:" << endl;
-
-        removeEdgeTesting(pair);
+    for(auto edges:edgesBlocked) {
+        setEdgeTesting(edges);
+        cout << "Por causa do corte da linha entre " << stations_code[edges.first->getOrig()->getId()] << " e " << stations_code[edges.first->getDest()->getId()] <<", as estações mais afetadas foram as seguintes:" << endl;
+        for(auto station:stationsSet){
+            int y = maxTrainsArrivingAtStation(station.getName());
+            capacityCutted[station.getName()] = capacityNormal[station.getName()] - y;
+        }
+        vector<pair<string, int>> my_vector(capacityCutted.begin(), capacityCutted.end());
+        sort(my_vector.begin(),my_vector.end(),comp);
+        for(int i = 0; i<rank;i++){
+            pair<string,int> to_cout = my_vector[i];
+            if(to_cout.second==0){
+                cout << "Não há mais estações afetadas por este corte" << endl;
+                break;
+            }
+            cout << i+1 <<"ª estação mais afetada: " << to_cout.first << "    " << capacityNormal[to_cout.first] << " -> " << capacityNormal[to_cout.first] - capacityCutted[to_cout.first] << " ." << endl;
+        }
+        removeEdgeTesting(edges);
+        cout << endl;
     }
 }
 
