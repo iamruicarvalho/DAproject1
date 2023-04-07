@@ -20,21 +20,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="465be99d-6265-4807-bc15-af9603f60d95" name="Changes" comment="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade">
+    <list default="true" id="465be99d-6265-4807-bc15-af9603f60d95" name="Changes" comment="4.2 e remove_block aperfeiçoados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a357d20fedce7fe018e6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-d0502afa689c6663d341.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projeto1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projeto1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +93,7 @@
       <workItem from="1680801822666" duration="1000" />
       <workItem from="1680803591765" duration="11418000" />
       <workItem from="1680832010073" duration="4796000" />
-      <workItem from="1680877191593" duration="5152000" />
+      <workItem from="1680877191593" duration="7102000" />
     </task>
     <task id="LOCAL-00001" summary="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos">
       <created>1680837802308</created>
@@ -116,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680838324589</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="4.2 e remove_block aperfeiçoados">
+      <created>1680882775352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680882775352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +142,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos" />
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
+    <MESSAGE value="4.2 e remove_block aperfeiçoados" />
+    <option name="LAST_COMMIT_MESSAGE" value="4.2 e remove_block aperfeiçoados" />
   </component>
 </project>
