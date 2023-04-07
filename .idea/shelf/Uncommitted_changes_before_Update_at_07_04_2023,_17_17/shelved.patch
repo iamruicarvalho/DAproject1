@@ -1,0 +1,809 @@
+Index: cmake-build-debug/CMakeFiles/CMakeOutput.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/CMakeFiles/CMakeOutput.log b/cmake-build-debug/CMakeFiles/CMakeOutput.log
+--- a/cmake-build-debug/CMakeFiles/CMakeOutput.log	
++++ b/cmake-build-debug/CMakeFiles/CMakeOutput.log	
+@@ -1,548 +1,250 @@
+-The system is: Windows - 10.0.22621 - AMD64
++The system is: Darwin - 22.4.0 - arm64
+ Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+-Compiler: C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/gcc.exe 
++Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+ Build flags: 
+-Id flags:  
++Id flags: -c 
+ 
+ The output was:
+ 0
+ 
+ 
+-Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
++Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+ 
+-The C compiler identification is GNU, found in "C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdC/a.exe"
++The C compiler identification is AppleClang, found in "/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/CMakeCCompilerId.o"
+ 
+ Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+-Compiler: C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/g++.exe 
++Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ 
+ Build flags: 
+-Id flags:  
++Id flags: -c 
+ 
+ The output was:
+ 0
+ 
+ 
+-Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
++Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+ 
+-The CXX compiler identification is GNU, found in "C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/3.25.2/CompilerIdCXX/a.exe"
++The CXX compiler identification is AppleClang, found in "/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+ 
+ Detecting C compiler ABI info compiled with the following output:
+-Change Dir: C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-znc4a2
+-
+-Run Build Command(s):C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/ninja/win/x64/ninja.exe cmTC_36120 && [1/2] Building C object CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj
++Change Dir: /Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp
+ 
+-Using built-in specs.
+-
+-COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\gcc.exe
+-
+-Target: x86_64-w64-mingw32
+-
+-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+-
++Run Build Command(s):/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/ninja/mac/ninja cmTC_df277 && [1/2] Building C object CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o
++Apple clang version 14.0.3 (clang-1403.0.22.14.1)
++Target: arm64-apple-darwin22.4.0
+ Thread model: posix
+-
+-Supported LTO compression algorithms: zlib
+-
+-gcc version 11.2.0 (GCC) 
+-
+-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_36120.dir/'
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_36120.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Bernardo\AppData\Local\Temp\ccGgF0sz.s
+-
+-GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
+-
+-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+-
+-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"
+-
+-ignoring nonexistent directory "/win/include"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../include"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
+-
+-ignoring nonexistent directory "/mingw/include"
+-
++InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
++clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
++ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o -x c "/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c"
++clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.4.0
++ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"
++ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"
+ #include "..." search starts here:
+-
+ #include <...> search starts here:
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include
+-
++ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include
++ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include
++ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
++ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
+ End of search list.
+-
+-GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
+-
+-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+-
+-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+-
+-Compiler executable checksum: 23424b72d090e8b977a96775bde79257
+-
+-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_36120.dir/'
+-
+- as -v -o CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj C:\Users\Bernardo\AppData\Local\Temp\ccGgF0sz.s
+-
+-GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
+-
+-COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/
+-
+-LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+-
+-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.'
+-
+-[2/2] Linking C executable cmTC_36120.exe
+-
+-Using built-in specs.
+-
+-COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\gcc.exe
+-
+-COLLECT_LTO_WRAPPER=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
+-
+-Target: x86_64-w64-mingw32
+-
+-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+-
++[2/2] Linking C executable cmTC_df277
++Apple clang version 14.0.3 (clang-1403.0.22.14.1)
++Target: arm64-apple-darwin22.4.0
+ Thread model: posix
+-
+-Supported LTO compression algorithms: zlib
+-
+-gcc version 11.2.0 (GCC) 
+-
+-COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/
+-
+-LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+-
+-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_36120.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_36120.'
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_36120.exe C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_36120.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+-
+-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_36120.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_36120.'
+-
++InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
++ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_df277 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
++@(#)PROGRAM:ld  PROJECT:ld64-857.1
++BUILD 16:59:58 Feb 24 2023
++configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
++Library search paths:
++	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib
++Framework search paths:
++	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/
+ 
+ 
+ 
+ Parsed C implicit include dir info from above output: rv=done
+   found start of include info
+   found start of implicit include info
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
++    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
++    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
++    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+   end of search list found
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/include]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/include]
+-  implicit include dirs: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/include;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/include]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
++  implicit include dirs: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+ 
+ 
+ Parsed C implicit link information from above output:
+-  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+-  ignore line: [Change Dir: C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-znc4a2]
++  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
++  ignore line: [Change Dir: /Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp]
+   ignore line: []
+-  ignore line: [Run Build Command(s):C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/ninja/win/x64/ninja.exe cmTC_36120 && [1/2] Building C object CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj]
+-  ignore line: [Using built-in specs.]
+-  ignore line: [COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\gcc.exe]
+-  ignore line: [Target: x86_64-w64-mingw32]
+-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
++  ignore line: [Run Build Command(s):/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/ninja/mac/ninja cmTC_df277 && [1/2] Building C object CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o]
++  ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
++  ignore line: [Target: arm64-apple-darwin22.4.0]
+   ignore line: [Thread model: posix]
+-  ignore line: [Supported LTO compression algorithms: zlib]
+-  ignore line: [gcc version 11.2.0 (GCC) ]
+-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_36120.dir/']
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_36120.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Bernardo\AppData\Local\Temp\ccGgF0sz.s]
+-  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
+-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"]
+-  ignore line: [ignoring nonexistent directory "/win/include"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../include"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"]
+-  ignore line: [ignoring nonexistent directory "/mingw/include"]
++  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
++  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
++  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -no-opaque-pointers -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o -x c "/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCCompilerABI.c"]
++  ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.4.0]
++  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"]
++  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
+   ignore line: [#include "..." search starts here:]
+   ignore line: [#include <...> search starts here:]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)]
+   ignore line: [End of search list.]
+-  ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
+-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+-  ignore line: [Compiler executable checksum: 23424b72d090e8b977a96775bde79257]
+-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_36120.dir/']
+-  ignore line: [ as -v -o CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj C:\Users\Bernardo\AppData\Local\Temp\ccGgF0sz.s]
+-  ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
+-  ignore line: [COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/]
+-  ignore line: [LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.']
+-  ignore line: [[2/2] Linking C executable cmTC_36120.exe]
+-  ignore line: [Using built-in specs.]
+-  ignore line: [COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\gcc.exe]
+-  ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
+-  ignore line: [Target: x86_64-w64-mingw32]
+-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
++  ignore line: [[2/2] Linking C executable cmTC_df277]
++  ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
++  ignore line: [Target: arm64-apple-darwin22.4.0]
+   ignore line: [Thread model: posix]
+-  ignore line: [Supported LTO compression algorithms: zlib]
+-  ignore line: [gcc version 11.2.0 (GCC) ]
+-  ignore line: [COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/]
+-  ignore line: [LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_36120.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_36120.']
+-  link line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_36120.exe C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_36120.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
+-    arg [-m] ==> ignore
+-    arg [i386pep] ==> ignore
+-    arg [-Bdynamic] ==> search dynamic
++  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
++  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_df277 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
++    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
++    arg [-demangle] ==> ignore
++    arg [-lto_library] ==> ignore, skip following value
++    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
++    arg [-dynamic] ==> ignore
++    arg [-arch] ==> ignore
++    arg [arm64] ==> ignore
++    arg [-platform_version] ==> ignore
++    arg [macos] ==> ignore
++    arg [13.0.0] ==> ignore
++    arg [13.3] ==> ignore
++    arg [-syslibroot] ==> ignore
++    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk] ==> ignore
+     arg [-o] ==> ignore
+-    arg [cmTC_36120.exe] ==> ignore
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
+-    arg [CMakeFiles/cmTC_36120.dir/CMakeCCompilerABI.c.obj] ==> ignore
+-    arg [--out-implib] ==> ignore
+-    arg [libcmTC_36120.dll.a] ==> ignore
+-    arg [--major-image-version] ==> ignore
+-    arg [0] ==> ignore
+-    arg [--minor-image-version] ==> ignore
+-    arg [0] ==> ignore
+-    arg [-lmingw32] ==> lib [mingw32]
+-    arg [-lgcc] ==> lib [gcc]
+-    arg [-lgcc_eh] ==> lib [gcc_eh]
+-    arg [-lmoldname] ==> lib [moldname]
+-    arg [-lmingwex] ==> lib [mingwex]
+-    arg [-lmsvcrt] ==> lib [msvcrt]
+-    arg [-lkernel32] ==> lib [kernel32]
+-    arg [-lpthread] ==> lib [pthread]
+-    arg [-ladvapi32] ==> lib [advapi32]
+-    arg [-lshell32] ==> lib [shell32]
+-    arg [-luser32] ==> lib [user32]
+-    arg [-lkernel32] ==> lib [kernel32]
+-    arg [-liconv] ==> lib [iconv]
+-    arg [-lmingw32] ==> lib [mingw32]
+-    arg [-lgcc] ==> lib [gcc]
+-    arg [-lgcc_eh] ==> lib [gcc_eh]
+-    arg [-lmoldname] ==> lib [moldname]
+-    arg [-lmingwex] ==> lib [mingwex]
+-    arg [-lmsvcrt] ==> lib [msvcrt]
+-    arg [-lkernel32] ==> lib [kernel32]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-  remove lib [gcc_eh]
+-  remove lib [msvcrt]
+-  remove lib [gcc_eh]
+-  remove lib [msvcrt]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib]
+-  implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
+-  implicit objs: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-  implicit dirs: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib]
+-  implicit fwks: []
++    arg [cmTC_df277] ==> ignore
++    arg [-search_paths_first] ==> ignore
++    arg [-headerpad_max_install_names] ==> ignore
++    arg [-v] ==> ignore
++    arg [CMakeFiles/cmTC_df277.dir/CMakeCCompilerABI.c.o] ==> ignore
++    arg [-lSystem] ==> lib [System]
++    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
++  Library search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
++  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/]
++  remove lib [System]
++  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
++  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
++  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
++  implicit libs: []
++  implicit objs: []
++  implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
++  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+ 
+ 
+ Detecting CXX compiler ABI info compiled with the following output:
+-Change Dir: C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jclkuy
+-
+-Run Build Command(s):C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/ninja/win/x64/ninja.exe cmTC_2d2ac && [1/2] Building CXX object CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj
++Change Dir: /Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp
+ 
+-Using built-in specs.
+-
+-COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\g++.exe
+-
+-Target: x86_64-w64-mingw32
+-
+-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+-
++Run Build Command(s):/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/ninja/mac/ninja cmTC_ef082 && [1/2] Building CXX object CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o
++Apple clang version 14.0.3 (clang-1403.0.22.14.1)
++Target: arm64-apple-darwin22.4.0
+ Thread model: posix
+-
+-Supported LTO compression algorithms: zlib
+-
+-gcc version 11.2.0 (GCC) 
+-
+-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d2ac.dir/'
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2d2ac.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Bernardo\AppData\Local\Temp\cc0uY2O0.s
+-
+-GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
+-
+-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+-
+-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"
+-
+-ignoring nonexistent directory "/win/include"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../include"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"
+-
+-ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
+-
+-ignoring nonexistent directory "/mingw/include"
+-
++InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
++clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
++ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o -x c++ "/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp"
++clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.4.0
++ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"
++ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"
+ #include "..." search starts here:
+-
+ #include <...> search starts here:
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include
+-
++ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1
++ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include
++ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include
++ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
++ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)
+ End of search list.
+-
+-GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
+-
+-	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
+-
+-GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+-
+-Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f
+-
+-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d2ac.dir/'
+-
+- as -v -o CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\Bernardo\AppData\Local\Temp\cc0uY2O0.s
+-
+-GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
+-
+-COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/
+-
+-LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+-
+-COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.'
+-
+-[2/2] Linking CXX executable cmTC_2d2ac.exe
+-
+-Using built-in specs.
+-
+-COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\g++.exe
+-
+-COLLECT_LTO_WRAPPER=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
+-
+-Target: x86_64-w64-mingw32
+-
+-Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+-
++[2/2] Linking CXX executable cmTC_ef082
++Apple clang version 14.0.3 (clang-1403.0.22.14.1)
++Target: arm64-apple-darwin22.4.0
+ Thread model: posix
+-
+-Supported LTO compression algorithms: zlib
+-
+-gcc version 11.2.0 (GCC) 
+-
+-COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/
+-
+-LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+-
+-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d2ac.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2d2ac.'
+-
+- C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_2d2ac.exe C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_2d2ac.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+-
+-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d2ac.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2d2ac.'
+-
++InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
++ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_ef082 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a
++@(#)PROGRAM:ld  PROJECT:ld64-857.1
++BUILD 16:59:58 Feb 24 2023
++configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
++Library search paths:
++	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib
++Framework search paths:
++	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/
+ 
+ 
+ 
+ Parsed CXX implicit include dir info from above output: rv=done
+   found start of include info
+   found start of implicit include info
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+-    add: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
++    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1]
++    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
++    add: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
++    add: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+   end of search list found
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/include]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+-  collapse include dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/include]
+-  implicit include dirs: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/include;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/include]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
++  collapse include dir [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include] ==> [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
++  implicit include dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include;/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
+ 
+ 
+ Parsed CXX implicit link information from above output:
+-  link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+-  ignore line: [Change Dir: C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-jclkuy]
++  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
++  ignore line: [Change Dir: /Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp]
+   ignore line: []
+-  ignore line: [Run Build Command(s):C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/ninja/win/x64/ninja.exe cmTC_2d2ac && [1/2] Building CXX object CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj]
+-  ignore line: [Using built-in specs.]
+-  ignore line: [COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\g++.exe]
+-  ignore line: [Target: x86_64-w64-mingw32]
+-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
++  ignore line: [Run Build Command(s):/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/ninja/mac/ninja cmTC_ef082 && [1/2] Building CXX object CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o]
++  ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
++  ignore line: [Target: arm64-apple-darwin22.4.0]
+   ignore line: [Thread model: posix]
+-  ignore line: [Supported LTO compression algorithms: zlib]
+-  ignore line: [gcc version 11.2.0 (GCC) ]
+-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d2ac.dir/']
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_2d2ac.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fdiagnostics-color=always -o C:\Users\Bernardo\AppData\Local\Temp\cc0uY2O0.s]
+-  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
+-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"]
+-  ignore line: [ignoring nonexistent directory "/win/include"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../include"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"]
+-  ignore line: [ignoring duplicate directory "C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"]
+-  ignore line: [ignoring nonexistent directory "/mingw/include"]
++  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
++  ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
++  ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx13.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all --mrelax-relocations -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=13.3 -fvisibility-inlines-hidden-static-local-var -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +lse -target-feature +rdm -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +neon -target-feature +fp16fml -target-feature +ras -target-feature +rcpc -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -target-abi darwinpcs -fallow-half-arguments-and-returns -mllvm -treat-scalable-fixed-error-as-warning -debugger-tuning=lldb -target-linker-version 857.1 -v -fcoverage-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3 -dependency-file CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -stdlib=libc++ -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/davidcastro/Desktop/ProjectDA1/cmake-build-debug/CMakeFiles/CMakeTmp -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -no-opaque-pointers -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -mllvm -disable-aligned-alloc-awareness=1 -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o -x c++ "/Users/davidcastro/Library/Mobile Documents/com~apple~CloudDocs/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXCompilerABI.cpp"]
++  ignore line: [clang -cc1 version 14.0.3 (clang-1403.0.22.14.1) default target arm64-apple-darwin22.4.0]
++  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/local/include"]
++  ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/Library/Frameworks"]
+   ignore line: [#include "..." search starts here:]
+   ignore line: [#include <...> search starts here:]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+-  ignore line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
++  ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks (framework directory)]
+   ignore line: [End of search list.]
+-  ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
+-  ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
+-  ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+-  ignore line: [Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f]
+-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d2ac.dir/']
+-  ignore line: [ as -v -o CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\Bernardo\AppData\Local\Temp\cc0uY2O0.s]
+-  ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
+-  ignore line: [COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/]
+-  ignore line: [LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+-  ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.']
+-  ignore line: [[2/2] Linking CXX executable cmTC_2d2ac.exe]
+-  ignore line: [Using built-in specs.]
+-  ignore line: [COLLECT_GCC=C:\Users\Bernardo\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\231.8109.222\bin\mingw\bin\g++.exe]
+-  ignore line: [COLLECT_LTO_WRAPPER=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
+-  ignore line: [Target: x86_64-w64-mingw32]
+-  ignore line: [Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts=yes --enable-libstdcxx-time=yes --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
++  ignore line: [[2/2] Linking CXX executable cmTC_ef082]
++  ignore line: [Apple clang version 14.0.3 (clang-1403.0.22.14.1)]
++  ignore line: [Target: arm64-apple-darwin22.4.0]
+   ignore line: [Thread model: posix]
+-  ignore line: [Supported LTO compression algorithms: zlib]
+-  ignore line: [gcc version 11.2.0 (GCC) ]
+-  ignore line: [COMPILER_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/]
+-  ignore line: [LIBRARY_PATH=C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
+-  ignore line: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2d2ac.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_2d2ac.']
+-  link line: [ C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_2d2ac.exe C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_2d2ac.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
+-    arg [-m] ==> ignore
+-    arg [i386pep] ==> ignore
+-    arg [-Bdynamic] ==> search dynamic
++  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
++  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 13.0.0 13.3 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o cmTC_ef082 -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
++    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
++    arg [-demangle] ==> ignore
++    arg [-lto_library] ==> ignore, skip following value
++    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
++    arg [-dynamic] ==> ignore
++    arg [-arch] ==> ignore
++    arg [arm64] ==> ignore
++    arg [-platform_version] ==> ignore
++    arg [macos] ==> ignore
++    arg [13.0.0] ==> ignore
++    arg [13.3] ==> ignore
++    arg [-syslibroot] ==> ignore
++    arg [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk] ==> ignore
+     arg [-o] ==> ignore
+-    arg [cmTC_2d2ac.exe] ==> ignore
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
+-    arg [-LC:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
+-    arg [CMakeFiles/cmTC_2d2ac.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+-    arg [--out-implib] ==> ignore
+-    arg [libcmTC_2d2ac.dll.a] ==> ignore
+-    arg [--major-image-version] ==> ignore
+-    arg [0] ==> ignore
+-    arg [--minor-image-version] ==> ignore
+-    arg [0] ==> ignore
+-    arg [-lstdc++] ==> lib [stdc++]
+-    arg [-lmingw32] ==> lib [mingw32]
+-    arg [-lgcc_s] ==> lib [gcc_s]
+-    arg [-lgcc] ==> lib [gcc]
+-    arg [-lmoldname] ==> lib [moldname]
+-    arg [-lmingwex] ==> lib [mingwex]
+-    arg [-lmsvcrt] ==> lib [msvcrt]
+-    arg [-lkernel32] ==> lib [kernel32]
+-    arg [-lpthread] ==> lib [pthread]
+-    arg [-ladvapi32] ==> lib [advapi32]
+-    arg [-lshell32] ==> lib [shell32]
+-    arg [-luser32] ==> lib [user32]
+-    arg [-lkernel32] ==> lib [kernel32]
+-    arg [-liconv] ==> lib [iconv]
+-    arg [-lmingw32] ==> lib [mingw32]
+-    arg [-lgcc_s] ==> lib [gcc_s]
+-    arg [-lgcc] ==> lib [gcc]
+-    arg [-lmoldname] ==> lib [moldname]
+-    arg [-lmingwex] ==> lib [mingwex]
+-    arg [-lmsvcrt] ==> lib [msvcrt]
+-    arg [-lkernel32] ==> lib [kernel32]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+-    arg [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-  remove lib [msvcrt]
+-  remove lib [msvcrt]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+-  collapse obj [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib]
+-  collapse library dir [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib]
+-  implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
+-  implicit objs: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+-  implicit dirs: [C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib/gcc;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/Bernardo/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/231.8109.222/bin/mingw/lib]
+-  implicit fwks: []
++    arg [cmTC_ef082] ==> ignore
++    arg [-search_paths_first] ==> ignore
++    arg [-headerpad_max_install_names] ==> ignore
++    arg [-v] ==> ignore
++    arg [CMakeFiles/cmTC_ef082.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
++    arg [-lc++] ==> lib [c++]
++    arg [-lSystem] ==> lib [System]
++    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
++  Library search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
++  Framework search paths: [;/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/]
++  remove lib [System]
++  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/lib/darwin/libclang_rt.osx.a]
++  collapse library dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
++  collapse framework dir [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/] ==> [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
++  implicit libs: [c++]
++  implicit objs: []
++  implicit dirs: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/lib]
++  implicit fwks: [/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks]
+ 
+ 
+Index: cmake-build-debug/.ninja_log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/cmake-build-debug/.ninja_log b/cmake-build-debug/.ninja_log
+--- a/cmake-build-debug/.ninja_log	
++++ b/cmake-build-debug/.ninja_log	
+@@ -1,45 +1,21 @@
+ # ninja log v5
+-9	4919	7025051245012694	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
+-45	3631	7025050766622602	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	361289d8199257c
+ 723	769	1680604965737109683	Projeto1	55a5302083b37106
+-43	4178	7025051237531184	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	a756b7dc10851d9b
+-54	4005	7025051236168671	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	4d5ed308337bf111
+-3632	6363	7025050796307605	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	c0859137743e41d1
+-35	5588	7025050787306844	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	f8b261fe9a500a17
+-4006	6307	7025051259135026	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	5e3633a9b5b8ae86
+-4179	8896	7025051285126233	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	f02e67e1021751e
+-8897	10297	7025051298820508	Projeto1.exe	98ee526f4762a412
+-35	424	7025079388852586	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	1caefa5eb3297c50
+-21	485	7025079389454727	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	8c92a701f5a4c2c5
+-55	785	7025079392466636	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	34c78a7def05647b
+-8	810	7025079392712485	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	af337adcec35b43c
+-15	873	7025079393346102	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	f8c93772cf5c6c93
+-43	1077	7025079395367989	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	a0a8a39b948a4abc
+-2	1171	7025079396316237	CMakeFiles/Projeto1.dir/main.cpp.obj	ff9b7d47c73de229
+-28	2244	7025079407017415	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2245	2749	7025079412048939	Projeto1.exe	5b787a28b9d9b41b
+-4	1966	7025083598831988	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-1967	2409	7025083603232835	Projeto1.exe	5b787a28b9d9b41b
+-4	2109	7025096573115604	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2111	2647	7025096578445007	Projeto1.exe	5b787a28b9d9b41b
+-4	1930	7025134661892623	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-1931	2409	7025134666670557	Projeto1.exe	5b787a28b9d9b41b
+-4	994	7025141182833609	CMakeFiles/Projeto1.dir/main.cpp.obj	ff9b7d47c73de229
+-4	2417	7025141337053292	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2418	3144	7025141344294845	Projeto1.exe	5b787a28b9d9b41b
+-4	1946	7025143280612401	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-1947	2435	7025143285463893	Projeto1.exe	5b787a28b9d9b41b
+-5	1230	7025286499572109	CMakeFiles/Projeto1.dir/main.cpp.obj	ff9b7d47c73de229
+-1231	1845	7025286505677718	Projeto1.exe	5b787a28b9d9b41b
+-4	1021	7025373718378717	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	a0a8a39b948a4abc
+-13	2527	7025373733443001	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2528	3310	7025373741231230	Projeto1.exe	5b787a28b9d9b41b
+-4	2263	7025381830840031	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2264	2710	7025381835301945	Projeto1.exe	5b787a28b9d9b41b
+-4	2131	7025382093581008	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2132	2588	7025382098141032	Projeto1.exe	5b787a28b9d9b41b
+-4	889	7025406630837979	CMakeFiles/Projeto1.dir/main.cpp.obj	ff9b7d47c73de229
+-10	2166	7025406643561202	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+-2167	2729	7025406649192892	Projeto1.exe	5b787a28b9d9b41b
+-4	2537	7025408888773925	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+ 2538	3203	7025408895436129	Projeto1.exe	5b787a28b9d9b41b
++0	743	1680881149585435703	CMakeFiles/Projeto1.dir/main.cpp.o	48fade0e3f600e45
++1	365	1680881149212010812	CMakeFiles/Projeto1.dir/src/UFDS.cpp.o	777153c8eac6f63b
++1	390	1680881149235600994	CMakeFiles/Projeto1.dir/src/Heap.cpp.o	866c2638a2656d6d
++1	632	1680881149471496195	CMakeFiles/Projeto1.dir/src/Graph.cpp.o	e1cd1767fbe1477a
++1	555	1680881149397789739	CMakeFiles/Projeto1.dir/src/network.cpp.o	c4d28079806e2802
++367	1254	1680881150099139443	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.o	8027dc9d0ad343ad
++390	793	1680881149638799009	CMakeFiles/Projeto1.dir/src/Station.cpp.o	e1dd8e2ab9b7b60
++1	582	1680881149421199755	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.o	434f0d801c0758dd
++9	412	1680881167478635033	CMakeFiles/Projeto1.dir/src/UFDS.cpp.o	777153c8eac6f63b
++9	487	1680881167551205992	CMakeFiles/Projeto1.dir/src/Heap.cpp.o	866c2638a2656d6d
++9	716	1680881167779005258	CMakeFiles/Projeto1.dir/src/network.cpp.o	c4d28079806e2802
++9	815	1680881167879945137	CMakeFiles/Projeto1.dir/src/Graph.cpp.o	e1cd1767fbe1477a
++8	830	1680881167892480851	CMakeFiles/Projeto1.dir/main.cpp.o	48fade0e3f600e45
++487	895	1680881167958944661	CMakeFiles/Projeto1.dir/src/Station.cpp.o	e1dd8e2ab9b7b60
++10	943	1680881168008516519	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.o	434f0d801c0758dd
++412	1431	1680881168495867418	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.o	8027dc9d0ad343ad
++7	725	1680881218841524394	CMakeFiles/Projeto1.dir/main.cpp.o	48fade0e3f600e45
++725	803	1680881218922500662	Projeto1	8d5c6c2dc1be7ccd

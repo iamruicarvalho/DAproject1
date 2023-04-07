@@ -421,6 +421,13 @@ void NetworkManager::dijkstra(string first, string second) {
 
 
 // pré 4
+/**
+ * Coloca a ligação entre duas estações em modo bloqueado
+ * Complexidade temporal: O(n), onde n é o número de estações
+ * @param A string, estação de origem
+ * @param B string, estação de destino
+ * @return bool, true se a ligação foi bloqueada, false caso contrário
+ */
 
 bool NetworkManager::set_block(std::string A, std::string B) {
     int station_start = stations_code_reverse[A];
@@ -547,7 +554,12 @@ int NetworkManager::max_trains_with_blocks (string A, string B) {
 }
 
 //4.2
-
+/**
+ * Comparador para ordenar as estações por ordem decrescente de capacidade e caso igual por ordem alfabética
+ * @param x pair<string,int>, estação e capacidade
+ * @param y pair<string,int>, estação e capacidade
+ * @return bool, true se a capacidade de x é maior que y, false caso contrário
+ */
 static bool comp(pair<string, int>& x, pair<string, int>& y) {
     if (x.second == y.second) {
         return x.first < y.first;
@@ -555,17 +567,29 @@ static bool comp(pair<string, int>& x, pair<string, int>& y) {
     return x.second > y.second;
 }
 
-
+/**
+ * Coloca a flag de teste a true nas ligações que estão a ser testadas
+ * Complexidade temporal: O(1)
+ * @param that pair<Edge*,Edge*>, ligações que estão a ser testadas
+ */
 void NetworkManager::setEdgeTesting(pair<Edge*,Edge*> that) {
     that.first->setTesting(true);
     that.second->setTesting(true);
 }
-
+/**
+ * Remove a flag de teste das ligações que estão a ser testadas
+ * Complexidade temporal: O(1)
+ * @param that pair<Edge*,Edge*>, ligações que estão a ser testadas
+ */
 void NetworkManager::removeEdgeTesting(pair<Edge *, Edge *> that) {
     that.first->setTesting(false);
     that.second->setTesting(false);
 }
-
+/**
+ * Encontra as estações mais afetadas por um corte de uma linha
+ * Complexidade temporal: O(nm), onde n é o número de estações e m é o número de ligações
+ * @param rank int, número de estações a mostrar
+ */
 void NetworkManager::most_affected_stations(int rank) {
     unordered_map<string,int> capacityNormal;
     unordered_map<string,int> capacityCutted;
