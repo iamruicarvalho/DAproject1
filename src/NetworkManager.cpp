@@ -256,7 +256,7 @@ vector<pair<int,pair<string,string>>> NetworkManager::max_of_max_trains() {
             string A = connection1.second;
             string B = connection1.first;
             comparing = max_trains(A,B);
-            if(comparing==result){
+            if(comparing == result){
                 all.first = result;
                 all.second.first = A;
                 all.second.second = B;
@@ -269,6 +269,8 @@ vector<pair<int,pair<string,string>>> NetworkManager::max_of_max_trains() {
                 all.first = result;
                 all.second.first = A;
                 all.second.second = B;
+                that.clear();
+                that.push_back(all);
             }
         }
     }
