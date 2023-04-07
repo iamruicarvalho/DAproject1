@@ -79,11 +79,6 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Projeto1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projeto1" TARGET_NAME="Projeto1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projeto1" RUN_TARGET_NAME="Projeto1">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -122,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680838324589</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Doxygen NetworkManager.cpp">
+      <created>1680884354653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680884354653</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +150,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos" />
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
+    <MESSAGE value="Doxygen NetworkManager.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doxygen NetworkManager.cpp" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

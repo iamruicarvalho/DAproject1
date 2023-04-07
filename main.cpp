@@ -5,7 +5,9 @@
 #include <locale.h>
 #include <codecvt>
 
-
+/**
+ * Função que mostra o menu
+ */
 void showMenu() {
     cout << "1 - Pretendo saber o fluxo maximo de comboios entre 2 estações" << endl;
     cout << "2 - Pretendo saber qual é o máximo valor possível de fluxo entre 2 estações quaisquer" << endl;
