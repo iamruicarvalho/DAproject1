@@ -9,6 +9,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <unordered_set>
 #include <set>
 #include <list>
 
@@ -18,6 +19,8 @@ class NetworkManager : public Graph {
 public:
     NetworkManager();
     void readFiles();
+    void listStations();
+    void listConnections();
 
     int indexA(string a);
     int indexB(string a);
@@ -35,7 +38,7 @@ public:
     static double minResidual(Vertex *s, Vertex *t);
     void update(Vertex *s, Vertex *t, double f);
     int maxTrainsArrivingAtStation(const string& arrivingStation);
-    pair<int,pair<string,string>> max_of_max_trains();
+    vector<pair<int,pair<string,string>>> max_of_max_trains();
     bool set_block(string A, string B);
     bool remove_block(string A, string B);
     set<int> returnBlockedStations(const string& line);
@@ -56,7 +59,6 @@ private:
     unordered_map<int,std::string> stations_code;
     unordered_map<std::string, int> network_code_reverse;
     vector<pair<Edge*,Edge*>> edgesBlocked;
-    unordered_map<string, int> my_map; //4.2
 
 
 };

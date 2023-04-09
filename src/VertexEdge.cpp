@@ -18,6 +18,7 @@ Edge * Vertex::addEdge(Vertex *d, double w, string service, int cost) {
     auto newEdge = new Edge(this, d, w, service, cost);
     adj.push_back(newEdge);
     d->capacity+=w;
+    newEdge->setReverse(new Edge(d,this,w,service,cost));
     d->incoming.push_back(newEdge);
     return newEdge;
 }
