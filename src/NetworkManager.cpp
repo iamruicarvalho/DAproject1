@@ -624,3 +624,39 @@ void NetworkManager::most_affected_stations(int rank) {
     }
 }
 
+void NetworkManager:: bfs(string source, string target){
+    for(auto vertex: vertexSet){
+        vertex->setVisited(false);
+        vertex->setPath(nullptr);
+        vertex->setDist(0);
+    }
+    Vertex* start = findVertex(stations_code_reverse[source]);
+    Vertex* end = findVertex(stations_code_reverse[target]);
+    start->setVisited(true);
+    queue<Vertex*> q;
+    q.push(start);
+    while(!q.empty()){
+        Vertex* v = q.front();
+        q.pop();
+        for(auto edge: v->getAdj()){
+            if(!edge->getDest()->isVisited() && edge->getDest()->getDist() - v->getDist()+1 > 0){
+                edge->getDest()->setVisited(true);
+                edge->getDest()->setPath(edge);
+                edge->getDest()->setDist(v->getDist()+1);
+                q.push(edge->getDest());
+            }
+        }
+    }
+    if(end->isVisited()){
+        cout<< "Existe caminho entre " << source << " e " << target << endl;
+        cout << "O caminho é: " << endl;
+        Vertex* v = end;
+        while(v->getPath()!= nullptr){
+            cout << stations_code[v->getId()] << " -> ";
+            v = v->getPath()->getOrig();
+        }
+        cout << stations_code[v->getId()] << endl;
+        cout << "O comprimento do caminho é: " << end->getDist() << endl;
+    }
+}
+

@@ -124,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680884354653</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Doxygen quase terminado">
+      <created>1680902503793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680902503793</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,14 +158,15 @@
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos" />
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
     <MESSAGE value="Doxygen NetworkManager.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doxygen NetworkManager.cpp" />
+    <MESSAGE value="Doxygen quase terminado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Doxygen quase terminado" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/NetworkManager.cpp</url>
-          <line>403</line>
+          <line>405</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
