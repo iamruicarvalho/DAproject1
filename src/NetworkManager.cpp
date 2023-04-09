@@ -643,7 +643,12 @@ void NetworkManager::most_affected_stations(int rank) {
         cout << endl;
     }
 }
-
+/**
+ * Encontra o caminho mais curto em numero de comboios entre duas estações
+ * Complexidade temporal: O(nm), onde n é o número de estações e m é o número de ligações
+ * @param source string, estação de origem
+ * @param target string, estação de destino
+ */
 void NetworkManager:: bfs(string source, string target){
     for(auto vertex: vertexSet){
         vertex->setVisited(false);
