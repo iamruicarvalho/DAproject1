@@ -320,8 +320,8 @@ void NetworkManager::trainManagementByMunicipality(int k){
     double max = vec[0].second;
     auto c = vec.begin();
     int i = 1;
+    c++;
     while(k>0){
-        if(c->second == INF) c++;
         if(c->second < max){
             max = c->second;
             k--;
@@ -349,11 +349,11 @@ void NetworkManager::trainManagementByDistrict(int k){
     sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
         return a.second > b.second;
     });
-    double max = vec[0].second;
+    double max = vec[1].second;
     auto c = vec.begin();
     int i = 1;
+    c++;
     while(k>0){
-        if(c->second == INF) c++;
         if(c->second < max){
             k--;
             if(k==0)break;
