@@ -2,6 +2,7 @@
 // Created by Utilizador on 12/03/2023.
 //
 #include <iostream>
+#include <cstring>
 #include "NetworkManager.h"
 
 using namespace std;
@@ -12,10 +13,10 @@ NetworkManager::NetworkManager() {
 }
 
 /**
- * Lê os ficheiros stations.csv e network.csv e cria um grafo com as estações (vertices) e ligações (arestas)
- * Guardamos também as estações numa hash table para facilitar a procura de estações por id e nome
- * O id da estação é feito por auto-incrementação
- * Complexidade temporal: O(n+m), onde n é o número de estações e m é o número de ligações
+ * Lê os ficheiros stations.csv e network.csv e cria um grafo com as estações (vertices) e ligações (edges).
+ * Guardamos também as estações numa hash table para facilitar a procura de estações por id e nome.
+ * O id da estação é feito por auto-incrementação.
+ * Complexidade temporal: O(n+m), onde n é o número de estações e m é o número de ligações.
  * @return
  */
 void NetworkManager::readFiles() {
@@ -110,23 +111,41 @@ void NetworkManager::readFiles() {
     }
 }
 
+/**
+ * Beside showing the name, the district, the municipality and the township of each train station,
+ * this function also shows the line that connects a specific station to its reachable stations.
+ * Temporal Complexity: O(n), where n represents the number of stations of the train railway.
+ * @return
+ */
 void NetworkManager::listStations() {
-    cout << "NAME    |    DISTRICT    |    MUNICIPALITY    |    TOWNSHIP    |    LINE" << endl;
+    cout << "\n[NAME | DISTRICT | MUNICIPALITY | TOWNSHIP | LINE]";
+    cout << "\n--------------------------------------------------\n";
+
+    //int k = 1;
     for (auto station : stationsSet) {
-        cout << station.getName() << "  |  " <<
-        station.getDistrict() << "  |  " <<
-        station.getMunicipality() << "  |  " <<
-        station.getTownship() << "  |  " <<
-        station.getLine() << endl;
+        cout << station.getName() << " | " <<
+             station.getDistrict() << " | " <<
+             station.getMunicipality() << " | " <<
+             station.getTownship() << " | " <<
+             station.getLine() << endl;
     }
 }
+
+/**
+ * Beside showing the names of the source and the destiny stations,
+ * this function also shows the line's capacity that connects the source station to the destiny station
+ * and the service associated with that line.
+ * Temporal Complexity: O(n), where n represents the number of connections of the train railway.
+ * @return
+ */
 void NetworkManager::listConnections() {
-    cout << "STATION_A    |    STATION_B    |    CAPACITY    |    SERVICE" << endl;
+    cout << "\n[STATION_A | STATION_B | CAPACITY | SERVICE]";
+    cout << "\n--------------------------------------------\n";
     for (auto connection : networkSet) {
-        cout << connection.getStationA() << "  |  " <<
-        connection.getStationB() << "  |  " <<
-        connection.getCapacity() << "  |  " <<
-        connection.getService() << endl;
+        cout << connection.getStationA() << " | " <<
+            connection.getStationB() << " | " <<
+            connection.getCapacity() << " | " <<
+            connection.getService() << endl;
     }
 }
 
