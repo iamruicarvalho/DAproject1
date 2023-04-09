@@ -131,7 +131,28 @@
       <option name="project" value="LOCAL" />
       <updated>1680902503793</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bfs e numero de comboios">
+      <created>1681051771211</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681051771211</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bfs e numero de comboios">
+      <created>1681051836853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681051836853</updated>
+    </task>
+    <task id="LOCAL-00007" summary="doxy bfs">
+      <created>1681052228463</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681052228463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,14 +180,16 @@
     <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
     <MESSAGE value="Doxygen NetworkManager.cpp" />
     <MESSAGE value="Doxygen quase terminado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doxygen quase terminado" />
+    <MESSAGE value="bfs e numero de comboios" />
+    <MESSAGE value="doxy bfs" />
+    <option name="LAST_COMMIT_MESSAGE" value="doxy bfs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/NetworkManager.cpp</url>
-          <line>405</line>
+          <line>428</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -321,7 +321,9 @@ void NetworkManager::trainManagementByMunicipality(int k){
     auto c = vec.begin();
     int i = 1;
     while(k>0){
+        if(c->second == INF) c++;
         if(c->second < max){
+            max = c->second;
             k--;
             if(k==0)break;
             i++;
@@ -351,6 +353,7 @@ void NetworkManager::trainManagementByDistrict(int k){
     auto c = vec.begin();
     int i = 1;
     while(k>0){
+        if(c->second == INF) c++;
         if(c->second < max){
             k--;
             if(k==0)break;
