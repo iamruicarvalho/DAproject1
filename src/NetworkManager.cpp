@@ -110,6 +110,26 @@ void NetworkManager::readFiles() {
     }
 }
 
+void NetworkManager::listStations() {
+    cout << "NAME    |    DISTRICT    |    MUNICIPALITY    |    TOWNSHIP    |    LINE" << endl;
+    for (auto station : stationsSet) {
+        cout << station.getName() << "  |  " <<
+        station.getDistrict() << "  |  " <<
+        station.getMunicipality() << "  |  " <<
+        station.getTownship() << "  |  " <<
+        station.getLine() << endl;
+    }
+}
+void NetworkManager::listConnections() {
+    cout << "STATION_A    |    STATION_B    |    CAPACITY    |    SERVICE" << endl;
+    for (auto connection : networkSet) {
+        cout << connection.getStationA() << "  |  " <<
+        connection.getStationB() << "  |  " <<
+        connection.getCapacity() << "  |  " <<
+        connection.getService() << endl;
+    }
+}
+
 //2.1
 /**
  * Verfica se o Vertex w foi visitado e se o residual é maior que 0 e se for, adiciona o w à queue q e marca-o como visitado
@@ -606,7 +626,7 @@ void NetworkManager::most_affected_stations(int rank) {
         }
         vector<pair<string, int>> my_vector(capacityCutted.begin(), capacityCutted.end());
         sort(my_vector.begin(),my_vector.end(),comp);
-        for(int i = 0; i<rank;i++){
+        for(int i = 0; i<rank; i++){
             pair<string,int> to_cout = my_vector[i];
             if(to_cout.second==0){
                 if(i==0){

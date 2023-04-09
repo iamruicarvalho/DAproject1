@@ -20,6 +20,8 @@ public:
     NetworkManager();
 
     void readFiles();
+    void listStations();
+    void listConnections();
 
     int indexA(string a);
 

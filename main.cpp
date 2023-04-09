@@ -166,7 +166,7 @@ int main() {
                 networkManager.most_affected_stations(rank);
                 break;
             }
-            case 10:{
+            case 12:{
                 string first, second;
                 cout << "Qual é a primeira estação?" << endl;
                 cin.ignore();
@@ -174,6 +174,14 @@ int main() {
                 cout << "Qual é a segunda estação?" << endl;
                 getline(cin, second);
                 networkManager.bfs(first, second);
+                break;
+            }
+            case 10: {
+                networkManager.listStations();
+                break;
+            }
+            case 11: {
+                networkManager.listConnections();
                 break;
             }
             case 0:
