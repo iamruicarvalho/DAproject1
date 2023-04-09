@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+=======
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+>>>>>>> 15737c633a0a99eeb21a256fd1c3faa41d56cc92
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -17,36 +23,21 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65a8c15e-25be-458b-b9c1-7fb96eb3ed4a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ProjectDA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProjectDA1.iml" afterDir="false" />
+    <list default="true" id="465be99d-6265-4807-bc15-af9603f60d95" name="Changes" comment="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-6da2e3bc4566d29d9623.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-e321c30e8522ef5f7ebe.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-396f323e258256f3ddd8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-04-06T17-24-10-0258.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Projeto1-Debug-ef0b8e08ed273b24352c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-2aa95edb22efbe90c0ad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a357d20fedce7fe018e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-d0502afa689c6663d341.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdC/a.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.23.2/CompilerIdCXX/a.exe" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/main.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/Graph.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/Heap.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/Network.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/Station.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Projeto1.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Projeto1.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NetworkManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/NetworkManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VertexEdge.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/VertexEdge.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,16 +50,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2022" />
     <option name="minorVersion" value="2.3" />
   </component>
-  <component name="ProjectId" id="2OAV7wBMGL2p3G1xlC99aayUP2Z" />
+  <component name="ProjectId" id="2O3uvuzDNONvCwMzAsNUgLLq4O8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -81,11 +70,31 @@
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+<<<<<<< HEAD
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;
+=======
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> 15737c633a0a99eeb21a256fd1c3faa41d56cc92
   }
 }</component>
   <component name="RunManager">
     <configuration name="Projeto1" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projeto1" TARGET_NAME="Projeto1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projeto1" RUN_TARGET_NAME="Projeto1">
+<<<<<<< HEAD
+=======
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+>>>>>>> 15737c633a0a99eeb21a256fd1c3faa41d56cc92
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -94,17 +103,76 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="65a8c15e-25be-458b-b9c1-7fb96eb3ed4a" name="Changes" comment="" />
-      <created>1681003210141</created>
+      <changelist id="465be99d-6265-4807-bc15-af9603f60d95" name="Changes" comment="" />
+      <created>1680801820538</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1681003210141</updated>
-      <workItem from="1681003214352" duration="359000" />
+      <updated>1680801820538</updated>
+      <workItem from="1680801822666" duration="1000" />
+      <workItem from="1680803591765" duration="11418000" />
+      <workItem from="1680832010073" duration="4796000" />
+      <workItem from="1680877191593" duration="5152000" />
     </task>
+    <task id="LOCAL-00001" summary="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos">
+      <created>1680837802308</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680837802308</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade">
+      <created>1680838324589</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680838324589</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Doxygen NetworkManager.cpp">
+      <created>1680884354653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680884354653</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Doxygen quase terminado">
+      <created>1680902503793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680902503793</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bfs e numero de comboios">
+      <created>1681051771211</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681051771211</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bfs e numero de comboios">
+      <created>1681051836853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681051836853</updated>
+    </task>
+    <task id="LOCAL-00007" summary="doxy bfs">
+      <created>1681052228463</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681052228463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticEditVcpkgJson value="false" />
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticFoundErrors value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -116,5 +184,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos" />
+    <MESSAGE value="2.2 aperfeiçoado e 4.2 feito. Penso que depois vai ser preciso testar melhor o 4 todo para casos mais complexos. Também não esquecer de mudar a documentação de algumas funções, como a 2.4 e a 2.2, em que foi alterada a complexidade" />
+    <MESSAGE value="Doxygen NetworkManager.cpp" />
+    <MESSAGE value="Doxygen quase terminado" />
+    <MESSAGE value="bfs e numero de comboios" />
+    <MESSAGE value="doxy bfs" />
+    <option name="LAST_COMMIT_MESSAGE" value="doxy bfs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/NetworkManager.cpp</url>
+          <line>428</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -7,7 +7,11 @@
  */
 
 #include "UFDS.h"
-
+/**
+ * Contrutor da classe UFDS
+ * Complexidade: O(n)
+ * @param N unsigned int, número de nós
+ */
 UFDS::UFDS(unsigned int N) {
     path.resize(N);
     rank.resize(N);
@@ -16,16 +20,34 @@ UFDS::UFDS(unsigned int N) {
         rank[i] = 0;
     }
 }
+/**
+ * Encontra o conjunto de um nó
+ * Complexidade: O(log n)
+ * @param i unsigned int, nó
+ * @return unsigned long, conjunto do nó
+ */
 
 unsigned long UFDS::findSet(unsigned int i) {
     if (path[i] != i) path[i] = findSet(path[i]);
     return path[i];
 }
+/**
+ * Verifica se dois nós pertencem ao mesmo conjunto
+ * Complexidade: O(log n)
+ * @param i int, indice do primeiro nó
+ * @param j int, indice do segundo nó
+ * @return bool, true se pertencerem ao mesmo conjunto, false caso contrário
+ */
 
 bool UFDS::isSameSet(unsigned int i, unsigned int j) {
     return findSet(i) == findSet(j);
 }
-
+/**
+ * Faz a ligação entre dois conjuntos
+ * Complexidade: O(log n)
+ * @param i unsigned int, indice do primeiro nó
+ * @param j unsigned int, indice do segundo nó
+ */
 void UFDS::linkSets(unsigned int i, unsigned int j) {
     if (!isSameSet(i, j)) {
         unsigned long x = findSet(i), y = findSet(j);

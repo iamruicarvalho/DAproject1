@@ -5,7 +5,9 @@
 #include <locale.h>
 #include <codecvt>
 
-
+/**
+ * Função que mostra o menu
+ */
 void showMenu() {
     cout << "1 - Pretendo saber o fluxo maximo de comboios entre 2 estações" << endl;
     cout << "2 - Pretendo saber qual é o máximo valor possível de fluxo entre 2 estações quaisquer" << endl;
@@ -19,7 +21,7 @@ void showMenu() {
     cout << "7 - Desejo reportar um troço do caminho de ferro que já está operacional" << endl;
     cout << "8 - Pretendo saber o fluxo maximo de comboios entre 2 estações, tendo em conta as linhas que foram cortadas " << endl;
     cout << "9 - Pretendo saber quais as estações mais afetadas por cada bloqueio da ferrovia" <<endl<<endl;
-
+    cout << "10 - Pretendo saber se existe um caminho entre duas estações" << endl;
     cout << "0 - Sair" << endl;
 }
 
@@ -162,6 +164,16 @@ int main() {
                 cout << "Digite o top-k de estações mais afetadas que deseja ver" << endl;
                 cin >> rank;
                 networkManager.most_affected_stations(rank);
+                break;
+            }
+            case 12:{
+                string first, second;
+                cout << "Qual é a primeira estação?" << endl;
+                cin.ignore();
+                getline(cin, first);
+                cout << "Qual é a segunda estação?" << endl;
+                getline(cin, second);
+                networkManager.bfs(first, second);
                 break;
             }
             case 10: {

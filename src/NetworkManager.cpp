@@ -339,8 +339,10 @@ void NetworkManager::trainManagementByMunicipality(int k){
     double max = vec[0].second;
     auto c = vec.begin();
     int i = 1;
+    c++;
     while(k>0){
         if(c->second < max){
+            max = c->second;
             k--;
             if(k==0)break;
             i++;
@@ -366,9 +368,10 @@ void NetworkManager::trainManagementByDistrict(int k){
     sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
         return a.second > b.second;
     });
-    double max = vec[0].second;
+    double max = vec[1].second;
     auto c = vec.begin();
     int i = 1;
+    c++;
     while(k>0){
         if(c->second < max){
             k--;
@@ -660,6 +663,47 @@ void NetworkManager::most_affected_stations(int rank) {
         }
         removeEdgeTesting(edges);
         cout << endl;
+    }
+}
+/**
+ * Encontra o caminho mais curto em numero de comboios entre duas estações
+ * Complexidade temporal: O(nm), onde n é o número de estações e m é o número de ligações
+ * @param source string, estação de origem
+ * @param target string, estação de destino
+ */
+void NetworkManager:: bfs(string source, string target){
+    for(auto vertex: vertexSet){
+        vertex->setVisited(false);
+        vertex->setPath(nullptr);
+        vertex->setDist(0);
+    }
+    Vertex* start = findVertex(stations_code_reverse[source]);
+    Vertex* end = findVertex(stations_code_reverse[target]);
+    start->setVisited(true);
+    queue<Vertex*> q;
+    q.push(start);
+    while(!q.empty()){
+        Vertex* v = q.front();
+        q.pop();
+        for(auto edge: v->getAdj()){
+            if(!edge->getDest()->isVisited() && edge->getDest()->getDist() - v->getDist()+1 > 0){
+                edge->getDest()->setVisited(true);
+                edge->getDest()->setPath(edge);
+                edge->getDest()->setDist(v->getDist()+1);
+                q.push(edge->getDest());
+            }
+        }
+    }
+    if(end->isVisited()){
+        cout<< "Existe caminho entre " << source << " e " << target << endl;
+        cout << "O caminho é: " << endl;
+        Vertex* v = end;
+        while(v->getPath()!= nullptr){
+            cout << stations_code[v->getId()] << " -> ";
+            v = v->getPath()->getOrig();
+        }
+        cout << stations_code[v->getId()] << endl;
+        cout << "O comprimento do caminho é: " << end->getDist() << endl;
     }
 }
 

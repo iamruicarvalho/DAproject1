@@ -75,7 +75,7 @@ protected:
 
     bool blocked = false;
 
-    double capacity = 0;
+    double capacity = 0.0;
     vector<pair<string,int>> pathForCost;
     int prev;
     int cost = std::numeric_limits<double>::infinity();
