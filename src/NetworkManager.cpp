@@ -336,7 +336,7 @@ void NetworkManager::trainManagementByMunicipality(int k){
     sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
         return a.second > b.second;
     });
-    double max = vec[0].second;
+    double max = vec[1].second;
     auto c = vec.begin();
     int i = 1;
     c++;
