@@ -434,7 +434,7 @@ void NetworkManager::dijkstra(string first, string second) {
         }
         currentVertex->setVisited(true);
         if(currentVertex->getId() == stations_code_reverse[second]) {
-            std::cout << "Shortest path from " << first << " to " << second << " is:";
+            std::cout << "Shortest path from " << first << " to " << second << " is:\n";
             for (auto node : currentVertex->getPathForCost()) {
                 std::cout << " " << node.first<<endl;
                 if (node.second < flow) {

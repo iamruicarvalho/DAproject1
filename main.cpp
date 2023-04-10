@@ -55,9 +55,9 @@ int main() {
                 if (result == -1) {
                     cout << "Erro ao ler as estações submetidas" << endl;
                 } else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
-                    cout << "Nao existe um caminho entre essas 2 estações" << endl;
+                    cout << "Nao existe um caminho entre essas 2 estações.\n" << endl;
                 } else {
-                    cout << "No máximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo"
+                    cout << "No máximo, entre essas duas estacoes, podem passar " << result << " comboios ao mesmo tempo.\n"
                          << endl;
                 }
                 break;
@@ -65,15 +65,15 @@ int main() {
             case 2: {
                 vector<pair<int,pair<string,string>>> total= networkManager.max_of_max_trains();
                 for(auto result:total){
-                    cout << "entre " << result.second.first << " e " <<result.second.second<< " , ";
+                    cout << "entre " << result.second.first << " e " <<result.second.second<< ", ";
                 }
                 cout << "que corresponde(m) à(s) ligação(ões) com maior fluxo possível, podem passar "<<
-                                    total[0].first <<" comboios ao mesmo tempo" << endl;
+                                    total[0].first <<" comboios ao mesmo tempo.\n" << endl;
                 break;
             }
             case 3:
-                cout << "1 - Pretendo saber qual o municipio que necessita de mais comboios" << endl;
-                cout << "2 - Pretendo saber qual o distrito que necessita de mais comboios" << endl;
+                cout << "1 - Pretendo saber qual o municipio que necessita de mais comboios." << endl;
+                cout << "2 - Pretendo saber qual o distrito que necessita de mais comboios." << endl;
                 int n;
                 int k;
                 cin >> n;
