@@ -20,8 +20,7 @@ NetworkManager::NetworkManager() {
  * @return
  */
 void NetworkManager::readFiles() {
-    cout << "[LOADING FILES...]" << endl;
-
+    
     // read stations.csv
     int station_count = 0;
     std::ifstream stationsFile;
