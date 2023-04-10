@@ -62,7 +62,7 @@ int main() {
                 getline(cin, second);
                 int result = networkManager.max_trains(first, second);
                 if (result == -1) {
-                    cout << "Erro ao ler as estações submetidas" << endl;
+                    cout << "Erro ao ler as estações submetidas.\n" << endl;
                 } else if (result == 0) { // quando dá 0 significa que não existe um caminho entre as duas estações
                     cout << "Nao existe um caminho entre essas 2 estações.\n" << endl;
                 } else {

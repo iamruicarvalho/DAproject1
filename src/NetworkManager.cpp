@@ -415,7 +415,7 @@ public:
 // function to perform Dijkstra's algorithm
 void NetworkManager::dijkstra(string first, string second) {
     for(auto vertex: vertexSet){
-        vertex->setCost(numeric_limits<double>::max());
+        vertex->setCost(INT32_MAX);
         vertex->setVisited(false);
         vertex->setPathForCost({});
     }
