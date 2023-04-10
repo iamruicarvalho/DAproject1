@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 C:/DA/project/ProjectDA1/cmake-build-debug/CMakeFiles/Projeto1.dir
 C:/DA/project/ProjectDA1/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/DA/project/ProjectDA1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+=======
+C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/Projeto1.dir
+C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Bernardo/OneDrive/Ensino superior/2ano_2semestre/DA/ProjectDA1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+>>>>>>> e7b528b703242b23fd4fa9d129d3cf8996ccf539

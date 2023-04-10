@@ -263,7 +263,7 @@ double NetworkManager::max_trains(string A, string B) {
 
 //2.2
 
-struct PairHash {
+struct Hash {
     size_t operator()(const pair<string, string> &p) const {
         return hash<string>()(p.first) ^ hash<string>()(p.second);
     }
@@ -276,7 +276,7 @@ struct PairHash {
  */
 vector<pair<int,pair<string,string>>> NetworkManager::max_of_max_trains() {
     vector<pair<int,pair<string,string>>> that;
-    unordered_set<pair<string,string>,PairHash> edges_verified{};
+    unordered_set<pair<string,string>,Hash> edges_verified{};
     int result = 0;
     int comparing;
     pair<int, pair<string,string>> all;
@@ -421,10 +421,10 @@ void NetworkManager::dijkstra(string first, string second) {
     }
     std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
     int source = stations_code_reverse[first];
-    double flow = numeric_limits<int>::max();
+    double flow = INT32_MAX;
     Vertex* startNode = findVertex(source);
     startNode->setCost(0.0);
-    startNode->addPathForCost({first, numeric_limits<int>::max()});
+    startNode->addPathForCost({first, INT32_MAX});
     pq.push(startNode);
     while (!pq.empty()) {
         Vertex* currentVertex = pq.top();
