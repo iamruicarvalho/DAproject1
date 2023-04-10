@@ -20,14 +20,14 @@ NetworkManager::NetworkManager() {
  * @return
  */
 void NetworkManager::readFiles() {
-    cout << "Loading files..." << endl;
+    cout << "[LOADING FILES...]" << endl;
 
     // read stations.csv
     int station_count = 0;
     std::ifstream stationsFile;
     stationsFile.open("../resources/stations.csv");
     if (!stationsFile.is_open()) {
-        cout << "File not found\n";
+        cout << "[FILE NOT FOUND]\n";
         return;
     }
     string name, district, municipality, township, line;
@@ -56,7 +56,7 @@ void NetworkManager::readFiles() {
         }
     }
     stationsFile.close();
-    cout << "There are " << stationsSet.size() << " stations!" << endl;
+    cout << "There are " << stationsSet.size() << " stations!\n" << endl;
 
 
     // read network.csv
@@ -94,7 +94,7 @@ void NetworkManager::readFiles() {
         addEdge(code_StationB, code_StationA, stod(capacity)/2, service, cost);
     }
     networkFile.close();
-    cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!"
+    cout << "In all, there are " << networkSet.size() << " possible connections in the provided railway network!\n"
          << endl;
     Station superStation("superStation");
     stations_code_reverse[superStation.getName()] = stationsSet.size()+1;    // id big enough to be unique
