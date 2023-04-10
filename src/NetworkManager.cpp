@@ -414,6 +414,11 @@ public:
  */
 // function to perform Dijkstra's algorithm
 void NetworkManager::dijkstra(string first, string second) {
+    for(auto vertex: vertexSet){
+        vertex->setCost(numeric_limits<double>::max());
+        vertex->setVisited(false);
+        vertex->setPathForCost({});
+    }
     std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
     int source = stations_code_reverse[first];
     double flow = numeric_limits<int>::max();
@@ -429,7 +434,7 @@ void NetworkManager::dijkstra(string first, string second) {
         }
         currentVertex->setVisited(true);
         if(currentVertex->getId() == stations_code_reverse[second]) {
-            std::cout << "Shortest path from " << first << " to " << second << " is:\n";
+            std::cout << "Shortest path by cost from " << first << " to " << second << " is:"<<endl;
             for (auto node : currentVertex->getPathForCost()) {
                 std::cout << " " << node.first<<endl;
                 if (node.second < flow) {
