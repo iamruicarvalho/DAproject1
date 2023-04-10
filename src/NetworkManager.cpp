@@ -109,7 +109,10 @@ void NetworkManager::readFiles() {
         }
     }
 }
-
+/**
+ * Mostra as estações
+ * Complexidade temporal: O(n), onde n é o número de estações
+ */
 void NetworkManager::listStations() {
     cout << "NAME    |    DISTRICT    |    MUNICIPALITY    |    TOWNSHIP    |    LINE" << endl;
     for (auto station : stationsSet) {
@@ -120,6 +123,10 @@ void NetworkManager::listStations() {
         station.getLine() << endl;
     }
 }
+/**
+ * Mostra as ligações
+ * Complexidade temporal: O(m), onde m é o número de ligações
+ */
 void NetworkManager::listConnections() {
     cout << "STATION_A    |    STATION_B    |    CAPACITY    |    SERVICE" << endl;
     for (auto connection : networkSet) {
@@ -400,6 +407,11 @@ public:
  */
 // function to perform Dijkstra's algorithm
 void NetworkManager::dijkstra(string first, string second) {
+    for(auto c: vertexSet){
+        c->setCost(numeric_limits<double>::max());
+        c->setVisited(false);
+        c->setPathForCost({});
+    }
     std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
     int source = stations_code_reverse[first];
     double flow = numeric_limits<int>::max();
