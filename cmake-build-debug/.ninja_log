@@ -1,4 +1,5 @@
 # ninja log v5
+<<<<<<< HEAD
 6130	7277	7027785264840169	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	a756b7dc10851d9b
 1563	1657	1681064925223275307	Projeto1	8d5c6c2dc1be7ccd
 2405	3048	7028414530044053	Projeto1.exe	98ee526f4762a412
@@ -26,3 +27,25 @@
 1133	1915	7028419254969873	Projeto1.exe	98ee526f4762a412
 4	1291	7028420316187380	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
 1292	2027	7028420323558946	Projeto1.exe	98ee526f4762a412
+=======
+9	395	1681063718764695539	CMakeFiles/Projeto1.dir/src/UFDS.cpp.o	777153c8eac6f63b
+9	325	1681063718696482195	CMakeFiles/Projeto1.dir/src/Heap.cpp.o	866c2638a2656d6d
+16	898	1681064512301070842	CMakeFiles/Projeto1.dir/src/Graph.cpp.o	e1cd1767fbe1477a
+9	696	1681064692095759927	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.o	434f0d801c0758dd
+2391	3126	7026033738501620	Projeto1.exe	5b787a28b9d9b41b
+838	888	1681139908290026481	Projeto1	8d5c6c2dc1be7ccd
+8	507	1681132212961090786	CMakeFiles/Projeto1.dir/main.cpp.o	48fade0e3f600e45
+15	928	1681064512336054925	CMakeFiles/Projeto1.dir/src/network.cpp.o	c4d28079806e2802
+7	75	1681153626345851027	build.ninja	6ca2215973e19c28
+21	838	1681139908237170859	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.o	8027dc9d0ad343ad
+17	907	1681064512313366282	CMakeFiles/Projeto1.dir/src/Station.cpp.o	e1dd8e2ab9b7b60
+11	473	1681153627224596946	CMakeFiles/Projeto1.dir/src/UFDS.cpp.o	777153c8eac6f63b
+9	510	1681153627259865585	CMakeFiles/Projeto1.dir/src/Heap.cpp.o	866c2638a2656d6d
+9	778	1681153627528912337	CMakeFiles/Projeto1.dir/src/network.cpp.o	c4d28079806e2802
+9	786	1681153627535754989	CMakeFiles/Projeto1.dir/src/Graph.cpp.o	e1cd1767fbe1477a
+12	850	1681153627600125844	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.o	434f0d801c0758dd
+9	939	1681153627683594159	CMakeFiles/Projeto1.dir/main.cpp.o	48fade0e3f600e45
+510	1065	1681153627816088289	CMakeFiles/Projeto1.dir/src/Station.cpp.o	e1dd8e2ab9b7b60
+474	1554	1681153628307908265	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.o	8027dc9d0ad343ad
+1555	1592	1681153628348676016	Projeto1	8d5c6c2dc1be7ccd
+>>>>>>> cf38e6c17c5da5e3c42ff560d89c2eb281208c17

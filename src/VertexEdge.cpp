@@ -3,12 +3,16 @@
 #include "VertexEdge.h"
 
 /************************* Vertex  **************************/
+
+
 /**
  * Construtor de um vértice com um dado id.
  * Complexidade: O(1)
  * @param id int, id do vértice
  */
 Vertex::Vertex(int id): id(id) {}
+
+
 /**
  * Construtor de um vértice com um dado id, distrito, município e cidade.
  * Complexidade: O(1)
@@ -18,6 +22,8 @@ Vertex::Vertex(int id): id(id) {}
  * @param township string, cidade do vértice
  */
 Vertex::Vertex(int id, string district, string municipality, string township): id(id), district_(district), municipality_(municipality), township_(township) {}
+
+
 /**
  * Construtor de um vértice com um dado id, distrito, município, cidade e linha.
  * Complexidade: O(1)

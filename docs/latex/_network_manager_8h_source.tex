@@ -1,0 +1,101 @@
+\hypertarget{_network_manager_8h_source}{}\doxysection{Network\+Manager.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Utilizador on 12/03/2023.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef NETWORKMANAGER\_H}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define NETWORKMANAGER\_H}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}Station.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Network.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <unordered\_set>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <set>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_network_manager}{NetworkManager}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_graph}{Graph}} \{}
+\DoxyCodeLine{19 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_network_manager_a5aaf71c4aa7a2efab7f1dbae02312280}{NetworkManager}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a9eb823fe1d3a864b70f67f1a416e2838}{readFiles}}();}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a19aae84e589aef8d25b8d5149f10ef7f}{listStations}}();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_ae2324b73dafb3bb6be666b0d8f0389b4}{listConnections}}();}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} indexA(\textcolor{keywordtype}{string} a);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} indexB(\textcolor{keywordtype}{string} a);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     unordered\_map<std::string, int> get\_stations\_code\_reversed();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     std::unordered\_map<int, std::string> get\_stations\_code();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_network_manager_ae7df9d4e3cab78041fa22aba0981ecea}{max\_trains}}(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_network_manager_aff65de5f3d3bb1fce6d4bef3fa19612e}{max\_trains\_with\_blocks}}(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{int} max\_trains\_with\_specific\_block(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a0e764c7c2f2c3da1c14355424242ad37}{testAndVisit}}(std::queue<Vertex *> \&q, \mbox{\hyperlink{class_edge}{Edge}} *e, \mbox{\hyperlink{class_vertex}{Vertex}} *w, \textcolor{keywordtype}{double} residual);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a78dd2863348bbf4fe888edae4b6565b8}{testAndVisitWithBlocks}}(std::queue<Vertex *> \&q, \mbox{\hyperlink{class_edge}{Edge}} *e, \mbox{\hyperlink{class_vertex}{Vertex}} *w, \textcolor{keywordtype}{double} residual);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} testAndVisitWithSpecificBlock(std::queue<Vertex *> \&q, \mbox{\hyperlink{class_edge}{Edge}} *e, \mbox{\hyperlink{class_vertex}{Vertex}} *w, \textcolor{keywordtype}{double} residual);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_manager_a69c740614982afe5b43d583b2f9e604a}{augmentingPath}}(\mbox{\hyperlink{class_vertex}{Vertex}} *s, \mbox{\hyperlink{class_vertex}{Vertex}} *t);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_manager_a37c4eb95e3ead7195b777b1880ea4c7c}{augmentingPathWithBlocks}}(\mbox{\hyperlink{class_vertex}{Vertex}} *s, \mbox{\hyperlink{class_vertex}{Vertex}} *t);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keywordtype}{bool} augmentingPathWithSpecificBlock(\mbox{\hyperlink{class_vertex}{Vertex}} *s, \mbox{\hyperlink{class_vertex}{Vertex}} *t);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keyword}{static} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_network_manager_adf6659e40c46e960a39e51c85e3433d4}{minResidual}}(\mbox{\hyperlink{class_vertex}{Vertex}} *s, \mbox{\hyperlink{class_vertex}{Vertex}} *t);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_af9c7203c052199787a6f0d64124ee44d}{update}}(\mbox{\hyperlink{class_vertex}{Vertex}} *s, \mbox{\hyperlink{class_vertex}{Vertex}} *t, \textcolor{keywordtype}{double} f);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_network_manager_ac9762d5b3852079ad79bf755f2fadd35}{maxTrainsArrivingAtStation}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&arrivingStation);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     vector<pair<int, pair<string, string>>> \mbox{\hyperlink{class_network_manager_afe290a360fb2f5edde721cf81f1f0abd}{max\_of\_max\_trains}}();}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_manager_aaae326fd06585a73eb1aebdf812cd261}{set\_block}}(\textcolor{keywordtype}{string} A, \textcolor{keywordtype}{string} B);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_manager_a9a9436df0e453b9cefa1e66393d98766}{remove\_block}}(\textcolor{keywordtype}{string} A, \textcolor{keywordtype}{string} B);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     set<int> returnBlockedStations(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&line);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} setBlockLine(\textcolor{keyword}{const} \textcolor{keywordtype}{string} \&blockline);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a454085f9c707c175273c261855b8ffca}{trainManagementByMunicipality}}(\textcolor{keywordtype}{int} k);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a07f5e4a4ff09bc33722dcdbdb327148e}{trainManagementByDistrict}}(\textcolor{keywordtype}{int} k);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     \textcolor{keywordtype}{void} trainManagementByTownship(\textcolor{keywordtype}{int} k);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_ae0e2ea067998110964ba3923c8f8e4ca}{dijkstra}}(\textcolor{keywordtype}{string} first, \textcolor{keywordtype}{string} second);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} printShortestPath(\textcolor{keywordtype}{string} second);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a6983a46a680845a67aea638e85489794}{most\_affected\_stations}}(\textcolor{keywordtype}{int} rank);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_ad14465fa91554505cf566198237c45ae}{setEdgeTesting}}(pair<Edge *, Edge *> that);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a737e323020fb93cde449a0216cea8a98}{removeEdgeTesting}}(pair<Edge *, Edge *> that);}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} add\_or\_update(\textcolor{keywordtype}{string} key, \textcolor{keywordtype}{int} value);}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_manager_a688932a83cb7ec649968bd56abb30f3a}{bfs}}(\textcolor{keywordtype}{string} source, \textcolor{keywordtype}{string} target);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{keyword}{private}:}
+\DoxyCodeLine{89     set<Station> stationsSet;}
+\DoxyCodeLine{90     set<Network> networkSet;}
+\DoxyCodeLine{91     unordered\_map<std::string, int> stations\_code\_reverse;}
+\DoxyCodeLine{92     unordered\_map<int, std::string> stations\_code;}
+\DoxyCodeLine{93     unordered\_map<std::string, int> network\_code\_reverse;}
+\DoxyCodeLine{94     vector<pair<Edge *, Edge *>> edgesBlocked;}
+\DoxyCodeLine{95 \};}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//NETWORKMANAGER\_H}}
+
+\end{DoxyCode}

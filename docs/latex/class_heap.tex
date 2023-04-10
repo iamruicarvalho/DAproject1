@@ -1,0 +1,73 @@
+\hypertarget{class_heap}{}\doxysection{Heap Class Reference}
+\label{class_heap}\index{Heap@{Heap}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_heap_a6595efd3562a6334d2f5471c2b3b7cb4}{Heap}} ()
+\item 
+\mbox{\hyperlink{class_heap_aad54cb57cd3f33a1493aef602d787463}{Heap}} (std\+::vector$<$ int $>$ v)
+\item 
+void \mbox{\hyperlink{class_heap_a4c6a62f67cebbe16be684d464b2e19f0}{insert}} (int x)
+\item 
+int \mbox{\hyperlink{class_heap_acbf8935a8c01b3188d16ffca0011824b}{extract\+Min}} ()
+\item 
+bool \mbox{\hyperlink{class_heap_a576331b44a7f81f24b324261b1714732}{empty}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_heap_a6595efd3562a6334d2f5471c2b3b7cb4}\label{class_heap_a6595efd3562a6334d2f5471c2b3b7cb4}} 
+\index{Heap@{Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Heap\+::\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Contrutor da classe \mbox{\hyperlink{class_heap}{Heap}} \mbox{\Hypertarget{class_heap_aad54cb57cd3f33a1493aef602d787463}\label{class_heap_aad54cb57cd3f33a1493aef602d787463}} 
+\index{Heap@{Heap}!Heap@{Heap}}
+\index{Heap@{Heap}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{Heap()}{Heap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Heap\+::\+Heap (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{v }\end{DoxyParamCaption})}
+
+Construtor da classe \mbox{\hyperlink{class_heap}{Heap}} tendo como parâmetro um vector 
+\begin{DoxyParams}{Parameters}
+{\em v} & vector, vector de inteiros \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_heap_a576331b44a7f81f24b324261b1714732}\label{class_heap_a576331b44a7f81f24b324261b1714732}} 
+\index{Heap@{Heap}!empty@{empty}}
+\index{empty@{empty}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Heap\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Função que verifica se o vector está vazio Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+bool, true se o vector estiver vazio, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heap_acbf8935a8c01b3188d16ffca0011824b}\label{class_heap_acbf8935a8c01b3188d16ffca0011824b}} 
+\index{Heap@{Heap}!extractMin@{extractMin}}
+\index{extractMin@{extractMin}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{extractMin()}{extractMin()}}
+{\footnotesize\ttfamily int Heap\+::extract\+Min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Função que extrai o menor elemento do vector Complexidade\+: O(log n) \begin{DoxyReturn}{Returns}
+int, menor elemento do vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_heap_a4c6a62f67cebbe16be684d464b2e19f0}\label{class_heap_a4c6a62f67cebbe16be684d464b2e19f0}} 
+\index{Heap@{Heap}!insert@{insert}}
+\index{insert@{insert}!Heap@{Heap}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Heap\+::insert (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+Função que insere um elemento no vector Complexidade\+: O(log n) 
+\begin{DoxyParams}{Parameters}
+{\em x} & int, elemento a inserir \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Heap.\+h\item 
+Heap.\+cpp\end{DoxyCompactItemize}

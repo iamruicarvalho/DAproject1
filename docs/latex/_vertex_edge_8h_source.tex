@@ -1,0 +1,136 @@
+\hypertarget{_vertex_edge_8h_source}{}\doxysection{Vertex\+Edge.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// By: Gonçalo Leão}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef DA\_TP\_CLASSES\_VERTEX\_EDGE}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define DA\_TP\_CLASSES\_VERTEX\_EDGE}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <limits>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}MutablePriorityQueue.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{class }\mbox{\hyperlink{class_edge}{Edge}};}
+\DoxyCodeLine{14 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define INF std::numeric\_limits<double>::max()}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{comment}{/************************* Vertex  **************************/}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{class }\mbox{\hyperlink{class_vertex}{Vertex}} \{}
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}();}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id});}
+\DoxyCodeLine{24     \mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}}(\textcolor{keywordtype}{int} \textcolor{keywordtype}{id}, \textcolor{keywordtype}{string} district, \textcolor{keywordtype}{string} municipality, \textcolor{keywordtype}{string} township);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_vertex_ad4ccd48170a1530ec1db5eb306357a74}{operator<}}(\mbox{\hyperlink{class_vertex}{Vertex}} \& vertex) \textcolor{keyword}{const}; \textcolor{comment}{// // required by MutablePriorityQueue}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_vertex_a75b6b4a4afc26affea59fdae48aa30b1}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28     std::vector<Edge *> \mbox{\hyperlink{class_vertex_a9858f2aa388d2bfb49d9df8f4504b5a0}{getAdj}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{isVisited}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_vertex_a126e306f0534b99cd97aa864fdb243d4}{isProcessing}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_vertex_ad7348af9376d4b9ada5ceeca3bd1b2b7}{getIndegree}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_vertex_aa36ca926de23a6e7283be42e2930957c}{getDist}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33     \mbox{\hyperlink{class_edge}{Edge}} *\mbox{\hyperlink{class_vertex_a6e120e57da6af94892fae44e05868794}{getPath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34     std::vector<Edge *> \mbox{\hyperlink{class_vertex_a84b20dae22321e5a729606885357b015}{getIncoming}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_vertex_ad6cc99b84f20c414eded4b0b8ebba45f}{isBlocked}}();}
+\DoxyCodeLine{36     \textcolor{keywordtype}{double} \textcolor{keyword}{const} \mbox{\hyperlink{class_vertex_a071b59fd1cdcee3816bc72d74ac5be86}{getCapacity}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_a5fbffd695323f52f0b93276176781c7d}{setId}}(\textcolor{keywordtype}{int} info);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_a15eeabbbb6d517af746ae137c6d5b595}{setVisited}}(\textcolor{keywordtype}{bool} visited);}
+\DoxyCodeLine{40     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_a1c93b166281b30db2edef03791748ace}{setProcesssing}}(\textcolor{keywordtype}{bool} processing);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_aeb605d2ba9296a5e40496a9e37557d03}{setIndegree}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} indegree);}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_a6939bef79bfe5fe5bf77d9fd1bd70085}{setDist}}(\textcolor{keywordtype}{double} dist);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_abe4bc30005eec65e775d0cd51f456460}{setPath}}(\mbox{\hyperlink{class_edge}{Edge}} *path);}
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_acf362d6e369860b40f6691a4864c3e81}{setBlock}}();}
+\DoxyCodeLine{45     \mbox{\hyperlink{class_edge}{Edge}} * \mbox{\hyperlink{class_vertex_af66475bbb9232623cbbed1a0684c9f24}{addEdge}}(\mbox{\hyperlink{class_vertex}{Vertex}} *dest, \textcolor{keywordtype}{double} w, \textcolor{keywordtype}{string} service, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_vertex_a10c6827225205dc4ad070914ebfa26e7}{removeEdge}}(\textcolor{keywordtype}{int} destID);}
+\DoxyCodeLine{47     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_vertex_a4037799e30acf908d25cddf24aa4e933}{getDistrict}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_vertex_aab416c1829877b78e2f9d7fb59d4b8be}{getMunicipality}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{49     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_vertex_ad65231ae22157e25ce9c5139a1c6345a}{getTownship}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{50     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_a1d2b3df50f9f1bb7c6d543e019b0f270}{setPrev}}(\textcolor{keywordtype}{int} prev);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_vertex_a859e9ab35003fc597bb0516d4cfbeaa5}{getPrev}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_ad58dfb3cfb1dc1fdfdd0821a1d633b59}{setCost}}(\textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_vertex_a84131dc713516e5e50263374dea5dcda}{getCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_abdcb889c44cb98aea6d3550626f22ba5}{addPathForCost}}(pair<string,int> caminho);}
+\DoxyCodeLine{55     vector<pair<string,int>> \mbox{\hyperlink{class_vertex_a526f5e20037ed4d3a044deae82c0b1a4}{getPathForCost}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_vertex_a49474437c44687c32ccfd170d7120b6b}{setPathForCost}}(vector<pair<string,int>> pathForCost);}
+\DoxyCodeLine{57     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{class_mutable_priority_queue}{MutablePriorityQueue}}<\mbox{\hyperlink{class_vertex}{Vertex}}>;}
+\DoxyCodeLine{58 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} id;                \textcolor{comment}{// identifier}}
+\DoxyCodeLine{60     \textcolor{keywordtype}{string} district\_;}
+\DoxyCodeLine{61     \textcolor{keywordtype}{string} municipality\_;}
+\DoxyCodeLine{62     \textcolor{keywordtype}{string} township\_;}
+\DoxyCodeLine{63     std::vector<Edge *> adj;  \textcolor{comment}{// outgoing edges}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{comment}{// auxiliary fields}}
+\DoxyCodeLine{66     \textcolor{keywordtype}{bool} visited = \textcolor{keyword}{false}; \textcolor{comment}{// used by DFS, BFS, Prim ...}}
+\DoxyCodeLine{67     \textcolor{keywordtype}{bool} processing = \textcolor{keyword}{false}; \textcolor{comment}{// used by isDAG (in addition to the visited attribute)}}
+\DoxyCodeLine{68     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} indegree; \textcolor{comment}{// used by topsort}}
+\DoxyCodeLine{69     \textcolor{keywordtype}{double} dist = 0;}
+\DoxyCodeLine{70     \mbox{\hyperlink{class_edge}{Edge}} *path = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72     std::vector<Edge *> incoming; \textcolor{comment}{// incoming edges}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{int} queueIndex = 0;         \textcolor{comment}{// required by MutablePriorityQueue and UFDS}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76     \textcolor{keywordtype}{bool} blocked = \textcolor{keyword}{false};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{double} capacity = 0.0;}
+\DoxyCodeLine{79     vector<pair<string,int>> pathForCost;}
+\DoxyCodeLine{80     \textcolor{keywordtype}{int} prev;}
+\DoxyCodeLine{81     \textcolor{keywordtype}{int} cost = std::numeric\_limits<double>::infinity();}
+\DoxyCodeLine{82 \};}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \textcolor{comment}{/********************** Edge  ****************************/}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{class }\mbox{\hyperlink{class_edge}{Edge}} \{}
+\DoxyCodeLine{87 \textcolor{keyword}{public}:}
+\DoxyCodeLine{88     \mbox{\hyperlink{class_edge_a3106b11d60125009dbf7a738ce540fdf}{Edge}}();}
+\DoxyCodeLine{89     \mbox{\hyperlink{class_edge_a3106b11d60125009dbf7a738ce540fdf}{Edge}}(\mbox{\hyperlink{class_vertex}{Vertex}} *orig, \mbox{\hyperlink{class_vertex}{Vertex}} *dest, \textcolor{keywordtype}{double} w, \textcolor{keywordtype}{string} service, \textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \mbox{\hyperlink{class_vertex}{Vertex}} * \mbox{\hyperlink{class_edge_a5cda44e9ba257b03963a1ac301371a59}{getDest}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{92     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_edge_a1caaffca117bab3ff5b7387623a356f8}{getWeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{93     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_edge_a52967cf488bb7185a512cd111420215d}{isSelected}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{94     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_edge_ab32cbad11bf83bee3eba201d1a1205d1}{isTesting}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{95     \mbox{\hyperlink{class_vertex}{Vertex}} * \mbox{\hyperlink{class_edge_a6e8b08e91c0694b40edff0432fb612eb}{getOrig}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{96     \mbox{\hyperlink{class_edge}{Edge}} *\mbox{\hyperlink{class_edge_a756d2d246aa5445d0f396626c7d4fd56}{getReverse}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{97     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_edge_a30ff9f3127097db8dce20f5e8b15e6dc}{getFlow}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_edge_a8ab1cf2fe7fd16152d1dba3822853894}{setSelected}}(\textcolor{keywordtype}{bool} selected);}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_edge_aa0f55236ffddb4e1dc79044f4fd3727a}{setTesting}}(\textcolor{keywordtype}{bool} testing);}
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_edge_a64881280015bd83702fe3b2c6234b7e5}{setReverse}}(\mbox{\hyperlink{class_edge}{Edge}} *reverse);}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_edge_a788cfe1f98772af4e7bbfe6310d0ccaa}{setFlow}}(\textcolor{keywordtype}{double} flow);}
+\DoxyCodeLine{103     \textcolor{keywordtype}{string} getService() \textcolor{keyword}{const};}
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_edge_ae91311e2d72e553c817793c4a66f347c}{setService}}(\textcolor{keywordtype}{string} service);}
+\DoxyCodeLine{105     \textcolor{keywordtype}{string} getService();}
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_edge_a8099382d330c8b4c5bdd7d059605e2ca}{setCost}}(\textcolor{keywordtype}{int} cost);}
+\DoxyCodeLine{107     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_edge_a97fec57a761885d58056c20e57ea3598}{getCost}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{110     \mbox{\hyperlink{class_vertex}{Vertex}} * dest; \textcolor{comment}{// destination vertex}}
+\DoxyCodeLine{111     \textcolor{keywordtype}{double} weight; \textcolor{comment}{// edge weight, can also be used for capacity}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \textcolor{comment}{// auxiliary fields}}
+\DoxyCodeLine{114     \textcolor{keywordtype}{bool} selected = \textcolor{keyword}{false};}
+\DoxyCodeLine{115     \textcolor{keywordtype}{bool} testing = \textcolor{keyword}{false}; \textcolor{comment}{//para o 4.2}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118     \textcolor{comment}{// used for bidirectional edges}}
+\DoxyCodeLine{119     \mbox{\hyperlink{class_vertex}{Vertex}} *orig;}
+\DoxyCodeLine{120     \mbox{\hyperlink{class_edge}{Edge}} *reverse = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{keywordtype}{double} flow; \textcolor{comment}{// for flow-\/related problems}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordtype}{string} service;\textcolor{comment}{// for cost-\/related problems}}
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     \textcolor{keywordtype}{int} cost = std::numeric\_limits<double>::infinity();}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* DA\_TP\_CLASSES\_VERTEX\_EDGE */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

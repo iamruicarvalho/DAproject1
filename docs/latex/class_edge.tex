@@ -1,0 +1,256 @@
+\hypertarget{class_edge}{}\doxysection{Edge Class Reference}
+\label{class_edge}\index{Edge@{Edge}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_edge_a3106b11d60125009dbf7a738ce540fdf}{Edge}} ()
+\item 
+\mbox{\hyperlink{class_edge_acbce8452529408c22c41560dd26cf704}{Edge}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$orig, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$dest, double w, string service, int cost)
+\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{class_edge_a5cda44e9ba257b03963a1ac301371a59}{get\+Dest}} () const
+\item 
+double \mbox{\hyperlink{class_edge_a1caaffca117bab3ff5b7387623a356f8}{get\+Weight}} () const
+\item 
+bool \mbox{\hyperlink{class_edge_a52967cf488bb7185a512cd111420215d}{is\+Selected}} () const
+\item 
+bool \mbox{\hyperlink{class_edge_ab32cbad11bf83bee3eba201d1a1205d1}{is\+Testing}} () const
+\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{class_edge_a6e8b08e91c0694b40edff0432fb612eb}{get\+Orig}} () const
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ \mbox{\hyperlink{class_edge_a756d2d246aa5445d0f396626c7d4fd56}{get\+Reverse}} () const
+\item 
+double \mbox{\hyperlink{class_edge_a30ff9f3127097db8dce20f5e8b15e6dc}{get\+Flow}} () const
+\item 
+void \mbox{\hyperlink{class_edge_a8ab1cf2fe7fd16152d1dba3822853894}{set\+Selected}} (bool selected)
+\item 
+void \mbox{\hyperlink{class_edge_aa0f55236ffddb4e1dc79044f4fd3727a}{set\+Testing}} (bool testing)
+\item 
+void \mbox{\hyperlink{class_edge_a64881280015bd83702fe3b2c6234b7e5}{set\+Reverse}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$reverse)
+\item 
+void \mbox{\hyperlink{class_edge_a788cfe1f98772af4e7bbfe6310d0ccaa}{set\+Flow}} (double flow)
+\item 
+\mbox{\Hypertarget{class_edge_a87c69455de371d592f27db4b282b2164}\label{class_edge_a87c69455de371d592f27db4b282b2164}} 
+string {\bfseries get\+Service} () const
+\item 
+void \mbox{\hyperlink{class_edge_ae91311e2d72e553c817793c4a66f347c}{set\+Service}} (string service)
+\item 
+string \mbox{\hyperlink{class_edge_aad1613389f5aff8ee1527914cb3a00ea}{get\+Service}} ()
+\item 
+void \mbox{\hyperlink{class_edge_a8099382d330c8b4c5bdd7d059605e2ca}{set\+Cost}} (int cost)
+\item 
+int \mbox{\hyperlink{class_edge_a97fec57a761885d58056c20e57ea3598}{get\+Cost}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_edge_a50339c1a85710ca827d4e3865727ffd7}\label{class_edge_a50339c1a85710ca827d4e3865727ffd7}} 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ {\bfseries dest}
+\item 
+\mbox{\Hypertarget{class_edge_a6d0148402e635354c03a151c77fcbdd8}\label{class_edge_a6d0148402e635354c03a151c77fcbdd8}} 
+double {\bfseries weight}
+\item 
+\mbox{\Hypertarget{class_edge_a3af6d278c4ddcb2589e1aa66e52f4efb}\label{class_edge_a3af6d278c4ddcb2589e1aa66e52f4efb}} 
+bool {\bfseries selected} = false
+\item 
+\mbox{\Hypertarget{class_edge_aa6d6d65bdccd17507743921e1f0162e0}\label{class_edge_aa6d6d65bdccd17507743921e1f0162e0}} 
+bool {\bfseries testing} = false
+\item 
+\mbox{\Hypertarget{class_edge_a48f1521d20ead8492fd1d184656862f5}\label{class_edge_a48f1521d20ead8492fd1d184656862f5}} 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ {\bfseries orig}
+\item 
+\mbox{\Hypertarget{class_edge_abcadfaa8985d0d593a124d0fea39130a}\label{class_edge_abcadfaa8985d0d593a124d0fea39130a}} 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ {\bfseries reverse} = nullptr
+\item 
+\mbox{\Hypertarget{class_edge_adbe59333b5a49cbb85b39ce1272e6098}\label{class_edge_adbe59333b5a49cbb85b39ce1272e6098}} 
+double {\bfseries flow}
+\item 
+\mbox{\Hypertarget{class_edge_a859073d36fecb5fa3de1d08733cc6d7b}\label{class_edge_a859073d36fecb5fa3de1d08733cc6d7b}} 
+string {\bfseries service}
+\item 
+\mbox{\Hypertarget{class_edge_ad7099a9059c497bb6d6191b6257837cf}\label{class_edge_ad7099a9059c497bb6d6191b6257837cf}} 
+int {\bfseries cost} = std\+::numeric\+\_\+limits$<$double$>$\+::infinity()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_edge_a3106b11d60125009dbf7a738ce540fdf}\label{class_edge_a3106b11d60125009dbf7a738ce540fdf}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construtor de uma aresta default Complexidade\+: O(1) \mbox{\Hypertarget{class_edge_acbce8452529408c22c41560dd26cf704}\label{class_edge_acbce8452529408c22c41560dd26cf704}} 
+\index{Edge@{Edge}!Edge@{Edge}}
+\index{Edge@{Edge}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{Edge()}{Edge()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Edge\+::\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{orig,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{dest,  }\item[{double}]{w,  }\item[{string}]{service,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Construtor de uma aresta tendo como parâmetros o vértice de origem, o vértice de destino, o peso da aresta, o serviço prestado e o custo do serviço 
+\begin{DoxyParams}{Parameters}
+{\em orig} & Vertex$\ast$, vértice de origem \\
+\hline
+{\em dest} & Vertex$\ast$, vértice de destino \\
+\hline
+{\em w} & double, peso da aresta \\
+\hline
+{\em service} & string, serviço prestado \\
+\hline
+{\em cost} & int, custo do serviço \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_edge_a97fec57a761885d58056c20e57ea3598}\label{class_edge_a97fec57a761885d58056c20e57ea3598}} 
+\index{Edge@{Edge}!getCost@{getCost}}
+\index{getCost@{getCost}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Edge\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retorna o custo da aresta Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+int, custo da aresta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a5cda44e9ba257b03963a1ac301371a59}\label{class_edge_a5cda44e9ba257b03963a1ac301371a59}} 
+\index{Edge@{Edge}!getDest@{getDest}}
+\index{getDest@{getDest}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getDest()}{getDest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ Edge\+::get\+Dest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o vértice de destino da aresta Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+Vertex$\ast$, vértice de destino da aresta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a30ff9f3127097db8dce20f5e8b15e6dc}\label{class_edge_a30ff9f3127097db8dce20f5e8b15e6dc}} 
+\index{Edge@{Edge}!getFlow@{getFlow}}
+\index{getFlow@{getFlow}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getFlow()}{getFlow()}}
+{\footnotesize\ttfamily double Edge\+::get\+Flow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o fluxo da aresta Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+double, fluxo da aresta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a6e8b08e91c0694b40edff0432fb612eb}\label{class_edge_a6e8b08e91c0694b40edff0432fb612eb}} 
+\index{Edge@{Edge}!getOrig@{getOrig}}
+\index{getOrig@{getOrig}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getOrig()}{getOrig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ Edge\+::get\+Orig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o vértice de origem da aresta Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+Vertex$\ast$, vértice de origem da aresta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a756d2d246aa5445d0f396626c7d4fd56}\label{class_edge_a756d2d246aa5445d0f396626c7d4fd56}} 
+\index{Edge@{Edge}!getReverse@{getReverse}}
+\index{getReverse@{getReverse}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getReverse()}{getReverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} $\ast$ Edge\+::get\+Reverse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o reverso da aresta Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+Edge$\ast$, reverso da aresta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_aad1613389f5aff8ee1527914cb3a00ea}\label{class_edge_aad1613389f5aff8ee1527914cb3a00ea}} 
+\index{Edge@{Edge}!getService@{getService}}
+\index{getService@{getService}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getService()}{getService()}}
+{\footnotesize\ttfamily std\+::string Edge\+::get\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retorna o serviço prestado Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+string, serviço prestado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a1caaffca117bab3ff5b7387623a356f8}\label{class_edge_a1caaffca117bab3ff5b7387623a356f8}} 
+\index{Edge@{Edge}!getWeight@{getWeight}}
+\index{getWeight@{getWeight}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{getWeight()}{getWeight()}}
+{\footnotesize\ttfamily double Edge\+::get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o peso da aresta Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+double, peso da aresta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a52967cf488bb7185a512cd111420215d}\label{class_edge_a52967cf488bb7185a512cd111420215d}} 
+\index{Edge@{Edge}!isSelected@{isSelected}}
+\index{isSelected@{isSelected}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{isSelected()}{isSelected()}}
+{\footnotesize\ttfamily bool Edge\+::is\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna se é selecionada a aresta ou não \begin{DoxyReturn}{Returns}
+bool, se é selecionada a aresta ou não 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_ab32cbad11bf83bee3eba201d1a1205d1}\label{class_edge_ab32cbad11bf83bee3eba201d1a1205d1}} 
+\index{Edge@{Edge}!isTesting@{isTesting}}
+\index{isTesting@{isTesting}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{isTesting()}{isTesting()}}
+{\footnotesize\ttfamily bool Edge\+::is\+Testing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna se a aresta está a ser testada ou não Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+bool, se a aresta está a ser testada ou não 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_edge_a8099382d330c8b4c5bdd7d059605e2ca}\label{class_edge_a8099382d330c8b4c5bdd7d059605e2ca}} 
+\index{Edge@{Edge}!setCost@{setCost}}
+\index{setCost@{setCost}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily void Edge\+::set\+Cost (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Define o custo da aresta Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em cost} & int, custo da aresta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_edge_a788cfe1f98772af4e7bbfe6310d0ccaa}\label{class_edge_a788cfe1f98772af4e7bbfe6310d0ccaa}} 
+\index{Edge@{Edge}!setFlow@{setFlow}}
+\index{setFlow@{setFlow}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setFlow()}{setFlow()}}
+{\footnotesize\ttfamily void Edge\+::set\+Flow (\begin{DoxyParamCaption}\item[{double}]{flow }\end{DoxyParamCaption})}
+
+Define o fluxo da aresta Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em flow} & double, fluxo da aresta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_edge_a64881280015bd83702fe3b2c6234b7e5}\label{class_edge_a64881280015bd83702fe3b2c6234b7e5}} 
+\index{Edge@{Edge}!setReverse@{setReverse}}
+\index{setReverse@{setReverse}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setReverse()}{setReverse()}}
+{\footnotesize\ttfamily void Edge\+::set\+Reverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{reverse }\end{DoxyParamCaption})}
+
+Define o reverso da aresta Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em reverse} & Edge$\ast$, reverso da aresta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_edge_a8ab1cf2fe7fd16152d1dba3822853894}\label{class_edge_a8ab1cf2fe7fd16152d1dba3822853894}} 
+\index{Edge@{Edge}!setSelected@{setSelected}}
+\index{setSelected@{setSelected}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setSelected()}{setSelected()}}
+{\footnotesize\ttfamily void Edge\+::set\+Selected (\begin{DoxyParamCaption}\item[{bool}]{selected }\end{DoxyParamCaption})}
+
+Define se a aresta está selecionada ou não Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em selected} & bool, se a aresta está selecionada ou não \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_edge_ae91311e2d72e553c817793c4a66f347c}\label{class_edge_ae91311e2d72e553c817793c4a66f347c}} 
+\index{Edge@{Edge}!setService@{setService}}
+\index{setService@{setService}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setService()}{setService()}}
+{\footnotesize\ttfamily void Edge\+::set\+Service (\begin{DoxyParamCaption}\item[{string}]{service }\end{DoxyParamCaption})}
+
+Define o serviço prestado Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em service} & string, serviço prestado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_edge_aa0f55236ffddb4e1dc79044f4fd3727a}\label{class_edge_aa0f55236ffddb4e1dc79044f4fd3727a}} 
+\index{Edge@{Edge}!setTesting@{setTesting}}
+\index{setTesting@{setTesting}!Edge@{Edge}}
+\doxysubsubsection{\texorpdfstring{setTesting()}{setTesting()}}
+{\footnotesize\ttfamily void Edge\+::set\+Testing (\begin{DoxyParamCaption}\item[{bool}]{testing }\end{DoxyParamCaption})}
+
+Define se a aresta está a ser testada ou não Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em testing} & bool, se a aresta está a ser testada ou não \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vertex\+Edge.\+h\item 
+Vertex\+Edge.\+cpp\end{DoxyCompactItemize}

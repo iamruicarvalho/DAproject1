@@ -1,0 +1,79 @@
+\hypertarget{class_u_f_d_s}{}\doxysection{UFDS Class Reference}
+\label{class_u_f_d_s}\index{UFDS@{UFDS}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_f_d_s_a9daac3830c0769f08aceb6236f407248}{UFDS}} (unsigned int N)
+\item 
+unsigned long \mbox{\hyperlink{class_u_f_d_s_afe161413e4cd6702b2ca2f475eddeca0}{find\+Set}} (unsigned int i)
+\item 
+bool \mbox{\hyperlink{class_u_f_d_s_a793b0e0337223456401318c652f0cdd0}{is\+Same\+Set}} (unsigned int i, unsigned int j)
+\item 
+void \mbox{\hyperlink{class_u_f_d_s_a0955e92d417b1bfbba94dc8c660f86d3}{link\+Sets}} (unsigned int i, unsigned int j)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_f_d_s_a9daac3830c0769f08aceb6236f407248}\label{class_u_f_d_s_a9daac3830c0769f08aceb6236f407248}} 
+\index{UFDS@{UFDS}!UFDS@{UFDS}}
+\index{UFDS@{UFDS}!UFDS@{UFDS}}
+\doxysubsubsection{\texorpdfstring{UFDS()}{UFDS()}}
+{\footnotesize\ttfamily UFDS\+::\+UFDS (\begin{DoxyParamCaption}\item[{unsigned int}]{N }\end{DoxyParamCaption})}
+
+Contrutor da classe \mbox{\hyperlink{class_u_f_d_s}{UFDS}} Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em N} & unsigned int, número de nós \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_f_d_s_afe161413e4cd6702b2ca2f475eddeca0}\label{class_u_f_d_s_afe161413e4cd6702b2ca2f475eddeca0}} 
+\index{UFDS@{UFDS}!findSet@{findSet}}
+\index{findSet@{findSet}!UFDS@{UFDS}}
+\doxysubsubsection{\texorpdfstring{findSet()}{findSet()}}
+{\footnotesize\ttfamily unsigned long UFDS\+::find\+Set (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption})}
+
+Encontra o conjunto de um nó Complexidade\+: O(log n) 
+\begin{DoxyParams}{Parameters}
+{\em i} & unsigned int, nó \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned long, conjunto do nó 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_f_d_s_a793b0e0337223456401318c652f0cdd0}\label{class_u_f_d_s_a793b0e0337223456401318c652f0cdd0}} 
+\index{UFDS@{UFDS}!isSameSet@{isSameSet}}
+\index{isSameSet@{isSameSet}!UFDS@{UFDS}}
+\doxysubsubsection{\texorpdfstring{isSameSet()}{isSameSet()}}
+{\footnotesize\ttfamily bool UFDS\+::is\+Same\+Set (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+Verifica se dois nós pertencem ao mesmo conjunto Complexidade\+: O(log n) 
+\begin{DoxyParams}{Parameters}
+{\em i} & int, indice do primeiro nó \\
+\hline
+{\em j} & int, indice do segundo nó \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se pertencerem ao mesmo conjunto, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_f_d_s_a0955e92d417b1bfbba94dc8c660f86d3}\label{class_u_f_d_s_a0955e92d417b1bfbba94dc8c660f86d3}} 
+\index{UFDS@{UFDS}!linkSets@{linkSets}}
+\index{linkSets@{linkSets}!UFDS@{UFDS}}
+\doxysubsubsection{\texorpdfstring{linkSets()}{linkSets()}}
+{\footnotesize\ttfamily void UFDS\+::link\+Sets (\begin{DoxyParamCaption}\item[{unsigned int}]{i,  }\item[{unsigned int}]{j }\end{DoxyParamCaption})}
+
+Faz a ligação entre dois conjuntos Complexidade\+: O(log n) 
+\begin{DoxyParams}{Parameters}
+{\em i} & unsigned int, indice do primeiro nó \\
+\hline
+{\em j} & unsigned int, indice do segundo nó \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+UFDS.\+h\item 
+UFDS.\+cpp\end{DoxyCompactItemize}
