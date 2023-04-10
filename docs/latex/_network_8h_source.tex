@@ -1,0 +1,42 @@
+\hypertarget{_network_8h_source}{}\doxysection{Network.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{//}}
+\DoxyCodeLine{2 \textcolor{comment}{// Created by Bernardo Pinto on 06/03/2023.}}
+\DoxyCodeLine{3 \textcolor{comment}{//}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef NETWORK\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define NETWORK\_H}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Graph.h"{}}}
+\DoxyCodeLine{12 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_network}{Network}}  \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_network}{Network}}(\textcolor{keywordtype}{string} stationA, \textcolor{keywordtype}{string} stationB);}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_network}{Network}}(\textcolor{keywordtype}{string} stationA, \textcolor{keywordtype}{string} stationB, \textcolor{keywordtype}{double} capacity, \textcolor{keywordtype}{string} service);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_network_a9b76ff08cca2eb320437a7e74ab395fe}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_network}{Network}}\& network2) \textcolor{keyword}{const};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_network_a58d84f39d589f3c6b78201c30e4c349a}{getStationA}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_network_ad349f334dd3b065b2e9bf83a28017a79}{getStationB}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{22     \textcolor{keyword}{const} \textcolor{keywordtype}{double} \mbox{\hyperlink{class_network_ac8ff7fb7496d968d75f1ed4d40176710}{getCapacity}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keyword}{const} \textcolor{keywordtype}{string} \mbox{\hyperlink{class_network_a9c8db447c661e740de2059a7cf933511}{getService}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_a38dbc862fb8ff27bfc8b4e440d8ced6a}{setStationA}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} stationA);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_afc7be027dc1ece3dc20b486421d9de17}{setStationB}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} stationB);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_a7bceafd59908bd442640005daddafc94}{setCapacity}}(\textcolor{keyword}{const} \textcolor{keywordtype}{double} capacity);}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_network_a3abf1067ac8ddadf96612be41ac96db3}{setService}}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} service);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{31     \textcolor{keywordtype}{string} stationA\_;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{string} stationB\_;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{double} capacity\_;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{string} service\_;}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//NETWORK\_H}}
+
+\end{DoxyCode}

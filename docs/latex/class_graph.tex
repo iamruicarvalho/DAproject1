@@ -1,0 +1,170 @@
+\hypertarget{class_graph}{}\doxysection{Graph Class Reference}
+\label{class_graph}\index{Graph@{Graph}}
+Inheritance diagram for Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_graph_a902c5b3eacb66d60752525ab23297a95}{$\sim$\+Graph}} ()
+\item 
+\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ \mbox{\hyperlink{class_graph_a089f7fc73ea9976295d387846ad36c69}{find\+Vertex}} (const int \&id) const
+\item 
+bool \mbox{\hyperlink{class_graph_aba9b8ea0f81df291bf8a3a14bc973741}{add\+Vertex}} (const int \&id, string district, string municipality, string township)
+\item 
+bool \mbox{\hyperlink{class_graph_a53a536db0511808d5d7463f6774107a6}{add\+Edge}} (const int \&sourc, const int \&dest, double w, string service, int cost)
+\item 
+bool \mbox{\hyperlink{class_graph_a4d81589360ca85ed573004a26f1ef673}{add\+Bidirectional\+Edge}} (const int \&sourc, const int \&dest, double w, string service, int cost)
+\item 
+int \mbox{\hyperlink{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}{get\+Num\+Vertex}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \mbox{\hyperlink{class_graph_a619ac583094079134074658e29463c0e}{get\+Vertex\+Set}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_graph_a7dfcef08a9286cf144902cd7e56940ee}{find\+Vertex\+Idx}} (const int \&id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_aa9b0a6d8ad43c5eabaca5a7140bcc8b6}\label{class_graph_aa9b0a6d8ad43c5eabaca5a7140bcc8b6}} 
+std\+::vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ {\bfseries vertex\+Set}
+\item 
+\mbox{\Hypertarget{class_graph_a9e61864da69191c1896a25a708d1a02d}\label{class_graph_a9e61864da69191c1896a25a708d1a02d}} 
+double $\ast$$\ast$ {\bfseries dist\+Matrix} = nullptr
+\item 
+\mbox{\Hypertarget{class_graph_a3ae09699c3616af3ebfcb1eb045f2b62}\label{class_graph_a3ae09699c3616af3ebfcb1eb045f2b62}} 
+int $\ast$$\ast$ {\bfseries path\+Matrix} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_graph_a902c5b3eacb66d60752525ab23297a95}\label{class_graph_a902c5b3eacb66d60752525ab23297a95}} 
+\index{Graph@{Graph}!````~Graph@{$\sim$Graph}}
+\index{````~Graph@{$\sim$Graph}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{$\sim$Graph()}{~Graph()}}
+{\footnotesize\ttfamily Graph\+::$\sim$\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construtor da classe \mbox{\hyperlink{class_graph}{Graph}} Complexidade\+: O(n$^\wedge$2) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_a4d81589360ca85ed573004a26f1ef673}\label{class_graph_a4d81589360ca85ed573004a26f1ef673}} 
+\index{Graph@{Graph}!addBidirectionalEdge@{addBidirectionalEdge}}
+\index{addBidirectionalEdge@{addBidirectionalEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addBidirectionalEdge()}{addBidirectionalEdge()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Bidirectional\+Edge (\begin{DoxyParamCaption}\item[{const int \&}]{sourc,  }\item[{const int \&}]{dest,  }\item[{double}]{w,  }\item[{string}]{service,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Adiciona uma aresta bidirecional ao grafo Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em sourc} & const int\&, id do vertice de origem \\
+\hline
+{\em dest} & const int\&, id do vertice de destino \\
+\hline
+{\em w} & double, peso da aresta \\
+\hline
+{\em service} & string, serviço da aresta \\
+\hline
+{\em cost} & int, custo da aresta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a aresta foi adicionada com sucesso, false caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a53a536db0511808d5d7463f6774107a6}\label{class_graph_a53a536db0511808d5d7463f6774107a6}} 
+\index{Graph@{Graph}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Edge (\begin{DoxyParamCaption}\item[{const int \&}]{sourc,  }\item[{const int \&}]{dest,  }\item[{double}]{w,  }\item[{string}]{service,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Adiciona uma aresta ao grafo Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em sourc} & const int\&, id do vertice de origem \\
+\hline
+{\em dest} & const int\&, id do vertice de destino \\
+\hline
+{\em w} & double, peso da aresta \\
+\hline
+{\em service} & string, serviço da aresta \\
+\hline
+{\em cost} & int, custo da aresta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a aresta foi adicionada com sucesso, false caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_aba9b8ea0f81df291bf8a3a14bc973741}\label{class_graph_aba9b8ea0f81df291bf8a3a14bc973741}} 
+\index{Graph@{Graph}!addVertex@{addVertex}}
+\index{addVertex@{addVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{addVertex()}{addVertex()}}
+{\footnotesize\ttfamily bool Graph\+::add\+Vertex (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{string}]{district,  }\item[{string}]{municipality,  }\item[{string}]{township }\end{DoxyParamCaption})}
+
+Adiciona um vertice ao grafo Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em id} & const int\&, id do vertice a adicionar \\
+\hline
+{\em district} & string, distrito do vertice a adicionar \\
+\hline
+{\em municipality} & string, município do vertice a adicionar \\
+\hline
+{\em township} & string, cidade do vertice a adicionar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se o vertice foi adicionado com sucesso, false caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a089f7fc73ea9976295d387846ad36c69}\label{class_graph_a089f7fc73ea9976295d387846ad36c69}} 
+\index{Graph@{Graph}!findVertex@{findVertex}}
+\index{findVertex@{findVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findVertex()}{findVertex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ Graph\+::find\+Vertex (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption}) const}
+
+Retorna o \mbox{\hyperlink{class_vertex}{Vertex}} com o id passado por parametro Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em id} & int, id do vertice a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vertex$\ast$, vertice com o id passado por parametro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a7dfcef08a9286cf144902cd7e56940ee}\label{class_graph_a7dfcef08a9286cf144902cd7e56940ee}} 
+\index{Graph@{Graph}!findVertexIdx@{findVertexIdx}}
+\index{findVertexIdx@{findVertexIdx}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{findVertexIdx()}{findVertexIdx()}}
+{\footnotesize\ttfamily int Graph\+::find\+Vertex\+Idx (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Retorna o indice do vertice com o id passado por parametro Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em id} & const int\&, id do vertice a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int, indice do vertice com o id passado por parametro 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}\label{class_graph_abb5e0517e2979c54eebdafc2a9875e8f}} 
+\index{Graph@{Graph}!getNumVertex@{getNumVertex}}
+\index{getNumVertex@{getNumVertex}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getNumVertex()}{getNumVertex()}}
+{\footnotesize\ttfamily int Graph\+::get\+Num\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o numero de vertices do grafo Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+int, numero de vertices do grafo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_a619ac583094079134074658e29463c0e}\label{class_graph_a619ac583094079134074658e29463c0e}} 
+\index{Graph@{Graph}!getVertexSet@{getVertexSet}}
+\index{getVertexSet@{getVertexSet}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{getVertexSet()}{getVertexSet()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ Graph\+::get\+Vertex\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna os vertices do grafo Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+vector$<$\+Vertex$\ast$$>$, vertices do grafo 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graph.\+h\item 
+Graph.\+cpp\end{DoxyCompactItemize}

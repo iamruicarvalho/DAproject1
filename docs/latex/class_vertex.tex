@@ -1,0 +1,498 @@
+\hypertarget{class_vertex}{}\doxysection{Vertex Class Reference}
+\label{class_vertex}\index{Vertex@{Vertex}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_vertex_a97488994a2482d70da74e1b91d40e169}{Vertex}} ()
+\item 
+\mbox{\hyperlink{class_vertex_af2d4681f3cb6deeeed264950bf2d4a9e}{Vertex}} (int id)
+\item 
+\mbox{\hyperlink{class_vertex_a9222c6d1520f3d2c6d2112e810d81537}{Vertex}} (int id, string district, string municipality, string township)
+\item 
+bool \mbox{\hyperlink{class_vertex_ad4ccd48170a1530ec1db5eb306357a74}{operator$<$}} (\mbox{\hyperlink{class_vertex}{Vertex}} \&vertex) const
+\item 
+int \mbox{\hyperlink{class_vertex_a75b6b4a4afc26affea59fdae48aa30b1}{get\+Id}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{class_vertex_a9858f2aa388d2bfb49d9df8f4504b5a0}{get\+Adj}} () const
+\item 
+bool \mbox{\hyperlink{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}{is\+Visited}} () const
+\item 
+bool \mbox{\hyperlink{class_vertex_a126e306f0534b99cd97aa864fdb243d4}{is\+Processing}} () const
+\item 
+unsigned int \mbox{\hyperlink{class_vertex_ad7348af9376d4b9ada5ceeca3bd1b2b7}{get\+Indegree}} () const
+\item 
+double \mbox{\hyperlink{class_vertex_aa36ca926de23a6e7283be42e2930957c}{get\+Dist}} () const
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ \mbox{\hyperlink{class_vertex_a6e120e57da6af94892fae44e05868794}{get\+Path}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ \mbox{\hyperlink{class_vertex_a84b20dae22321e5a729606885357b015}{get\+Incoming}} () const
+\item 
+bool \mbox{\hyperlink{class_vertex_ad6cc99b84f20c414eded4b0b8ebba45f}{is\+Blocked}} ()
+\item 
+double const \mbox{\hyperlink{class_vertex_a071b59fd1cdcee3816bc72d74ac5be86}{get\+Capacity}} ()
+\item 
+void \mbox{\hyperlink{class_vertex_a5fbffd695323f52f0b93276176781c7d}{set\+Id}} (int info)
+\item 
+void \mbox{\hyperlink{class_vertex_a15eeabbbb6d517af746ae137c6d5b595}{set\+Visited}} (bool visited)
+\item 
+void \mbox{\hyperlink{class_vertex_a1c93b166281b30db2edef03791748ace}{set\+Processsing}} (bool processing)
+\item 
+void \mbox{\hyperlink{class_vertex_aeb605d2ba9296a5e40496a9e37557d03}{set\+Indegree}} (unsigned int indegree)
+\item 
+void \mbox{\hyperlink{class_vertex_a6939bef79bfe5fe5bf77d9fd1bd70085}{set\+Dist}} (double dist)
+\item 
+void \mbox{\hyperlink{class_vertex_abe4bc30005eec65e775d0cd51f456460}{set\+Path}} (\mbox{\hyperlink{class_edge}{Edge}} $\ast$path)
+\item 
+void \mbox{\hyperlink{class_vertex_acf362d6e369860b40f6691a4864c3e81}{set\+Block}} ()
+\item 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ \mbox{\hyperlink{class_vertex_af66475bbb9232623cbbed1a0684c9f24}{add\+Edge}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$dest, double w, string service, int cost)
+\item 
+bool \mbox{\hyperlink{class_vertex_a10c6827225205dc4ad070914ebfa26e7}{remove\+Edge}} (int dest\+ID)
+\item 
+const string \mbox{\hyperlink{class_vertex_a4037799e30acf908d25cddf24aa4e933}{get\+District}} () const
+\item 
+const string \mbox{\hyperlink{class_vertex_aab416c1829877b78e2f9d7fb59d4b8be}{get\+Municipality}} () const
+\item 
+const string \mbox{\hyperlink{class_vertex_ad65231ae22157e25ce9c5139a1c6345a}{get\+Township}} () const
+\item 
+void \mbox{\hyperlink{class_vertex_a1d2b3df50f9f1bb7c6d543e019b0f270}{set\+Prev}} (int prev)
+\item 
+int \mbox{\hyperlink{class_vertex_a859e9ab35003fc597bb0516d4cfbeaa5}{get\+Prev}} () const
+\item 
+void \mbox{\hyperlink{class_vertex_ad58dfb3cfb1dc1fdfdd0821a1d633b59}{set\+Cost}} (int cost)
+\item 
+int \mbox{\hyperlink{class_vertex_a84131dc713516e5e50263374dea5dcda}{get\+Cost}} () const
+\item 
+void \mbox{\hyperlink{class_vertex_abdcb889c44cb98aea6d3550626f22ba5}{add\+Path\+For\+Cost}} (pair$<$ string, int $>$ caminho)
+\item 
+vector$<$ pair$<$ string, int $>$ $>$ \mbox{\hyperlink{class_vertex_a526f5e20037ed4d3a044deae82c0b1a4}{get\+Path\+For\+Cost}} () const
+\item 
+void \mbox{\hyperlink{class_vertex_a49474437c44687c32ccfd170d7120b6b}{set\+Path\+For\+Cost}} (vector$<$ pair$<$ string, int $>$ $>$ path\+For\+Cost)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vertex_a2e69697726190f50c7fc040fb1ddac7a}\label{class_vertex_a2e69697726190f50c7fc040fb1ddac7a}} 
+int {\bfseries id}
+\item 
+\mbox{\Hypertarget{class_vertex_a95926d25cd84b88d9186ae992fd49a0e}\label{class_vertex_a95926d25cd84b88d9186ae992fd49a0e}} 
+string {\bfseries district\+\_\+}
+\item 
+\mbox{\Hypertarget{class_vertex_af4c20abcac2058b4fde78b7fe26a7735}\label{class_vertex_af4c20abcac2058b4fde78b7fe26a7735}} 
+string {\bfseries municipality\+\_\+}
+\item 
+\mbox{\Hypertarget{class_vertex_a3aa67a9f5d00c7611fca3fd30ced930d}\label{class_vertex_a3aa67a9f5d00c7611fca3fd30ced930d}} 
+string {\bfseries township\+\_\+}
+\item 
+\mbox{\Hypertarget{class_vertex_a0be7a8d322f99d4812261af91c3e2178}\label{class_vertex_a0be7a8d322f99d4812261af91c3e2178}} 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ {\bfseries adj}
+\item 
+\mbox{\Hypertarget{class_vertex_aaef9f7de91b4b8f1752d391a1aae9c2e}\label{class_vertex_aaef9f7de91b4b8f1752d391a1aae9c2e}} 
+bool {\bfseries visited} = false
+\item 
+\mbox{\Hypertarget{class_vertex_a305dc8fcad6e4c7ef2491409ca7ddaa4}\label{class_vertex_a305dc8fcad6e4c7ef2491409ca7ddaa4}} 
+bool {\bfseries processing} = false
+\item 
+\mbox{\Hypertarget{class_vertex_a94ae99aae9b1a426feda5ecda70c598b}\label{class_vertex_a94ae99aae9b1a426feda5ecda70c598b}} 
+unsigned int {\bfseries indegree}
+\item 
+\mbox{\Hypertarget{class_vertex_a11d98611f5101fe7f46785d8b9c53f44}\label{class_vertex_a11d98611f5101fe7f46785d8b9c53f44}} 
+double {\bfseries dist} = 0
+\item 
+\mbox{\Hypertarget{class_vertex_a4e83821f961f6eb63ad210260ba0e1e2}\label{class_vertex_a4e83821f961f6eb63ad210260ba0e1e2}} 
+\mbox{\hyperlink{class_edge}{Edge}} $\ast$ {\bfseries path} = nullptr
+\item 
+\mbox{\Hypertarget{class_vertex_a2d41654d7aee77d99edacca6a923f4ee}\label{class_vertex_a2d41654d7aee77d99edacca6a923f4ee}} 
+std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ {\bfseries incoming}
+\item 
+\mbox{\Hypertarget{class_vertex_a78ba760e405ba9f66129b3870065b48f}\label{class_vertex_a78ba760e405ba9f66129b3870065b48f}} 
+int {\bfseries queue\+Index} = 0
+\item 
+\mbox{\Hypertarget{class_vertex_acfdb67a7ce202c68c6d42068a331914b}\label{class_vertex_acfdb67a7ce202c68c6d42068a331914b}} 
+bool {\bfseries blocked} = false
+\item 
+\mbox{\Hypertarget{class_vertex_ac67bec32f837ea435177971afda10c23}\label{class_vertex_ac67bec32f837ea435177971afda10c23}} 
+double {\bfseries capacity} = 0.\+0
+\item 
+\mbox{\Hypertarget{class_vertex_a9fa410c5a3c5c5c850f532cb5e14b6a1}\label{class_vertex_a9fa410c5a3c5c5c850f532cb5e14b6a1}} 
+vector$<$ pair$<$ string, int $>$ $>$ {\bfseries path\+For\+Cost}
+\item 
+\mbox{\Hypertarget{class_vertex_a288d0b1d940693fab1f2198f0a524d50}\label{class_vertex_a288d0b1d940693fab1f2198f0a524d50}} 
+int {\bfseries prev}
+\item 
+\mbox{\Hypertarget{class_vertex_a1abcdf9cc473b8e6927fc69a15b4b60c}\label{class_vertex_a1abcdf9cc473b8e6927fc69a15b4b60c}} 
+int {\bfseries cost} = std\+::numeric\+\_\+limits$<$double$>$\+::infinity()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_vertex_a6e8dd99e4d0d0f5083b2fb64743a8953}\label{class_vertex_a6e8dd99e4d0d0f5083b2fb64743a8953}} 
+class {\bfseries Mutable\+Priority\+Queue$<$ Vertex $>$}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_vertex_a97488994a2482d70da74e1b91d40e169}\label{class_vertex_a97488994a2482d70da74e1b91d40e169}} 
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Vertex\+::\+Vertex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Construtor de um vértice com um dado id, distrito, município, cidade e linha. Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em id} & int, id do vértice \\
+\hline
+{\em district} & string, distrito do vértice \\
+\hline
+{\em municipality} & string, município do vértice \\
+\hline
+{\em township} & string, cidade do vértice \\
+\hline
+{\em line} & string, linha do vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_af2d4681f3cb6deeeed264950bf2d4a9e}\label{class_vertex_af2d4681f3cb6deeeed264950bf2d4a9e}} 
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Vertex\+::\+Vertex (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Construtor de um vértice com um dado id. Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em id} & int, id do vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a9222c6d1520f3d2c6d2112e810d81537}\label{class_vertex_a9222c6d1520f3d2c6d2112e810d81537}} 
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\index{Vertex@{Vertex}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{Vertex()}{Vertex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Vertex\+::\+Vertex (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{string}]{district,  }\item[{string}]{municipality,  }\item[{string}]{township }\end{DoxyParamCaption})}
+
+Construtor de um vértice com um dado id, distrito, município e cidade. Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em id} & int, id do vértice \\
+\hline
+{\em district} & string, distrito do vértice \\
+\hline
+{\em municipality} & string, município do vértice \\
+\hline
+{\em township} & string, cidade do vértice \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_vertex_af66475bbb9232623cbbed1a0684c9f24}\label{class_vertex_af66475bbb9232623cbbed1a0684c9f24}} 
+\index{Vertex@{Vertex}!addEdge@{addEdge}}
+\index{addEdge@{addEdge}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{addEdge()}{addEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} $\ast$ Vertex\+::add\+Edge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{d,  }\item[{double}]{w,  }\item[{string}]{service,  }\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Retorna o id do vértice Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em d} & Vertex$\ast$, vértice de destino \\
+\hline
+{\em w} & double, peso da aresta \\
+\hline
+{\em service} & string, serviço do vértice \\
+\hline
+{\em cost} & int, custo do vértice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Edge$\ast$, aresta criada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_abdcb889c44cb98aea6d3550626f22ba5}\label{class_vertex_abdcb889c44cb98aea6d3550626f22ba5}} 
+\index{Vertex@{Vertex}!addPathForCost@{addPathForCost}}
+\index{addPathForCost@{addPathForCost}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{addPathForCost()}{addPathForCost()}}
+{\footnotesize\ttfamily void Vertex\+::add\+Path\+For\+Cost (\begin{DoxyParamCaption}\item[{pair$<$ string, int $>$}]{caminho }\end{DoxyParamCaption})}
+
+Adiciona o nome da estação e o flow para lá chegar ao caminho por custo Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em caminho} & pair$<$string, int$>$, nome da estação e o flow para lá chegar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a9858f2aa388d2bfb49d9df8f4504b5a0}\label{class_vertex_a9858f2aa388d2bfb49d9df8f4504b5a0}} 
+\index{Vertex@{Vertex}!getAdj@{getAdj}}
+\index{getAdj@{getAdj}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getAdj()}{getAdj()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ Vertex\+::get\+Adj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o vetor de arestas do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+vector$<$\+Edge$\ast$$>$, vetor de arestas do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a071b59fd1cdcee3816bc72d74ac5be86}\label{class_vertex_a071b59fd1cdcee3816bc72d74ac5be86}} 
+\index{Vertex@{Vertex}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily double const Vertex\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retorna a capacidade da estação Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+double, capacidade da estaçãor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a84131dc713516e5e50263374dea5dcda}\label{class_vertex_a84131dc713516e5e50263374dea5dcda}} 
+\index{Vertex@{Vertex}!getCost@{getCost}}
+\index{getCost@{getCost}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o custo até ao vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+int, custo até ao vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_aa36ca926de23a6e7283be42e2930957c}\label{class_vertex_aa36ca926de23a6e7283be42e2930957c}} 
+\index{Vertex@{Vertex}!getDist@{getDist}}
+\index{getDist@{getDist}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getDist()}{getDist()}}
+{\footnotesize\ttfamily double Vertex\+::get\+Dist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a distância do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+double, distância do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a4037799e30acf908d25cddf24aa4e933}\label{class_vertex_a4037799e30acf908d25cddf24aa4e933}} 
+\index{Vertex@{Vertex}!getDistrict@{getDistrict}}
+\index{getDistrict@{getDistrict}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getDistrict()}{getDistrict()}}
+{\footnotesize\ttfamily const string Vertex\+::get\+District (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o distrito do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+const string, distrito do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a75b6b4a4afc26affea59fdae48aa30b1}\label{class_vertex_a75b6b4a4afc26affea59fdae48aa30b1}} 
+\index{Vertex@{Vertex}!getId@{getId}}
+\index{getId@{getId}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o id do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+int, id do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a84b20dae22321e5a729606885357b015}\label{class_vertex_a84b20dae22321e5a729606885357b015}} 
+\index{Vertex@{Vertex}!getIncoming@{getIncoming}}
+\index{getIncoming@{getIncoming}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getIncoming()}{getIncoming()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ Vertex\+::get\+Incoming (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o vetor de arestas de entrada do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+vector$<$\+Edge$\ast$$>$, vetor de arestas de entrada do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_ad7348af9376d4b9ada5ceeca3bd1b2b7}\label{class_vertex_ad7348af9376d4b9ada5ceeca3bd1b2b7}} 
+\index{Vertex@{Vertex}!getIndegree@{getIndegree}}
+\index{getIndegree@{getIndegree}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getIndegree()}{getIndegree()}}
+{\footnotesize\ttfamily unsigned int Vertex\+::get\+Indegree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o valor de indegree do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+unsigned int, valor de indegree do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_aab416c1829877b78e2f9d7fb59d4b8be}\label{class_vertex_aab416c1829877b78e2f9d7fb59d4b8be}} 
+\index{Vertex@{Vertex}!getMunicipality@{getMunicipality}}
+\index{getMunicipality@{getMunicipality}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getMunicipality()}{getMunicipality()}}
+{\footnotesize\ttfamily const string Vertex\+::get\+Municipality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o concelho do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+const string, concelho do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a6e120e57da6af94892fae44e05868794}\label{class_vertex_a6e120e57da6af94892fae44e05868794}} 
+\index{Vertex@{Vertex}!getPath@{getPath}}
+\index{getPath@{getPath}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_edge}{Edge}} $\ast$ Vertex\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o caminho para o vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+Edge$\ast$, caminho para o vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a526f5e20037ed4d3a044deae82c0b1a4}\label{class_vertex_a526f5e20037ed4d3a044deae82c0b1a4}} 
+\index{Vertex@{Vertex}!getPathForCost@{getPathForCost}}
+\index{getPathForCost@{getPathForCost}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getPathForCost()}{getPathForCost()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, int $>$ $>$ Vertex\+::get\+Path\+For\+Cost (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o caminho por custo Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+vector$<$pair$<$string, int$>$$>$, caminho por custo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a859e9ab35003fc597bb0516d4cfbeaa5}\label{class_vertex_a859e9ab35003fc597bb0516d4cfbeaa5}} 
+\index{Vertex@{Vertex}!getPrev@{getPrev}}
+\index{getPrev@{getPrev}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getPrev()}{getPrev()}}
+{\footnotesize\ttfamily int Vertex\+::get\+Prev (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o vértice anterior Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+int, vértice anterior 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_ad65231ae22157e25ce9c5139a1c6345a}\label{class_vertex_ad65231ae22157e25ce9c5139a1c6345a}} 
+\index{Vertex@{Vertex}!getTownship@{getTownship}}
+\index{getTownship@{getTownship}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{getTownship()}{getTownship()}}
+{\footnotesize\ttfamily const string Vertex\+::get\+Township (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a cidade do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+const string, cidade do vértice 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_ad6cc99b84f20c414eded4b0b8ebba45f}\label{class_vertex_ad6cc99b84f20c414eded4b0b8ebba45f}} 
+\index{Vertex@{Vertex}!isBlocked@{isBlocked}}
+\index{isBlocked@{isBlocked}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{isBlocked()}{isBlocked()}}
+{\footnotesize\ttfamily bool Vertex\+::is\+Blocked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Verifica se o vértice está bloqueado Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+bool, se o vértice está bloqueado retorna true, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a126e306f0534b99cd97aa864fdb243d4}\label{class_vertex_a126e306f0534b99cd97aa864fdb243d4}} 
+\index{Vertex@{Vertex}!isProcessing@{isProcessing}}
+\index{isProcessing@{isProcessing}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{isProcessing()}{isProcessing()}}
+{\footnotesize\ttfamily bool Vertex\+::is\+Processing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Verifica se o vértice está a ser processado Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+bool, se o vertice está a ser processado retorna true, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}\label{class_vertex_aa4bd82105b85ee53a917391f4811cd8a}} 
+\index{Vertex@{Vertex}!isVisited@{isVisited}}
+\index{isVisited@{isVisited}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{isVisited()}{isVisited()}}
+{\footnotesize\ttfamily bool Vertex\+::is\+Visited (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o valor de visited do vértice Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+bool, se o vertice foi visitado retorna true, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_ad4ccd48170a1530ec1db5eb306357a74}\label{class_vertex_ad4ccd48170a1530ec1db5eb306357a74}} 
+\index{Vertex@{Vertex}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Vertex\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} \&}]{vertex }\end{DoxyParamCaption}) const}
+
+Operador de comparação de vértices Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em vertex} & \mbox{\hyperlink{class_vertex}{Vertex}}\&, vértice a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a distância do vértice for menor, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_a10c6827225205dc4ad070914ebfa26e7}\label{class_vertex_a10c6827225205dc4ad070914ebfa26e7}} 
+\index{Vertex@{Vertex}!removeEdge@{removeEdge}}
+\index{removeEdge@{removeEdge}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{removeEdge()}{removeEdge()}}
+{\footnotesize\ttfamily bool Vertex\+::remove\+Edge (\begin{DoxyParamCaption}\item[{int}]{dest\+ID }\end{DoxyParamCaption})}
+
+Remove uma aresta do vértice Complexidade\+: O(n) 
+\begin{DoxyParams}{Parameters}
+{\em dest\+ID} & int, id do vértice de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a aresta foi removida, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_vertex_acf362d6e369860b40f6691a4864c3e81}\label{class_vertex_acf362d6e369860b40f6691a4864c3e81}} 
+\index{Vertex@{Vertex}!setBlock@{setBlock}}
+\index{setBlock@{setBlock}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setBlock()}{setBlock()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Block (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Define a estação como bloqueada Complexidade\+: O(1) \mbox{\Hypertarget{class_vertex_ad58dfb3cfb1dc1fdfdd0821a1d633b59}\label{class_vertex_ad58dfb3cfb1dc1fdfdd0821a1d633b59}} 
+\index{Vertex@{Vertex}!setCost@{setCost}}
+\index{setCost@{setCost}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Cost (\begin{DoxyParamCaption}\item[{int}]{cost }\end{DoxyParamCaption})}
+
+Define o custo até ao vértice Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em cost} & int, custo até ao vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a6939bef79bfe5fe5bf77d9fd1bd70085}\label{class_vertex_a6939bef79bfe5fe5bf77d9fd1bd70085}} 
+\index{Vertex@{Vertex}!setDist@{setDist}}
+\index{setDist@{setDist}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setDist()}{setDist()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Dist (\begin{DoxyParamCaption}\item[{double}]{dist }\end{DoxyParamCaption})}
+
+Define a distância do vértice Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em dist} & double, distância do vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a5fbffd695323f52f0b93276176781c7d}\label{class_vertex_a5fbffd695323f52f0b93276176781c7d}} 
+\index{Vertex@{Vertex}!setId@{setId}}
+\index{setId@{setId}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Define o id do vértice Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em id} & int, id do vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_aeb605d2ba9296a5e40496a9e37557d03}\label{class_vertex_aeb605d2ba9296a5e40496a9e37557d03}} 
+\index{Vertex@{Vertex}!setIndegree@{setIndegree}}
+\index{setIndegree@{setIndegree}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setIndegree()}{setIndegree()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Indegree (\begin{DoxyParamCaption}\item[{unsigned int}]{indegree }\end{DoxyParamCaption})}
+
+Define o valor de indegree do vértice Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em indegree} & unsigned int, valor de indegree do vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_abe4bc30005eec65e775d0cd51f456460}\label{class_vertex_abe4bc30005eec65e775d0cd51f456460}} 
+\index{Vertex@{Vertex}!setPath@{setPath}}
+\index{setPath@{setPath}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setPath()}{setPath()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{path }\end{DoxyParamCaption})}
+
+Define o caminho para o vértice Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em path} & Edge$\ast$, caminho para o vértice \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a49474437c44687c32ccfd170d7120b6b}\label{class_vertex_a49474437c44687c32ccfd170d7120b6b}} 
+\index{Vertex@{Vertex}!setPathForCost@{setPathForCost}}
+\index{setPathForCost@{setPathForCost}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setPathForCost()}{setPathForCost()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Path\+For\+Cost (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ string, int $>$ $>$}]{path\+For\+Cost }\end{DoxyParamCaption})}
+
+Define o caminho por custo Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em path\+For\+Cost} & vector$<$pair$<$string, int$>$$>$, caminho por custo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a1d2b3df50f9f1bb7c6d543e019b0f270}\label{class_vertex_a1d2b3df50f9f1bb7c6d543e019b0f270}} 
+\index{Vertex@{Vertex}!setPrev@{setPrev}}
+\index{setPrev@{setPrev}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setPrev()}{setPrev()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Prev (\begin{DoxyParamCaption}\item[{int}]{prev }\end{DoxyParamCaption})}
+
+Define o vértice anterior Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em prev} & int, vértice anterior \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a1c93b166281b30db2edef03791748ace}\label{class_vertex_a1c93b166281b30db2edef03791748ace}} 
+\index{Vertex@{Vertex}!setProcesssing@{setProcesssing}}
+\index{setProcesssing@{setProcesssing}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setProcesssing()}{setProcesssing()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Processsing (\begin{DoxyParamCaption}\item[{bool}]{processing }\end{DoxyParamCaption})}
+
+Define se o vértice está a ser processado Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em processing} & bool, se está a ser processado ou não \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_vertex_a15eeabbbb6d517af746ae137c6d5b595}\label{class_vertex_a15eeabbbb6d517af746ae137c6d5b595}} 
+\index{Vertex@{Vertex}!setVisited@{setVisited}}
+\index{setVisited@{setVisited}!Vertex@{Vertex}}
+\doxysubsubsection{\texorpdfstring{setVisited()}{setVisited()}}
+{\footnotesize\ttfamily void Vertex\+::set\+Visited (\begin{DoxyParamCaption}\item[{bool}]{visited }\end{DoxyParamCaption})}
+
+Define se o vértice foi visitado Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em visited} & bool, se já foi visitado ou não \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Vertex\+Edge.\+h\item 
+Vertex\+Edge.\+cpp\end{DoxyCompactItemize}

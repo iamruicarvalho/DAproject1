@@ -1,0 +1,132 @@
+\hypertarget{class_network}{}\doxysection{Network Class Reference}
+\label{class_network}\index{Network@{Network}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_ae45e5ad80aa4d7fd1d8066646eed170e}\label{class_network_ae45e5ad80aa4d7fd1d8066646eed170e}} 
+{\bfseries Network} (string stationA, string stationB)
+\item 
+\mbox{\Hypertarget{class_network_a7f8e58da877bd13ab5537559982e83ea}\label{class_network_a7f8e58da877bd13ab5537559982e83ea}} 
+{\bfseries Network} (string stationA, string stationB, double capacity, string service)
+\item 
+bool \mbox{\hyperlink{class_network_a9b76ff08cca2eb320437a7e74ab395fe}{operator$<$}} (const \mbox{\hyperlink{class_network}{Network}} \&network2) const
+\item 
+const string \mbox{\hyperlink{class_network_a58d84f39d589f3c6b78201c30e4c349a}{get\+StationA}} () const
+\item 
+const string \mbox{\hyperlink{class_network_ad349f334dd3b065b2e9bf83a28017a79}{get\+StationB}} () const
+\item 
+const double \mbox{\hyperlink{class_network_ac8ff7fb7496d968d75f1ed4d40176710}{get\+Capacity}} () const
+\item 
+const string \mbox{\hyperlink{class_network_a9c8db447c661e740de2059a7cf933511}{get\+Service}} () const
+\item 
+void \mbox{\hyperlink{class_network_a38dbc862fb8ff27bfc8b4e440d8ced6a}{set\+StationA}} (const string stationA)
+\item 
+void \mbox{\hyperlink{class_network_afc7be027dc1ece3dc20b486421d9de17}{set\+StationB}} (const string stationB)
+\item 
+void \mbox{\hyperlink{class_network_a7bceafd59908bd442640005daddafc94}{set\+Capacity}} (const double capacity)
+\item 
+void \mbox{\hyperlink{class_network_a3abf1067ac8ddadf96612be41ac96db3}{set\+Service}} (const string service)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_ac8ff7fb7496d968d75f1ed4d40176710}\label{class_network_ac8ff7fb7496d968d75f1ed4d40176710}} 
+\index{Network@{Network}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily const double Network\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna a capacidade da ligação Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+double, capacidade da ligação 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a9c8db447c661e740de2059a7cf933511}\label{class_network_a9c8db447c661e740de2059a7cf933511}} 
+\index{Network@{Network}!getService@{getService}}
+\index{getService@{getService}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getService()}{getService()}}
+{\footnotesize\ttfamily const string Network\+::get\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o serviço da ligação Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+string, serviço da ligação 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a58d84f39d589f3c6b78201c30e4c349a}\label{class_network_a58d84f39d589f3c6b78201c30e4c349a}} 
+\index{Network@{Network}!getStationA@{getStationA}}
+\index{getStationA@{getStationA}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getStationA()}{getStationA()}}
+{\footnotesize\ttfamily const string Network\+::get\+StationA (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o nome da estação A Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+string, nome da estação A 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_ad349f334dd3b065b2e9bf83a28017a79}\label{class_network_ad349f334dd3b065b2e9bf83a28017a79}} 
+\index{Network@{Network}!getStationB@{getStationB}}
+\index{getStationB@{getStationB}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{getStationB()}{getStationB()}}
+{\footnotesize\ttfamily const string Network\+::get\+StationB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Retorna o nome da estação B Complexidade\+: O(1) \begin{DoxyReturn}{Returns}
+string, nome da estação B 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a9b76ff08cca2eb320437a7e74ab395fe}\label{class_network_a9b76ff08cca2eb320437a7e74ab395fe}} 
+\index{Network@{Network}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Network\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_network}{Network}} \&}]{network2 }\end{DoxyParamCaption}) const}
+
+Compara duas ligações entre estações 
+\begin{DoxyParams}{Parameters}
+{\em network2} & \mbox{\hyperlink{class_network}{Network}}, ligação a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a ligação for menor que a ligação a comparar, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_a7bceafd59908bd442640005daddafc94}\label{class_network_a7bceafd59908bd442640005daddafc94}} 
+\index{Network@{Network}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily void Network\+::set\+Capacity (\begin{DoxyParamCaption}\item[{const double}]{capacity }\end{DoxyParamCaption})}
+
+Altera a capacidade da ligação Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em capacity} & double, capacidade da ligação \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_a3abf1067ac8ddadf96612be41ac96db3}\label{class_network_a3abf1067ac8ddadf96612be41ac96db3}} 
+\index{Network@{Network}!setService@{setService}}
+\index{setService@{setService}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{setService()}{setService()}}
+{\footnotesize\ttfamily void Network\+::set\+Service (\begin{DoxyParamCaption}\item[{const string}]{service }\end{DoxyParamCaption})}
+
+Altera o serviço da ligação Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em service} & string, serviço da ligação \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_a38dbc862fb8ff27bfc8b4e440d8ced6a}\label{class_network_a38dbc862fb8ff27bfc8b4e440d8ced6a}} 
+\index{Network@{Network}!setStationA@{setStationA}}
+\index{setStationA@{setStationA}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{setStationA()}{setStationA()}}
+{\footnotesize\ttfamily void Network\+::set\+StationA (\begin{DoxyParamCaption}\item[{const string}]{stationA }\end{DoxyParamCaption})}
+
+Altera o nome da estação A Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em stationA} & string, nome da estação A \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_afc7be027dc1ece3dc20b486421d9de17}\label{class_network_afc7be027dc1ece3dc20b486421d9de17}} 
+\index{Network@{Network}!setStationB@{setStationB}}
+\index{setStationB@{setStationB}!Network@{Network}}
+\doxysubsubsection{\texorpdfstring{setStationB()}{setStationB()}}
+{\footnotesize\ttfamily void Network\+::set\+StationB (\begin{DoxyParamCaption}\item[{const string}]{stationB }\end{DoxyParamCaption})}
+
+Altera o nome da estação B Complexidade\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em stationB} & string, nome da estação B \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Network.\+h\item 
+Network.\+cpp\end{DoxyCompactItemize}

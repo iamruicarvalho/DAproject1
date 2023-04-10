@@ -1,0 +1,404 @@
+\hypertarget{class_network_manager}{}\doxysection{Network\+Manager Class Reference}
+\label{class_network_manager}\index{NetworkManager@{NetworkManager}}
+Inheritance diagram for Network\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_network_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_network_manager_a5aaf71c4aa7a2efab7f1dbae02312280}{Network\+Manager}} ()
+\item 
+void \mbox{\hyperlink{class_network_manager_a9eb823fe1d3a864b70f67f1a416e2838}{read\+Files}} ()
+\item 
+void \mbox{\hyperlink{class_network_manager_a19aae84e589aef8d25b8d5149f10ef7f}{list\+Stations}} ()
+\item 
+void \mbox{\hyperlink{class_network_manager_ae2324b73dafb3bb6be666b0d8f0389b4}{list\+Connections}} ()
+\item 
+\mbox{\Hypertarget{class_network_manager_a4ca9b8d8c94bfb0a0404d9eca6c3047b}\label{class_network_manager_a4ca9b8d8c94bfb0a0404d9eca6c3047b}} 
+int {\bfseries indexA} (string a)
+\item 
+\mbox{\Hypertarget{class_network_manager_a6843c3e58562b589a2cdb8935c3be07d}\label{class_network_manager_a6843c3e58562b589a2cdb8935c3be07d}} 
+int {\bfseries indexB} (string a)
+\item 
+\mbox{\Hypertarget{class_network_manager_a3848088c17c2fd0f76aa67c8d7b7c1ee}\label{class_network_manager_a3848088c17c2fd0f76aa67c8d7b7c1ee}} 
+unordered\+\_\+map$<$ std\+::string, int $>$ {\bfseries get\+\_\+stations\+\_\+code\+\_\+reversed} ()
+\item 
+\mbox{\Hypertarget{class_network_manager_a1a87122b829af9c20da6060b1f5a70ed}\label{class_network_manager_a1a87122b829af9c20da6060b1f5a70ed}} 
+std\+::unordered\+\_\+map$<$ int, std\+::string $>$ {\bfseries get\+\_\+stations\+\_\+code} ()
+\item 
+double \mbox{\hyperlink{class_network_manager_ae7df9d4e3cab78041fa22aba0981ecea}{max\+\_\+trains}} (string source, string target)
+\item 
+int \mbox{\hyperlink{class_network_manager_aff65de5f3d3bb1fce6d4bef3fa19612e}{max\+\_\+trains\+\_\+with\+\_\+blocks}} (string source, string target)
+\item 
+\mbox{\Hypertarget{class_network_manager_a4cbcbb0f92bdf768d93c777ec2e23d0c}\label{class_network_manager_a4cbcbb0f92bdf768d93c777ec2e23d0c}} 
+int {\bfseries max\+\_\+trains\+\_\+with\+\_\+specific\+\_\+block} (string source, string target)
+\item 
+void \mbox{\hyperlink{class_network_manager_a0e764c7c2f2c3da1c14355424242ad37}{test\+And\+Visit}} (std\+::queue$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&q, \mbox{\hyperlink{class_edge}{Edge}} $\ast$e, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$w, double residual)
+\item 
+void \mbox{\hyperlink{class_network_manager_a78dd2863348bbf4fe888edae4b6565b8}{test\+And\+Visit\+With\+Blocks}} (std\+::queue$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&q, \mbox{\hyperlink{class_edge}{Edge}} $\ast$e, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$w, double residual)
+\item 
+\mbox{\Hypertarget{class_network_manager_a2274b8c91efae43f46c3ab8b8edd4ad0}\label{class_network_manager_a2274b8c91efae43f46c3ab8b8edd4ad0}} 
+void {\bfseries test\+And\+Visit\+With\+Specific\+Block} (std\+::queue$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&q, \mbox{\hyperlink{class_edge}{Edge}} $\ast$e, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$w, double residual)
+\item 
+bool \mbox{\hyperlink{class_network_manager_a69c740614982afe5b43d583b2f9e604a}{augmenting\+Path}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$s, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$t)
+\item 
+bool \mbox{\hyperlink{class_network_manager_a37c4eb95e3ead7195b777b1880ea4c7c}{augmenting\+Path\+With\+Blocks}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$s, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$t)
+\item 
+\mbox{\Hypertarget{class_network_manager_a2676f996bb6d82e6de08ba08b06f745a}\label{class_network_manager_a2676f996bb6d82e6de08ba08b06f745a}} 
+bool {\bfseries augmenting\+Path\+With\+Specific\+Block} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$s, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$t)
+\item 
+void \mbox{\hyperlink{class_network_manager_af9c7203c052199787a6f0d64124ee44d}{update}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$s, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$t, double f)
+\item 
+int \mbox{\hyperlink{class_network_manager_ac9762d5b3852079ad79bf755f2fadd35}{max\+Trains\+Arriving\+At\+Station}} (const string \&arriving\+Station)
+\item 
+vector$<$ pair$<$ int, pair$<$ string, string $>$ $>$ $>$ \mbox{\hyperlink{class_network_manager_afe290a360fb2f5edde721cf81f1f0abd}{max\+\_\+of\+\_\+max\+\_\+trains}} ()
+\item 
+bool \mbox{\hyperlink{class_network_manager_aaae326fd06585a73eb1aebdf812cd261}{set\+\_\+block}} (string A, string B)
+\item 
+bool \mbox{\hyperlink{class_network_manager_a9a9436df0e453b9cefa1e66393d98766}{remove\+\_\+block}} (string A, string B)
+\item 
+\mbox{\Hypertarget{class_network_manager_adc261bb72d61a01bb470b14c30fc0ced}\label{class_network_manager_adc261bb72d61a01bb470b14c30fc0ced}} 
+set$<$ int $>$ {\bfseries return\+Blocked\+Stations} (const string \&line)
+\item 
+\mbox{\Hypertarget{class_network_manager_a74d392e7cd27dc5f9c27666991fb2947}\label{class_network_manager_a74d392e7cd27dc5f9c27666991fb2947}} 
+void {\bfseries set\+Block\+Line} (const string \&blockline)
+\item 
+void \mbox{\hyperlink{class_network_manager_a454085f9c707c175273c261855b8ffca}{train\+Management\+By\+Municipality}} (int k)
+\item 
+void \mbox{\hyperlink{class_network_manager_a07f5e4a4ff09bc33722dcdbdb327148e}{train\+Management\+By\+District}} (int k)
+\item 
+\mbox{\Hypertarget{class_network_manager_a060ae6c7a0baf9caa949b8161eaff59e}\label{class_network_manager_a060ae6c7a0baf9caa949b8161eaff59e}} 
+void {\bfseries train\+Management\+By\+Township} (int k)
+\item 
+void \mbox{\hyperlink{class_network_manager_ae0e2ea067998110964ba3923c8f8e4ca}{dijkstra}} (string first, string second)
+\item 
+\mbox{\Hypertarget{class_network_manager_ab65bec48eccd00462b579cb561645cb2}\label{class_network_manager_ab65bec48eccd00462b579cb561645cb2}} 
+void {\bfseries print\+Shortest\+Path} (string second)
+\item 
+void \mbox{\hyperlink{class_network_manager_a6983a46a680845a67aea638e85489794}{most\+\_\+affected\+\_\+stations}} (int rank)
+\item 
+void \mbox{\hyperlink{class_network_manager_ad14465fa91554505cf566198237c45ae}{set\+Edge\+Testing}} (pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ that)
+\item 
+void \mbox{\hyperlink{class_network_manager_a737e323020fb93cde449a0216cea8a98}{remove\+Edge\+Testing}} (pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$ that)
+\item 
+\mbox{\Hypertarget{class_network_manager_a65c002b2e949fe8fd77c202356ccc717}\label{class_network_manager_a65c002b2e949fe8fd77c202356ccc717}} 
+void {\bfseries add\+\_\+or\+\_\+update} (string key, int value)
+\item 
+void \mbox{\hyperlink{class_network_manager_a688932a83cb7ec649968bd56abb30f3a}{bfs}} (string source, string target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \mbox{\hyperlink{class_network_manager_adf6659e40c46e960a39e51c85e3433d4}{min\+Residual}} (\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$s, \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_network_manager_a5aaf71c4aa7a2efab7f1dbae02312280}\label{class_network_manager_a5aaf71c4aa7a2efab7f1dbae02312280}} 
+\index{NetworkManager@{NetworkManager}!NetworkManager@{NetworkManager}}
+\index{NetworkManager@{NetworkManager}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{NetworkManager()}{NetworkManager()}}
+{\footnotesize\ttfamily Network\+Manager\+::\+Network\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_network_manager_a69c740614982afe5b43d583b2f9e604a}\label{class_network_manager_a69c740614982afe5b43d583b2f9e604a}} 
+\index{NetworkManager@{NetworkManager}!augmentingPath@{augmentingPath}}
+\index{augmentingPath@{augmentingPath}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{augmentingPath()}{augmentingPath()}}
+{\footnotesize\ttfamily bool Network\+Manager\+::augmenting\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+Encontra o caminho aumentante e retorna true se existir Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de origem \\
+\hline
+{\em t} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se existir caminho aumentante 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_a37c4eb95e3ead7195b777b1880ea4c7c}\label{class_network_manager_a37c4eb95e3ead7195b777b1880ea4c7c}} 
+\index{NetworkManager@{NetworkManager}!augmentingPathWithBlocks@{augmentingPathWithBlocks}}
+\index{augmentingPathWithBlocks@{augmentingPathWithBlocks}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{augmentingPathWithBlocks()}{augmentingPathWithBlocks()}}
+{\footnotesize\ttfamily bool Network\+Manager\+::augmenting\+Path\+With\+Blocks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+Encontra um caminho aumentante a partir da estação s até à estação t tendo em conta as ligações bloqueadas Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de origem \\
+\hline
+{\em t} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_a688932a83cb7ec649968bd56abb30f3a}\label{class_network_manager_a688932a83cb7ec649968bd56abb30f3a}} 
+\index{NetworkManager@{NetworkManager}!bfs@{bfs}}
+\index{bfs@{bfs}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{bfs()}{bfs()}}
+{\footnotesize\ttfamily void Network\+Manager\+::bfs (\begin{DoxyParamCaption}\item[{string}]{source,  }\item[{string}]{target }\end{DoxyParamCaption})}
+
+Encontra o caminho mais curto em numero de comboios entre duas estações Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em source} & string, estação de origem \\
+\hline
+{\em target} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_ae0e2ea067998110964ba3923c8f8e4ca}\label{class_network_manager_ae0e2ea067998110964ba3923c8f8e4ca}} 
+\index{NetworkManager@{NetworkManager}!dijkstra@{dijkstra}}
+\index{dijkstra@{dijkstra}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{dijkstra()}{dijkstra()}}
+{\footnotesize\ttfamily void Network\+Manager\+::dijkstra (\begin{DoxyParamCaption}\item[{string}]{first,  }\item[{string}]{second }\end{DoxyParamCaption})}
+
+Calcula o caminho com melhor custo entre duas estações Complexidade temporal\+: O(nmlogn), onde n é o número de estações e m é o número de ligações \begin{DoxyReturn}{Returns}
+vector$<$pair$<$string, int$>$$>$, caminho com melhor custo entre duas estações 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em first} & string, estação de origem \\
+\hline
+{\em second} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_ae2324b73dafb3bb6be666b0d8f0389b4}\label{class_network_manager_ae2324b73dafb3bb6be666b0d8f0389b4}} 
+\index{NetworkManager@{NetworkManager}!listConnections@{listConnections}}
+\index{listConnections@{listConnections}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{listConnections()}{listConnections()}}
+{\footnotesize\ttfamily void Network\+Manager\+::list\+Connections (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Mostra as ligações com os dados estação A, estação B, capacidade e serviço Complexidade temporal\+: O(m), onde m é o número de ligações \mbox{\Hypertarget{class_network_manager_a19aae84e589aef8d25b8d5149f10ef7f}\label{class_network_manager_a19aae84e589aef8d25b8d5149f10ef7f}} 
+\index{NetworkManager@{NetworkManager}!listStations@{listStations}}
+\index{listStations@{listStations}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{listStations()}{listStations()}}
+{\footnotesize\ttfamily void Network\+Manager\+::list\+Stations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Mostra as estações com os dados nome, distrito, concelho, freguesia e linha Complexidade temporal\+: O(n), onde n é o número de estações \mbox{\Hypertarget{class_network_manager_afe290a360fb2f5edde721cf81f1f0abd}\label{class_network_manager_afe290a360fb2f5edde721cf81f1f0abd}} 
+\index{NetworkManager@{NetworkManager}!max\_of\_max\_trains@{max\_of\_max\_trains}}
+\index{max\_of\_max\_trains@{max\_of\_max\_trains}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{max\_of\_max\_trains()}{max\_of\_max\_trains()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ int, pair$<$ string, string $>$ $>$ $>$ Network\+Manager\+::max\+\_\+of\+\_\+max\+\_\+trains (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calcula o número máximo de comboios que podem circular entre todas as estações Complexidade temporal\+: O(n$^\wedge$3), onde n é o número de estações \begin{DoxyReturn}{Returns}
+pair$<$int,pair$<$string,string$>$$>$, par com o número máximo de comboios e as estações de origem e destino 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_ae7df9d4e3cab78041fa22aba0981ecea}\label{class_network_manager_ae7df9d4e3cab78041fa22aba0981ecea}} 
+\index{NetworkManager@{NetworkManager}!max\_trains@{max\_trains}}
+\index{max\_trains@{max\_trains}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{max\_trains()}{max\_trains()}}
+{\footnotesize\ttfamily double Network\+Manager\+::max\+\_\+trains (\begin{DoxyParamCaption}\item[{string}]{A,  }\item[{string}]{B }\end{DoxyParamCaption})}
+
+Calcula o número máximo de comboios que podem circular entre duas estações Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em A} & string, estação de origem \\
+\hline
+{\em B} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double, número máximo de comboios que podem circular entre as duas estações 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_aff65de5f3d3bb1fce6d4bef3fa19612e}\label{class_network_manager_aff65de5f3d3bb1fce6d4bef3fa19612e}} 
+\index{NetworkManager@{NetworkManager}!max\_trains\_with\_blocks@{max\_trains\_with\_blocks}}
+\index{max\_trains\_with\_blocks@{max\_trains\_with\_blocks}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{max\_trains\_with\_blocks()}{max\_trains\_with\_blocks()}}
+{\footnotesize\ttfamily int Network\+Manager\+::max\+\_\+trains\+\_\+with\+\_\+blocks (\begin{DoxyParamCaption}\item[{string}]{A,  }\item[{string}]{B }\end{DoxyParamCaption})}
+
+Encontra o maximo de comboios que podem circular entre duas estações tendo em conta as ligações bloqueadas Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em A} & String, estação de origem \\
+\hline
+{\em B} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int, número máximo de comboios que podem circular entre as duas estações 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_ac9762d5b3852079ad79bf755f2fadd35}\label{class_network_manager_ac9762d5b3852079ad79bf755f2fadd35}} 
+\index{NetworkManager@{NetworkManager}!maxTrainsArrivingAtStation@{maxTrainsArrivingAtStation}}
+\index{maxTrainsArrivingAtStation@{maxTrainsArrivingAtStation}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{maxTrainsArrivingAtStation()}{maxTrainsArrivingAtStation()}}
+{\footnotesize\ttfamily int Network\+Manager\+::max\+Trains\+Arriving\+At\+Station (\begin{DoxyParamCaption}\item[{const string \&}]{arriving\+Station }\end{DoxyParamCaption})}
+
+Calcula o número máximo de comboios que podem chegar a uma estação Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações \begin{DoxyReturn}{Returns}
+int, número máximo de comboios que podem chegar a uma estação 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em arriving\+Station} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_adf6659e40c46e960a39e51c85e3433d4}\label{class_network_manager_adf6659e40c46e960a39e51c85e3433d4}} 
+\index{NetworkManager@{NetworkManager}!minResidual@{minResidual}}
+\index{minResidual@{minResidual}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{minResidual()}{minResidual()}}
+{\footnotesize\ttfamily double Network\+Manager\+::min\+Residual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Calcula o valor do residual mínimo Complexidade temporal\+: O(n), onde n é o número de estações 
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de origem \\
+\hline
+{\em t} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double, valor do residual mínimo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_a6983a46a680845a67aea638e85489794}\label{class_network_manager_a6983a46a680845a67aea638e85489794}} 
+\index{NetworkManager@{NetworkManager}!most\_affected\_stations@{most\_affected\_stations}}
+\index{most\_affected\_stations@{most\_affected\_stations}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{most\_affected\_stations()}{most\_affected\_stations()}}
+{\footnotesize\ttfamily void Network\+Manager\+::most\+\_\+affected\+\_\+stations (\begin{DoxyParamCaption}\item[{int}]{rank }\end{DoxyParamCaption})}
+
+Encontra as estações mais afetadas por um corte de uma linha Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em rank} & int, número de estações a mostrar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_a9eb823fe1d3a864b70f67f1a416e2838}\label{class_network_manager_a9eb823fe1d3a864b70f67f1a416e2838}} 
+\index{NetworkManager@{NetworkManager}!readFiles@{readFiles}}
+\index{readFiles@{readFiles}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{readFiles()}{readFiles()}}
+{\footnotesize\ttfamily void Network\+Manager\+::read\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Lê os ficheiros stations.\+csv e network.\+csv e cria um grafo com as estações (vertices) e ligações (edges). Guardamos também as estações numa hash table para facilitar a procura de estações por id e nome. O id da estação é feito por auto-\/incrementação. Complexidade temporal\+: O(n+m), onde n é o número de estações e m é o número de ligações. \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_a9a9436df0e453b9cefa1e66393d98766}\label{class_network_manager_a9a9436df0e453b9cefa1e66393d98766}} 
+\index{NetworkManager@{NetworkManager}!remove\_block@{remove\_block}}
+\index{remove\_block@{remove\_block}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{remove\_block()}{remove\_block()}}
+{\footnotesize\ttfamily bool Network\+Manager\+::remove\+\_\+block (\begin{DoxyParamCaption}\item[{string}]{A,  }\item[{string}]{B }\end{DoxyParamCaption})}
+
+Coloca a ligação entre duas estações em modo desbloqueado Complexidade temporal\+: O(nm), onde n é o número de estações e m é o número de ligações 
+\begin{DoxyParams}{Parameters}
+{\em A} & string, estação de origem \\
+\hline
+{\em B} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a ligação foi desbloqueada, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_a737e323020fb93cde449a0216cea8a98}\label{class_network_manager_a737e323020fb93cde449a0216cea8a98}} 
+\index{NetworkManager@{NetworkManager}!removeEdgeTesting@{removeEdgeTesting}}
+\index{removeEdgeTesting@{removeEdgeTesting}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{removeEdgeTesting()}{removeEdgeTesting()}}
+{\footnotesize\ttfamily void Network\+Manager\+::remove\+Edge\+Testing (\begin{DoxyParamCaption}\item[{pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$}]{that }\end{DoxyParamCaption})}
+
+Remove a flag de teste das ligações que estão a ser testadas Complexidade temporal\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em that} & pair$<$\+Edge$\ast$,\+Edge$\ast$$>$, ligações que estão a ser testadas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_aaae326fd06585a73eb1aebdf812cd261}\label{class_network_manager_aaae326fd06585a73eb1aebdf812cd261}} 
+\index{NetworkManager@{NetworkManager}!set\_block@{set\_block}}
+\index{set\_block@{set\_block}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{set\_block()}{set\_block()}}
+{\footnotesize\ttfamily bool Network\+Manager\+::set\+\_\+block (\begin{DoxyParamCaption}\item[{string}]{A,  }\item[{string}]{B }\end{DoxyParamCaption})}
+
+Coloca a ligação entre duas estações em modo bloqueado Complexidade temporal\+: O(n), onde n é o número de estações 
+\begin{DoxyParams}{Parameters}
+{\em A} & string, estação de origem \\
+\hline
+{\em B} & string, estação de destino \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool, true se a ligação foi bloqueada, false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_network_manager_ad14465fa91554505cf566198237c45ae}\label{class_network_manager_ad14465fa91554505cf566198237c45ae}} 
+\index{NetworkManager@{NetworkManager}!setEdgeTesting@{setEdgeTesting}}
+\index{setEdgeTesting@{setEdgeTesting}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{setEdgeTesting()}{setEdgeTesting()}}
+{\footnotesize\ttfamily void Network\+Manager\+::set\+Edge\+Testing (\begin{DoxyParamCaption}\item[{pair$<$ \mbox{\hyperlink{class_edge}{Edge}} $\ast$, \mbox{\hyperlink{class_edge}{Edge}} $\ast$ $>$}]{that }\end{DoxyParamCaption})}
+
+Coloca a flag de teste a true nas ligações que estão a ser testadas Complexidade temporal\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em that} & pair$<$\+Edge$\ast$,\+Edge$\ast$$>$, ligações que estão a ser testadas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_a0e764c7c2f2c3da1c14355424242ad37}\label{class_network_manager_a0e764c7c2f2c3da1c14355424242ad37}} 
+\index{NetworkManager@{NetworkManager}!testAndVisit@{testAndVisit}}
+\index{testAndVisit@{testAndVisit}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{testAndVisit()}{testAndVisit()}}
+{\footnotesize\ttfamily void Network\+Manager\+::test\+And\+Visit (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&}]{q,  }\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{e,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{w,  }\item[{double}]{residual }\end{DoxyParamCaption})}
+
+Verfica se o \mbox{\hyperlink{class_vertex}{Vertex}} w foi visitado e se o residual é maior que 0 e se for, adiciona o w à queue q e marca-\/o como visitado Complexidade temporal\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em q} & \mbox{\hyperlink{class_vertex}{Vertex}} queue, guarda as estações a visitar \\
+\hline
+{\em e} & \mbox{\hyperlink{class_edge}{Edge}}, ligação a verificar \\
+\hline
+{\em w} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação a verificar \\
+\hline
+{\em residual} & double, residual a verificar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_a78dd2863348bbf4fe888edae4b6565b8}\label{class_network_manager_a78dd2863348bbf4fe888edae4b6565b8}} 
+\index{NetworkManager@{NetworkManager}!testAndVisitWithBlocks@{testAndVisitWithBlocks}}
+\index{testAndVisitWithBlocks@{testAndVisitWithBlocks}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{testAndVisitWithBlocks()}{testAndVisitWithBlocks()}}
+{\footnotesize\ttfamily void Network\+Manager\+::test\+And\+Visit\+With\+Blocks (\begin{DoxyParamCaption}\item[{std\+::queue$<$ \mbox{\hyperlink{class_vertex}{Vertex}} $\ast$ $>$ \&}]{q,  }\item[{\mbox{\hyperlink{class_edge}{Edge}} $\ast$}]{e,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{w,  }\item[{double}]{residual }\end{DoxyParamCaption})}
+
+Verfica se o \mbox{\hyperlink{class_vertex}{Vertex}} w foi visitado e se o residual é maior que 0 e se for Adiciona o \mbox{\hyperlink{class_vertex}{Vertex}} w à queue q e marca-\/o como visitado Esta função não considera as ligações bloqueadas Complexidade temporal\+: O(1) 
+\begin{DoxyParams}{Parameters}
+{\em q} & \mbox{\hyperlink{class_vertex}{Vertex}} queue, guarda as estações a visitar \\
+\hline
+{\em e} & \mbox{\hyperlink{class_edge}{Edge}}, ligação a verificar \\
+\hline
+{\em w} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação a verificar \\
+\hline
+{\em residual} & double, residual a verificar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_a07f5e4a4ff09bc33722dcdbdb327148e}\label{class_network_manager_a07f5e4a4ff09bc33722dcdbdb327148e}} 
+\index{NetworkManager@{NetworkManager}!trainManagementByDistrict@{trainManagementByDistrict}}
+\index{trainManagementByDistrict@{trainManagementByDistrict}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{trainManagementByDistrict()}{trainManagementByDistrict()}}
+{\footnotesize\ttfamily void Network\+Manager\+::train\+Management\+By\+District (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+Calcula o número de comboios por distrito Complexidade temporal\+: O(n), onde n é o número de estações 
+\begin{DoxyParams}{Parameters}
+{\em k} & int, top k-\/th de distritos a mostrar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_a454085f9c707c175273c261855b8ffca}\label{class_network_manager_a454085f9c707c175273c261855b8ffca}} 
+\index{NetworkManager@{NetworkManager}!trainManagementByMunicipality@{trainManagementByMunicipality}}
+\index{trainManagementByMunicipality@{trainManagementByMunicipality}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{trainManagementByMunicipality()}{trainManagementByMunicipality()}}
+{\footnotesize\ttfamily void Network\+Manager\+::train\+Management\+By\+Municipality (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})}
+
+Calcula o número de comboios por municipio Complexidade temporal\+: O(n), onde n é o número de estações 
+\begin{DoxyParams}{Parameters}
+{\em k} & int, top k-\/th de municipios a mostrar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_network_manager_af9c7203c052199787a6f0d64124ee44d}\label{class_network_manager_af9c7203c052199787a6f0d64124ee44d}} 
+\index{NetworkManager@{NetworkManager}!update@{update}}
+\index{update@{update}!NetworkManager@{NetworkManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Network\+Manager\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{s,  }\item[{\mbox{\hyperlink{class_vertex}{Vertex}} $\ast$}]{t,  }\item[{double}]{f }\end{DoxyParamCaption})}
+
+Atualiza o fluxo das arestas do caminho aumentante Complexidade temporal\+: O(n), onde n é o número de estações 
+\begin{DoxyParams}{Parameters}
+{\em s} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de origem \\
+\hline
+{\em t} & \mbox{\hyperlink{class_vertex}{Vertex}}, estação de destino \\
+\hline
+{\em f} & double, fluxo a atualizar \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Network\+Manager.\+h\item 
+Network\+Manager.\+cpp\end{DoxyCompactItemize}
