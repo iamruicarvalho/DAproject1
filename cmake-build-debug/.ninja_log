@@ -1,46 +1,21 @@
 # ninja log v5
-7	1327	7028418210530751	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	a756b7dc10851d9b
-1555	1592	1681153628348676016	Projeto1	8d5c6c2dc1be7ccd
-2391	3126	7026033738501620	Projeto1.exe	5b787a28b9d9b41b
-0	628	7028418203450928	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	c0859137743e41d1
-<<<<<<< HEAD
-7	75	7028645892934655	build.ninja	6ca2215973e19c28
-=======
-7	75	7028655986591185	build.ninja	6ca2215973e19c28
->>>>>>> e7b528b703242b23fd4fa9d129d3cf8996ccf539
-628	1765	7028418215070704	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	f8b261fe9a500a17
-4	1291	7028420316187380	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
-13	524	7028418202382274	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	361289d8199257c
-1328	2648	7028418223384049	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	5e3633a9b5b8ae86
-1765	2696	7028418224421709	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	4d5ed308337bf111
-2360	5039	7028418247778226	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	f02e67e1021751e
-<<<<<<< HEAD
-76	3311	7028646048752720	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	361289d8199257c
-41	3645	7028646052940053	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	f8b261fe9a500a17
-3646	7674	7028646088033848	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	c0859137743e41d1
-17	7753	7028646093884278	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
-3312	7876	7028646095318249	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	a756b7dc10851d9b
-7674	8644	7028646102983014	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	4d5ed308337bf111
-7876	9173	7028646108326930	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	5e3633a9b5b8ae86
-7754	10804	7028646124640426	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	f02e67e1021751e
-10804	11591	7028646132484602	Projeto1.exe	98ee526f4762a412
-34	1880	7028649609291206	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
-1881	2876	7028649618970973	Projeto1.exe	98ee526f4762a412
-4	2607	7028650580233620	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
-2609	3536	7028650589459365	Projeto1.exe	98ee526f4762a412
-21	1272	7028654772976074	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
-27	7072	7028654830952475	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	f02e67e1021751e
-7073	8029	7028654840489592	Projeto1.exe	98ee526f4762a412
-=======
-28	384	7028656027849809	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	1caefa5eb3297c50
-18	485	7028656028870236	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	8c92a701f5a4c2c5
-36	868	7028656032709587	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	34c78a7def05647b
-2	916	7028656033190736	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	af337adcec35b43c
 12	984	7028656033859841	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	f8c93772cf5c6c93
-42	1177	7028656035791103	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	a0a8a39b948a4abc
-7	1382	7028656037846244	CMakeFiles/Projeto1.dir/main.cpp.obj	ff9b7d47c73de229
-50	2714	7028656051062018	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
-2714	3272	7028656056719842	Projeto1.exe	5b787a28b9d9b41b
-5	2224	7028660095834168	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+1555	1592	1681153628348676016	Projeto1	8d5c6c2dc1be7ccd
 2225	2774	7028660101339956	Projeto1.exe	5b787a28b9d9b41b
->>>>>>> e7b528b703242b23fd4fa9d129d3cf8996ccf539
+18	485	7028656028870236	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	8c92a701f5a4c2c5
+7	75	7028665077519602	build.ninja	6ca2215973e19c28
+2	916	7028656033190736	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	af337adcec35b43c
+7	1382	7028656037846244	CMakeFiles/Projeto1.dir/main.cpp.obj	ff9b7d47c73de229
+28	384	7028656027849809	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	1caefa5eb3297c50
+42	1177	7028656035791103	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	a0a8a39b948a4abc
+36	868	7028656032709587	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	34c78a7def05647b
+5	2224	7028660095834168	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	6016ab95b166ac16
+23	13754	7028665471044013	CMakeFiles/Projeto1.dir/src/Network.cpp.obj	f8b261fe9a500a17
+100	13889	7028665472515331	CMakeFiles/Projeto1.dir/src/Graph.cpp.obj	a756b7dc10851d9b
+13755	14377	7028665477411205	CMakeFiles/Projeto1.dir/src/UFDS.cpp.obj	361289d8199257c
+13890	14643	7028665480015478	CMakeFiles/Projeto1.dir/src/Heap.cpp.obj	c0859137743e41d1
+92	14705	7028665480370711	CMakeFiles/Projeto1.dir/main.cpp.obj	cee1288aa3339396
+14643	16026	7028665493862373	CMakeFiles/Projeto1.dir/src/Station.cpp.obj	4d5ed308337bf111
+14705	16574	7028665499345081	CMakeFiles/Projeto1.dir/src/VertexEdge.cpp.obj	5e3633a9b5b8ae86
+14377	18656	7028665520200449	CMakeFiles/Projeto1.dir/src/NetworkManager.cpp.obj	f02e67e1021751e
+18657	19633	7028665529976430	Projeto1.exe	98ee526f4762a412

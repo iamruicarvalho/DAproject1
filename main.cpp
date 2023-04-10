@@ -17,7 +17,7 @@ void showMenu() {
     cout << "6 - Desejo ver quantos comboios podem chegar ao mesmo tempo a uma estação." << endl;
     cout << "7 - Pretendo saber o fluxo maximo de comboios entre 2 estações, tendo em conta os custos." << endl;
     cout << "8 - Desejo reportar um troço do caminho de ferro que não está operacional." << endl;
-    cout << "8 - Desejo reportar um troço do caminho de ferro que já está operacional." << endl;
+    cout << "9 - Desejo reportar um troço do caminho de ferro que já está operacional." << endl;
     cout << "10 - Pretendo saber o fluxo maximo de comboios entre 2 estações, tendo em conta as linhas que foram cortadas." << endl;
     cout << "11 - Pretendo saber quais as estações mais afetadas por cada bloqueio da ferrovia." <<endl;
     cout << "12 - Pretendo saber se existe um caminho entre duas estações." << endl;
