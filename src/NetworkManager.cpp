@@ -13,10 +13,10 @@ NetworkManager::NetworkManager() {
 }
 
 /**
- * Lê os ficheiros stations.csv e network.csv e cria um grafo com as estações (vertices) e ligações (arestas)
- * Guardamos também as estações numa hash table para facilitar a procura de estações por id e nome
- * O id da estação é feito por auto-incrementação
- * Complexidade temporal: O(n+m), onde n é o número de estações e m é o número de ligações
+ * Lê os ficheiros stations.csv e network.csv e cria um grafo com as estações (vertices) e ligações (edges).
+ * Guardamos também as estações numa hash table para facilitar a procura de estações por id e nome.
+ * O id da estação é feito por auto-incrementação.
+ * Complexidade temporal: O(n+m), onde n é o número de estações e m é o número de ligações.
  * @return
  */
 void NetworkManager::readFiles() {
@@ -128,6 +128,7 @@ void NetworkManager::listStations() {
              station.getLine() << endl;
     }
 }
+
 /**
  * Mostra as ligações com os dados estação A, estação B, capacidade e serviço
  * Complexidade temporal: O(m), onde m é o número de ligações
@@ -330,7 +331,7 @@ void NetworkManager::trainManagementByMunicipality(int k){
     sort(vec.begin(), vec.end(), [](const pair<string, double>& a, const pair<string, double>& b) {
         return a.second > b.second;
     });
-    double max = vec[0].second;
+    double max = vec[1].second;
     auto c = vec.begin();
     int i = 1;
     c++;
@@ -413,11 +414,6 @@ public:
  */
 // function to perform Dijkstra's algorithm
 void NetworkManager::dijkstra(string first, string second) {
-    for(auto c: vertexSet){
-        c->setCost(numeric_limits<double>::max());
-        c->setVisited(false);
-        c->setPathForCost({});
-    }
     std::priority_queue<Vertex*, std::vector<Vertex*>, NodeComparator> pq;
     int source = stations_code_reverse[first];
     double flow = numeric_limits<int>::max();
