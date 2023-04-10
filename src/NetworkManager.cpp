@@ -112,10 +112,8 @@ void NetworkManager::readFiles() {
 }
 
 /**
- * Beside showing the name, the district, the municipality and the township of each train station,
- * this function also shows the line that connects a specific station to its reachable stations.
- * Temporal Complexity: O(n), where n represents the number of stations of the train railway.
- * @return
+ * Mostra as estações com os dados nome, distrito, concelho, freguesia e linha
+ * Complexidade temporal: O(n), onde n é o número de estações
  */
 void NetworkManager::listStations() {
     cout << "\n[NAME | DISTRICT | MUNICIPALITY | TOWNSHIP | LINE]";
@@ -131,11 +129,8 @@ void NetworkManager::listStations() {
     }
 }
 /**
- * Beside showing the names of the source and the destiny stations,
- * this function also shows the line's capacity that connects the source station to the destiny station
- * and the service associated with that line.
- * Temporal Complexity: O(n), where n represents the number of connections of the train railway.
- * @return
+ * Mostra as ligações com os dados estação A, estação B, capacidade e serviço
+ * Complexidade temporal: O(m), onde m é o número de ligações
  */
 void NetworkManager::listConnections() {
     cout << "\n[STATION_A | STATION_B | CAPACITY | SERVICE]";

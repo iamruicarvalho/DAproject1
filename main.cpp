@@ -6,7 +6,7 @@
 #include <codecvt>
 
 /**
- * Função que mostra o menu
+ * Função que mostra as funcionalidades do programa
  */
 void showMenu() {
     cout << "1 - Pretendo saber o fluxo maximo de comboios entre 2 estações" << endl;
